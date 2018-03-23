@@ -1,0 +1,35 @@
+{
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "10-46",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/10+46/76eac37278c24557a3c4199677f19b62/jre-10_windows-x64_bin.tar.gz",
+            "hash": "0053d9adb4e6d264b3673cc1bb3b1a7b3857ad98e30db0ec659b1381284aa15e"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jre-10",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html",
+        "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jre-(?:.*?)_windows-x64_bin.tar.gz)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath"
+            }
+        },
+        "extract_dir": "jre-$matchMajor",
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

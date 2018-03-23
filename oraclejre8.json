@@ -1,0 +1,42 @@
+{
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "8u162-b12",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jre-8u162-windows-x64.tar.gz",
+            "hash": "b6e97fc695a91ef74651f850ce76cb14112c0c5a7f615d3fc0bce686e30ee345"
+        },
+        "32bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jre-8u162-windows-i586.tar.gz",
+            "hash": "b2bd0b0ea2cdf159bec16f7735f94456f76cfdff8fddb4793faed16c6e64433b"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jre1.8.0_162",
+    "env_add_path": "bin",
+    "env_set": {
+        "JRE_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html",
+        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/jre-(?<short>(?<release>[\\d]+)u(?<shorter>[\\d]+))-windows-x64.tar.gz",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jre-$matchShort-windows-x64.tar.gz"
+            },
+            "32bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jre-$matchShort-windows-i586.tar.gz"
+            }
+        },
+        "extract_dir": "jre1.$matchRelease.0_$matchShorter",
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

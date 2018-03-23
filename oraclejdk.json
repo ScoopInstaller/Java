@@ -1,0 +1,35 @@
+{
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "10-46",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/10+46/76eac37278c24557a3c4199677f19b62/jdk-10_windows-x64_bin.exe#/dl.7z",
+            "hash": "d3cb9ddf29c71e49f3976f93ef4d817a6765385f41e8db9ea947e64ba657f1c2"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "pre_install": "7z.exe x -o\"$dir\" \"$dir\\tools.zip\" -y | out-null",
+    "post_install": "rm \"$dir\\tools.zip\"",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html",
+        "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jdk-(?:.*?)_windows-x64_bin.exe)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

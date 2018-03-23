@@ -1,0 +1,35 @@
+{
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "9.0.4-11",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/serverjre-9.0.4_windows-x64_bin.tar.gz",
+            "hash": "6126cffa9f4a937d1435a21815c714654939e1054c9a8539156e40f4c5e54b95"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jdk-9.0.4",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre9-downloads-3848530.html",
+        "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/serverjre-(?:.*?)_windows-x64_bin.tar.gz)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath"
+            }
+        },
+        "extract_dir": "jdk-$matchMajor",
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre9-downloads-3848530.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}
