@@ -1,18 +1,16 @@
 {
-    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u162-b12",
+    "homepage": "http://jdk.java.net/8",
+    "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
+    "version": "8u172-b03",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe#/dl.exe",
-            "hash": "f05aa9904c373b2e0aad7a5ce1006aa3aff096842f256d66c6cfc268d9c48026"
+            "url": "https://download.java.net/java/jdk8u172/archive/b03/binaries/jdk-8u172-ea-bin-b03-windows-x64-18_jan_2018.exe#/dl.exe",
+            "hash": "d980e72ba906920dcc10f7807c77206cc76c2dea187927ce16b521d6aa458d98"
         },
         "32bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-i586.exe#/dl.exe",
-            "hash": "4a705bd74171eb003a1485d1b2d7a3fb735452f252d39a7beee5117f08614c1f"
+            "url": "https://download.java.net/java/jdk8u172/archive/b03/binaries/jdk-8u172-ea-bin-b03-windows-i586-18_jan_2018.exe#/dl.exe",
+            "hash": "e4dd301f3d59ad7a9292632c6bbcf0f7a7d1dfbeeab9284f2fadd2784fdf4194"
         }
-    },
-    "cookie": {
-        "oraclelicense": "accept-securebackup-cookie"
     },
     "pre_install": "
 Invoke-WebRequest -Uri https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1 -OutFile \"$dir\\oraclejdk8.ps1\"
@@ -29,22 +27,25 @@ Invoke-WebRequest -Uri https://gist.githubusercontent.com/se35710/2c22912a991372
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
-        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/jdk-(?<short>[u\\d]+)-windows",
-        "reverse": true
+        "re": "jdk-(?<major>[u\\d]+)-ea-bin-(?<build>[b\\d]+)-windows-(?<arch>[xi4-68]+)-(?<date>[\\w_]+).exe",
+        "replace": "${major}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-x64.exe#/dl.exe"
+                "url": "https://download.java.net/java/jdk$matchMajor/archive/$matchBuild/binaries/jdk-$matchMajor-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.exe",
+                "hash": {
+                    "url": "$baseurl/jdk-$matchMajor-ea-bin-$matchBuild-windows-x64-$matchDate.sha256",
+                    "find": "sha256 \\($basename\\) = ([a-fA-F0-9]{64})"
+                }
             },
             "32bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-i586.exe#/dl.exe"
+                "url": "https://download.java.net/java/jdk$matchMajor/archive/$matchBuild/binaries/jdk-$matchMajor-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.exe",
+                "hash": {
+                    "url": "$baseurl/jdk-$matchMajor-ea-bin-$matchBuild-windows-i586-$matchDate.sha256",
+                    "find": "sha256 \\($basename\\) = ([a-fA-F0-9]{64})"
+                }
             }
-        },
-        "hash": {
-            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
-            "find": "$basename.*([a-fA-F0-9]{64})\"};"
         }
     }
 }
