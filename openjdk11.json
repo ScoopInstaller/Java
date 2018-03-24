@@ -1,0 +1,30 @@
+{
+    "homepage": "http://jdk.java.net/11",
+    "version": "11-5",
+    "license": "http://openjdk.java.net/legal/gplv2+ce.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.java.net/java/early_access/jdk11/5/GPL/openjdk-11-ea+5_windows-x64_bin.tar.gz",
+            "hash": "30e5bbbb23bda5ca2f4e3b0203b640cb88c0c5041a6e8fa147520cf9e55ff565"
+        }
+    },
+    "extract_dir": "jdk-11",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.tar.gz",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
