@@ -1,5 +1,6 @@
 {
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "version": "9.0.4-11",
     "architecture": {
         "64bit": {
