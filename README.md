@@ -1,4 +1,4 @@
-# scoop-eclipse
+# scoop-java
 
 A bucket for [Scoop](http://scoop.sh), for [Oracle Java](http://www.oracle.com/technetwork/java/javase/overview/index.html) and [OpenJDK](http://openjdk.java.net).
 
