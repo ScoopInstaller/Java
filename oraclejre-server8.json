@@ -1,17 +1,17 @@
 {
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u172-b11",
+    "version": "8u171-b11",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/server-jre-8u172-windows-x64.tar.gz",
-            "hash": "03b002d4590dba1bbc8e748c86e0bafe9981e56e68956b5c2ce6a88bef55e6f6"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/server-jre-8u171-windows-x64.tar.gz",
+            "hash": "cd045571e00c44d22c5c1e8d6d9e1d991a5422e21fe5523de6b56463523d28fa"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk1.8.0_172",
+    "extract_dir": "jdk1.8.0_171",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir",
@@ -19,8 +19,7 @@
     },
     "checkver": {
         "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html",
-        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/server-jre-(?<short>(?<release>[\\d]+)u(?<shorter>[\\d]+))-windows-x64.tar.gz",
-        "reverse": true
+        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/server-jre-(?<short>(?<release>[\\d]+)u(?<shorter>[\\d]+))-windows-x64.tar.gz"
     },
     "autoupdate": {
         "architecture": {
