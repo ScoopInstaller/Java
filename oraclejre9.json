@@ -4,7 +4,7 @@
     "version": "9.0.4-11",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jre-9.0.4_windows-x64_bin.tar.gz",
+            "url": "http://download.oracle.com/otn/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jre-9.0.4_windows-x64_bin.tar.gz",
             "hash": "ffcd6d774cfba78d88a1af253eecad0ec3639bdeabdfb3345e61d1c2355267a4"
         }
     },
@@ -17,19 +17,19 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html",
-        "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jre-(?:.*?)_windows-x64_bin.tar.gz)",
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html",
+        "re": "otn/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jre-(?:.*?)_windows-x64_bin.tar.gz)",
         "replace": "${major}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath"
+                "url": "http://download.oracle.com/otn/java/jdk/$matchPath"
             }
         },
         "extract_dir": "jre-$matchMajor",
         "hash": {
-            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html",
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html",
             "find": "$basename.*([a-fA-F0-9]{64})\"};"
         }
     }
