@@ -4,22 +4,31 @@
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.exe",
-            "hash": "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4"
+            "url": [
+                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.exe",
+                "https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1"
+            ],
+            "hash": [
+                "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4",
+                "1010656d96dff3ce8d8280bd074536ff1742b37e7a2547e42ef2e8cd1ddfcc35"
+            ]
         },
         "32bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.exe",
-            "hash": "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138"
+            "url": [
+                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.exe",
+                "https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1"
+            ],
+            "hash": [
+                "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138",
+                "1010656d96dff3ce8d8280bd074536ff1742b37e7a2547e42ef2e8cd1ddfcc35"
+            ]
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "pre_install": "
-Invoke-WebRequest -Uri https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1 -OutFile \"$dir\\oraclejdk8.ps1\"
-    ",
     "installer": {
-        "file": "oraclejdk8.ps1",
+        "file": "oracle8.ps1",
         "args": [
             "$dir"
         ],
