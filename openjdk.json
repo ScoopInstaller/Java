@@ -19,8 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/GA/jdk10/$version/$matchRandom/10/openjdk-$version_windows-x64_bin.tar.gz",
-                "extract_dir": "jdk-$version"
+                "url": "https://download.java.net/java/GA/jdk10/$version/$matchRandom/10/openjdk-$version_windows-x64_bin.tar.gz"
             }
         },
         "extract_dir": "jdk-$version",
