@@ -1,0 +1,28 @@
+{
+    "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
+    "version": "7.22.0.3",
+    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu7.22.0.3-jdk7.0.171-win_x64.zip",
+            "hash": "7e005aebea78838c8f753350b07e352a198e28b25cbfa422661aa4db6e7efb0b"
+        }
+    },
+    "extract_dir": "zulu7.22.0.3-jdk7.0.171-win_x64",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "https://cdn.azul.com/zulu/bin/(?<name>zulu7(?<major>[\\d.]+)-jdk(?<openver>[\\d.]+)-win_x64).zip",
+        "replace": "7${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/zulu7$matchMajor-jdk$matchOpenver-win_x64.zip"
+            }
+        },
+        "extract_dir": "$matchName"
+    }
+}
