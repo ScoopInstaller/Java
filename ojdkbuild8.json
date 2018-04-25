@@ -19,18 +19,18 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
-        "re": "download/.*/java-(?<short>[\\d.]+)-openjdk-(?<version>[\\d.]+-[\\d]+)(?<tail>.*).x86_64.zip\\)"
+        "url": "https://github.com/ojdkbuild/ojdkbuild/releases",
+        "re": "download/(?<version>1.8[\\d.-]+)/java-(?<short>1.8[\\d.]+)-openjdk-(?<build>[\\d.-]+)(?<tail>.*).x86_64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$version$matchTail.x86_64.zip",
-                "extract_dir": "java-$matchShort-openjdk-$version$matchTail.x86_64"
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$matchBuild$matchTail.x86_64.zip",
+                "extract_dir": "java-$matchShort-openjdk-$matchBuild$matchTail.x86_64"
             },
             "32bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$version$matchTail.x86.zip",
-                "extract_dir": "java-$matchShort-openjdk-$version$matchTail.x86"
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$matchBuild$matchTail.x86.zip",
+                "extract_dir": "java-$matchShort-openjdk-$matchBuild$matchTail.x86"
             }
         },
         "hash": {
