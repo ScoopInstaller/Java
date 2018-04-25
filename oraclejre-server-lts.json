@@ -14,8 +14,7 @@
     "extract_dir": "jdk1.8.0_172",
     "env_add_path": "bin",
     "env_set": {
-        "JAVA_HOME": "$dir",
-        "JRE_HOME": "$dir\\jre"
+        "JAVA_HOME": "$dir"
     },
     "checkver": {
         "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html",
