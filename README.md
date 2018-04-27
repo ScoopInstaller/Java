@@ -4,3 +4,5 @@ A bucket for [Scoop](http://scoop.sh), for [Oracle Java](http://www.oracle.com/t
 
 To make it easy to install apps from this bucket, run
     `scoop bucket add java`
+
+For more information, read the [wiki](https://github.com/lukesampson/scoop/wiki/Java).
