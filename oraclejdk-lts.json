@@ -24,7 +24,7 @@
         "oraclelicense": "accept-securebackup-cookie"
     },
     "extract_to": "tmp",
-    "post_install": [
+    "pre_install": [
         "Push-Location $dir",
         "# Java Source (src.zip)",
         "7z x \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB9\\110\" \"-o$dir\" | out-null",
