@@ -5,35 +5,44 @@
     "architecture": {
         "64bit": {
             "url": [
-                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.exe",
-                "https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1"
+                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.7z"
             ],
             "hash": [
-                "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4",
-                "1010656d96dff3ce8d8280bd074536ff1742b37e7a2547e42ef2e8cd1ddfcc35"
+                "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4"
             ]
         },
         "32bit": {
             "url": [
-                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.exe",
-                "https://gist.githubusercontent.com/se35710/2c22912a99137263b633e682f3134809/raw/oracle8.ps1"
+                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.7z"
             ],
             "hash": [
-                "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138",
-                "1010656d96dff3ce8d8280bd074536ff1742b37e7a2547e42ef2e8cd1ddfcc35"
+                "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138"
             ]
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "installer": {
-        "file": "oracle8.ps1",
-        "args": [
-            "$dir"
-        ],
-        "keep": "true"
-    },
+    "extract_to": "tmp",
+    "post_install": [
+        "Push-Location $dir",
+        "# Java Source (src.zip)",
+        "7z x \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB9\\110\" \"-o$dir\" | out-null",
+        "# JDK (tools.zip)",
+        "7z x \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB10\\111\" \"-o$dir\\tmp\" | out-null",
+        "7z x \"$dir\\tmp\\tools.zip\" \"-o$dir\" | out-null",
+        "# Copyright (COPYRIGHT)",
+        "7z x \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB11\\112\" \"-o$dir\" | out-null",
+        "# Convert .pack to .jar, and removes .pack",
+        "ls \"$dir\" -recurse | ? name -match '^[^_].*?\\.(?i)pack$' | % {",
+        "    $name = $_.fullname -replace '\\.(?i)pack$', ''",
+        "    $pack = \"$name.pack\"",
+        "    $jar = \"$name.jar\"",
+        "    & \"$dir\\bin\\unpack200.exe\" \"-r\" \"$pack\" \"$jar\"",
+        "}",
+        "rm -r \"$dir\\tmp\"",
+        "Pop-Location"
+    ],
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -45,10 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-x64.exe#/dl.exe"
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-i586.exe#/dl.exe"
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-i586.exe#/dl.7z"
             }
         },
         "hash": {
