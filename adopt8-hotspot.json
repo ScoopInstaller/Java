@@ -1,33 +1,33 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u144-b01",
+    "version": "8u172-b00-20180430",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/jdk8u144-b01/OpenJDK8_x64_Win_jdk8u144-b01.zip",
-            "hash": "035638d19d9d95bd39840ec2f43288a1edad00ce6f970d79be5a6b9ad56aed56"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-nightly/releases/download/jdk8u172-b00-20180430/OpenJDK8_x64_Win_20180430.zip",
+            "hash": "1621c9f212e1570be25e768a5eb4b54356645288c964f48cec12bfd174bc12a3"
         }
     },
-    "extract_dir": "jdk8u144-b01",
+    "extract_dir": "jdk8u172-b03",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk8-releases",
-        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+))",
-        "replace": "${major}-${build}"
+        "github": "https://github.com/AdoptOpenJDK/openjdk8-nightly",
+        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d]{8}))",
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/$matchFullname/OpenJDK8_x64_Win_$matchFullname.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk8-nightly/releases/download/$matchFullname/OpenJDK8_x64_Win_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/$matchFullname/OpenJDK8_x64_Win_$matchFullname.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk8-nightly/releases/download/$matchFullname/OpenJDK8_x64_Win_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
         },
-        "extract_dir": "$matchFullname"
+        "extract_dir": "jdk$matchMajor-b03"
     }
 }
