@@ -14,20 +14,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk10-openj9-releases",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
-        "replace": "${major}-${build}"
+        "github": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{8}))",
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-releases/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
         },
-        "extract_dir": "$matchFullname"
+        "extract_dir": "jdk-$matchMajor+$matchBuild"
     }
 }
