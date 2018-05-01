@@ -4,30 +4,30 @@
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/jdk-10%2B23-20180430/OpenJDK10_x64_Win_20180430.zip",
+            "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/jdk-10+23-20180430/OpenJDK10_x64_Win_20180430.zip",
             "hash": "75d182bc6f028c85d8b1f79b9c2892b5918802730fbdd46837684a6a2d1f3f45"
         }
     },
-    "extract_dir": "10-23-20180430",
+    "extract_dir": "jdk-10+46",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk10-releases",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
-        "replace": "${major}-${build}"
+        "github": "https://github.com/AdoptOpenJDK/openjdk10-nightly",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{8}))",
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk10-releases/releases/download/$matchFullname/OpenJDK10_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/$matchFullname/OpenJDK10_x64_Win_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk10-releases/releases/download/$matchFullname/OpenJDK10_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/$matchFullname/OpenJDK10_x64_Win_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
         },
-        "extract_dir": "$matchFullname"
+        "extract_dir": "jdk-$matchMajor+46"
     }
 }
