@@ -1,33 +1,33 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "9-181-20182003",
+    "version": "9-181-20181603",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/jdk-9+181-20182003/OpenJDK9-OPENJ9_x64_Win_20182003.zip",
-            "hash": "1e34cba5ae46f2b8bf557688a1dd1931a2184f46f6e180caea320d23f96d4fd3"
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/jdk-9+181-20181603/OpenJDK9-OPENJ9_x64_Win_20181603.zip",
+            "hash": "0217ba5767d642a6abcc639ba79cc0088fb3e1f58ce2a53f987adcb24200b911"
         }
     },
-    "extract_dir": "9-181-20182003",
+    "extract_dir": "jdk-9+181",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
-        "replace": "${major}-${build}"
+        "github": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{8}))",
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
         },
-        "extract_dir": "$matchFullname"
+        "extract_dir": "jdk-$matchMajor+$matchBuild"
     }
 }
