@@ -4,20 +4,12 @@
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": [
-                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.7z"
-            ],
-            "hash": [
-                "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4"
-            ]
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-x64.exe#/dl.7z",
+            "hash": "841b20e904b7f46fe7c8ce88bd35148e9663c750c8336286d0eb05a0a5b203f4"
         },
         "32bit": {
-            "url": [
-                "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.7z"
-            ],
-            "hash": [
-                "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138"
-            ]
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-windows-i586.exe#/dl.7z",
+            "hash": "fa5de8068571d40f01d6ce8040761b63b5e805aca584e8904cfd026c3fd09138"
         }
     },
     "cookie": {
