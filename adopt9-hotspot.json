@@ -1,0 +1,33 @@
+{
+    "homepage": "https://adoptopenjdk.net",
+    "version": "9-181",
+    "license": "http://openjdk.java.net/legal/gplv2+ce.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/jdk-9+181/OpenJDK9_x64_Win_jdk-9.181.zip",
+            "hash": "223f646726a9bc0dfae5655a40ed11bf1db16b510b45d73c03e34e1102455ff7"
+        }
+    },
+    "extract_dir": "jdk-9+181",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/AdoptOpenJDK/openjdk9-releases",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/$matchFullname/OpenJDK9_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "hash": {
+                    "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/$matchFullname/OpenJDK9_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "find": "^([a-fA-F0-9]{64})"
+                }
+            }
+        },
+        "extract_dir": "$matchFullname"
+    }
+}

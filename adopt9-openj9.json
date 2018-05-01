@@ -1,0 +1,33 @@
+{
+    "homepage": "https://adoptopenjdk.net",
+    "version": "9-181-20182003",
+    "license": "http://openjdk.java.net/legal/gplv2+ce.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/jdk-9+181-20182003/OpenJDK9-OPENJ9_x64_Win_20182003.zip",
+            "hash": "1e34cba5ae46f2b8bf557688a1dd1931a2184f46f6e180caea320d23f96d4fd3"
+        }
+    },
+    "extract_dir": "9-181-20182003",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "hash": {
+                    "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/$matchFullname/OpenJDK9-OPENJ9_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "find": "^([a-fA-F0-9]{64})"
+                }
+            }
+        },
+        "extract_dir": "$matchFullname"
+    }
+}

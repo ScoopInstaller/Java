@@ -1,0 +1,33 @@
+{
+    "homepage": "https://adoptopenjdk.net",
+    "version": "8u161-b12-20180430",
+    "license": "http://openjdk.java.net/legal/gplv2+ce.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/releases/download/jdk8u162-b12-20180430/OpenJDK8-OPENJ9_x64_Win_20180430.zip",
+            "hash": "c3ef679d81a2dd9dde01cd70ce7a1d3b6d7ce1c7be24395e82b1abd3f29b7dd4"
+        }
+    },
+    "extract_dir": "jdk8u162-b12",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/AdoptOpenJDK/openjdk8-openj9-releases",
+        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)_openj9-(?<jnine>[\\d.]+))",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/releases/download/$matchFullname/OpenJDK8-OPENJ9_x64_Win_$matchFullname.zip",
+                "hash": {
+                    "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-releases/releases/download/$matchFullname/OpenJDK8-OPENJ9_x64_Win_$matchFullname.sha256.txt",
+                    "find": "^([a-fA-F0-9]{64})"
+                }
+            }
+        },
+        "extract_dir": "$matchFullname"
+    }
+}
