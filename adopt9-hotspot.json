@@ -1,11 +1,11 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "9-181",
+    "version": "9-181-20180430",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/jdk-9+181/OpenJDK9_x64_Win_jdk-9.181.zip",
-            "hash": "223f646726a9bc0dfae5655a40ed11bf1db16b510b45d73c03e34e1102455ff7"
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/jdk-9+181-20180430/OpenJDK9_x64_Win_20180430.zip",
+            "hash": "f1e1b0da4b85158aaf03c5c4e6e739e347a2b2d5a2f3599d00f8f29d3d43c2b9"
         }
     },
     "extract_dir": "jdk-9+181",
@@ -14,20 +14,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk9-releases",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+))",
-        "replace": "${major}-${build}"
+        "github": "https://github.com/AdoptOpenJDK/openjdk9-nightly",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{8}))",
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/$matchFullname/OpenJDK9_x64_Win_jdk-$matchMajor.$matchBuild.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/$matchFullname/OpenJDK9_x64_Win_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk9-releases/releases/download/$matchFullname/OpenJDK9_x64_Win_jdk-$matchMajor.$matchBuild.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/$matchFullname/OpenJDK9_x64_Win_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
         },
-        "extract_dir": "$matchFullname"
+        "extract_dir": "jdk-$matchMajor+$matchBuild"
     }
 }
