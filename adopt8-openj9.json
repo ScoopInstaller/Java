@@ -1,6 +1,6 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u162-b12",
+    "version": "8u162-b12-20180430",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
@@ -16,7 +16,7 @@
     "checkver": {
         "github": "https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly",
         "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d.]{8}))",
-        "replace": "${major}-${build}"
+        "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
