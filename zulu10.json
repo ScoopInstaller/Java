@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.azul.com/zulu/bin/zulu10$matchMajor+$matchBuild-jdk$matchOpenver-win_x64.zip"
+                "url": "https://cdn.azul.com/zulu/bin/$matchName.zip"
             }
         },
         "hash": {
