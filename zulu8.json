@@ -1,14 +1,14 @@
 {
     "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
-    "version": "8.28.0.1",
+    "version": "8.30.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.28.0.1-jdk8.0.163-win_x64.zip",
-            "hash": "md5:3c7a135bfc04eadce30f3c30169db732"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.30.0.1-jdk8.0.172-win_x64.zip",
+            "hash": "md5:38eecdb3d3f22c8620de97674e97325c"
         }
     },
-    "extract_dir": "zulu8.28.0.1-jdk8.0.163-win_x64",
+    "extract_dir": "zulu8.30.0.1-jdk8.0.172-win_x64",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
