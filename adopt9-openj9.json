@@ -1,11 +1,11 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "9-181-20180504",
+    "version": "9-181-20180507",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/jdk-9+181-20180504/OpenJDK9-OPENJ9_x64_Win_20180504.zip",
-            "hash": "386daf57ede6a654769f1d602adda9d90deb1fa692819b8eb84d80a1f71d418e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-nightly/releases/download/jdk-9+181-20180507/OpenJDK9-OPENJ9_x64_Win_20180507.zip",
+            "hash": "f40140531abec9e8e8238755dbdebd00dd9240fc4931689f6ad9c3a776abd7f6"
         }
     },
     "extract_dir": "jdk-9.0.4+12",
