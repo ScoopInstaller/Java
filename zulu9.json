@@ -5,7 +5,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu9.0.7.1-jdk9.0.7-win_x64.zip",
-            "hash": "75f76c53c6a1f12b1a571b86bd9708ab75adf582d689dddc94fdd77dcc0f3f5c"
+            "hash": "md5:9d03ecc676fc0a8f5943db30010fe84d"
         }
     },
     "extract_dir": "zulu9.0.7.1-jdk9.0.7-win_x64",
@@ -20,8 +20,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.azul.com/zulu/bin/$matchName.zip"
+                "url": "https://cdn.azul.com/zulu/bin/zulu9$matchMajor-jdk$matchOpenver-win_x64.zip"
             }
+        },
+        "hash": {
+            "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
+            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
         },
         "extract_dir": "$matchName"
     }
