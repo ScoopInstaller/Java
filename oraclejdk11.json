@@ -1,11 +1,11 @@
 {
     "homepage": "http://jdk.java.net/11",
-    "version": "11-13",
+    "version": "11-14",
     "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk11/13/BCL/jdk-11-ea+13_windows-x64_bin.exe#/dl.7z",
-            "hash": "54597d85a4ebd07e07c6a4bc8796621affb5a1a82926b31e58db846b0b900b26"
+            "url": "https://download.java.net/java/early_access/jdk11/14/BCL/jdk-11-ea+14_windows-x64_bin.exe#/dl.7z",
+            "hash": "97569f02fc59db33829c0cbcb7654bc8c08d40813a26eb418f8b77e0eb4d1d4f"
         }
     },
     "pre_install": "7z.exe x -o\"$dir\" \"$dir\\tools.zip\" -y | out-null",
