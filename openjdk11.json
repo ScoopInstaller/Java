@@ -1,11 +1,11 @@
 {
     "homepage": "http://jdk.java.net/11",
-    "version": "11-14",
+    "version": "11-15",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk11/14/GPL/openjdk-11-ea+14_windows-x64_bin.tar.gz",
-            "hash": "a13b1b8c5907d3d6a3e9d28d07b4ed1c071e20f850c11c00512b2ce3ddc67009"
+            "url": "https://download.java.net/java/early_access/jdk11/15/GPL/openjdk-11-ea+15_windows-x64_bin.tar.gz",
+            "hash": "e1c7cbb9d074f866bcd0c46bc973f86a400e0160174935fc527e4ae3fb96c9d6"
         }
     },
     "extract_dir": "jdk-11",
