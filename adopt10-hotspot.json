@@ -1,11 +1,11 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "10-23-20180613",
+    "version": "10-23-20180614",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/jdk-10+23-20180613/OpenJDK10_x64_Win_20180613.zip",
-            "hash": "31499737be3f74d7f86320faef31ae4a300d38aa56bc913ff5df5887a64f40a2"
+            "url": "https://github.com/AdoptOpenJDK/openjdk10-nightly/releases/download/jdk-10+23-20180614/OpenJDK10_x64_Win_20180614.zip",
+            "hash": "45a12a724d2cd776b28da38c45f3e266a7d777eec73cabaa65af43e8322b9184"
         }
     },
     "extract_dir": "jdk-10+46",
