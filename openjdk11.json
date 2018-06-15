@@ -1,11 +1,11 @@
 {
     "homepage": "http://jdk.java.net/11",
-    "version": "11-17",
+    "version": "11-18",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk11/17/GPL/openjdk-11-ea+17_windows-x64_bin.tar.gz",
-            "hash": "0eb38495ac27fbc229eb62bf292a81a8a88d6e5db26ef8f95b6b117a409b74b9"
+            "url": "https://download.java.net/java/early_access/jdk11/18/GPL/openjdk-11-ea+18_windows-x64_bin.zip",
+            "hash": "bc1f27e25f992de0e797fba7cc8177168304d046f291d6e58e40539c4c335362"
         }
     },
     "extract_dir": "jdk-11",
@@ -14,13 +14,13 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.tar.gz",
+        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.(?<zip>tar.gz|zip)",
         "replace": "${major}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.tar.gz"
+                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.$matchZip"
             }
         },
         "hash": {
