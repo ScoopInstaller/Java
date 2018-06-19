@@ -15,15 +15,15 @@
     },
     "checkver": {
         "github": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{12}))",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{12}))/(?<filename>OpenJDK10-OPENJ9_x64_Windows_[\\d]{12})",
         "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_$matchBdate.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/$matchFilename.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/OpenJDK10-OPENJ9_x64_Win_$matchBdate.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/$matchFullname/$matchFilename.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
