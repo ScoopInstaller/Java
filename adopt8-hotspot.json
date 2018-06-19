@@ -15,7 +15,7 @@
     },
     "checkver": {
         "github": "https://github.com/AdoptOpenJDK/openjdk8-nightly",
-        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d]{8}))",
+        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d]{12}))",
         "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
