@@ -14,8 +14,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk8-nightly",
-        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d]{12}))",
+        "url": "https://github.com/AdoptOpenJDK/openjdk8-nightly/releases",
+        "re": "(?<fullname>jdk(?<major>[\\du]+)-(?<build>b[\\d]+)-(?<bdate>[\\d]{12}))/OpenJDK8_x64_Windows_",
         "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
