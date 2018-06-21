@@ -14,7 +14,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "https://download.java.net/java/GA/jdk10/([\\d.]+)/(?<random>[a-fA-F0-9]{32})/10/openjdk-([\\d.]+)_windows-x64_bin.tar.gz"
+        "re": "https://download.java.net/java/GA/jdk10/([\\d.]+)/(?<random>[a-fA-F0-9]{32})"
     },
     "autoupdate": {
         "architecture": {
