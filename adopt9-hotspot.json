@@ -1,33 +1,32 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "9-181-20180614",
+    "version": "9-181-201818060726",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/jdk-9+181-20180614/OpenJDK9_x64_Win_20180614.zip",
-            "hash": "231dfc3beeea0ac81506e350f330895f62267f521f5278654866974d3819a5b4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/jdk-9+181-201818060726/OpenJDK9_x64_Windows_201818060726.zip",
+            "hash": "3b5928818b339921eeef4a4febc03bc6b74c5f21c32e6773a471c67501155f91"
         }
     },
-    "extract_dir": "jdk-9+181",
+    "extract_dir": "jdk-9.0.4+11",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/AdoptOpenJDK/openjdk9-nightly",
-        "re": "(?<fullname>jdk-(?<major>[\\d.]+)\\+(?<build>[\\d]+)-(?<bdate>[\\d]{12}))",
+        "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases",
+        "re": "(?<fullname>jdk-(?<major>[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)-(?<bdate>[\\d]{12}))/OpenJDK9_x64_Windows_",
         "replace": "${major}-${build}-${bdate}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/$matchFullname/OpenJDK9_x64_Windows_$matchBdate.zip",
+                "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/jdk-$matchMajor+$matchBuild-$matchBdate/OpenJDK9_x64_Windows_$matchBdate.zip",
                 "hash": {
-                    "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/$matchFullname/OpenJDK9_x64_Windows_$matchBdate.sha256.txt",
+                    "url": "https://github.com/AdoptOpenJDK/openjdk9-nightly/releases/download/jdk-$matchMajor+$matchBuild-$matchBdate/OpenJDK9_x64_Windows_$matchBdate.sha256.txt",
                     "find": "^([a-fA-F0-9]{64})"
                 }
             }
-        },
-        "extract_dir": "jdk-$matchMajor+$matchBuild"
+        }
     }
 }
