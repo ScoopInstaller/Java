@@ -1,11 +1,11 @@
 {
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u172-b11-201802070700",
+    "version": "8u172-b11-201803070700",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/releases/download/jdk8u172-b11-201802070700/OpenJDK8-OPENJ9_x64_Windows_201802070700.zip",
-            "hash": "d9858e5e7ed89462f211540d55ac4c92dfbc5b5b18151c53721a22c0ea37c972"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/releases/download/jdk8u172-b11-201803070700/OpenJDK8-OPENJ9_x64_Windows_201803070700.zip",
+            "hash": "72092d3a7750cde8c9a6c29a4a16e4700d32213c14d5abe1c610833d3050da0c"
         }
     },
     "extract_dir": "jdk8u172-b11",
