@@ -11,8 +11,10 @@
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "pre_install": "7z.exe x -o\"$dir\" \"$dir\\tools.zip\" -y | out-null",
-    "post_install": "rm \"$dir\\tools.zip\"",
+    "pre_install": [
+        "extract_7zip \"$dir\\tools.zip\" \"$dir\"",
+        "rm \"$dir\\tools.zip\""
+    ],
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
