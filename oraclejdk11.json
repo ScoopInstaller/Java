@@ -8,8 +8,14 @@
             "hash": "67ac411fd38dc3236974f24314a408ea980774e2495e1ced6e734fc09bf24f1b"
         }
     },
-    "pre_install": "7z.exe x -o\"$dir\" \"$dir\\tools.zip\" -y | out-null",
-    "post_install": "rm \"$dir\\tools.zip\"",
+    "extract_to": "tmp",
+    "pre_install": [
+        "extract_7zip \"$dir\\tmp\\ss.cab\" \"$dir\"",
+        "extract_7zip \"$dir\\tmp\\st.cab\" \"$dir\\tmp\"",
+        "extract_7zip \"$dir\\tmp\\sz.cab\" \"$dir\"",
+        "extract_7zip \"$dir\\tmp\\tools.zip\" \"$dir\"",
+        "rm -r \"$dir\\tmp\""
+    ],
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
