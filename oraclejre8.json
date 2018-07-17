@@ -1,21 +1,21 @@
 {
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u171-b11",
+    "version": "8u181-b13",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jre-8u171-windows-x64.tar.gz",
-            "hash": "6946ac691341924fa039b2d2ac6befe085f432ed46ded4b8a76c11ecd640fcdd"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jre-8u181-windows-x64.tar.gz",
+            "hash": "4045e16ea023c68b8aa3818a4a200148850251830db6c57aaefb5c0f2b8e97c3"
         },
         "32bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jre-8u171-windows-i586.tar.gz",
-            "hash": "a7d8b3c23d986fd8a2934b6d88db17962f7f8b7ba2aff2123d370e19a86acc29"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jre-8u181-windows-i586.tar.gz",
+            "hash": "dd6b4869219ec9005fd6d53766d628a54480edfea5d34687ed31b8bd064f2b4f"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jre1.8.0_171",
+    "extract_dir": "jre1.8.0_181",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
