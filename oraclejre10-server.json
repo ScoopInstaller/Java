@@ -1,17 +1,17 @@
 {
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
-    "version": "10.0.1-10",
+    "version": "10.0.2-13",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/serverjre-10.0.1_windows-x64_bin.tar.gz",
-            "hash": "a40ccda1522af64a4d1954b9ed517d3d94187a6a145247e5732eef0fd555b27b"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/serverjre-10.0.2_windows-x64_bin.tar.gz",
+            "hash": "d54f57d574a0eaac231f486d6b15fe6d3d3857d3df74789675f08eb13b61076f"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk-10.0.1",
+    "extract_dir": "jdk-10.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
