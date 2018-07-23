@@ -1,28 +1,29 @@
 {
     "homepage": "http://jdk.java.net/10",
-    "version": "10.0.1",
+    "version": "10.0.2-13",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jdk10/10.0.1/fb4372174a714e6b8c52526dc134031e/10/openjdk-10.0.1_windows-x64_bin.tar.gz",
-            "hash": "df74f9359b99f91e1197319d7f5468899e23c0814cda2a58434c0a62b91e1bed"
+            "url": "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_windows-x64_bin.tar.gz",
+            "hash": "d6fadd228b195f754d3bb74cb7dce7a7fdbce58963257ba2ab63a923301bc2dd"
         }
     },
-    "extract_dir": "jdk-10.0.1",
+    "extract_dir": "jdk-10.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "https://download.java.net/java/GA/jdk10/([\\d.]+)/(?<random>[a-fA-F0-9]{32})"
+        "re": "https://download.java.net/java/GA/jdk10/(?<version>[\\d.]+)/(?<random>[a-fA-F0-9]{32})/(?<build>[\\d]+)/",
+        "replace": "${version}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/GA/jdk10/$version/$matchRandom/10/openjdk-$version_windows-x64_bin.tar.gz"
+                "url": "https://download.java.net/java/GA/jdk10/$matchVersion/$matchRandom/$matchBuild/openjdk-$matchVersion_windows-x64_bin.tar.gz"
             }
         },
-        "extract_dir": "jdk-$version",
+        "extract_dir": "jdk-$matchVersion",
         "hash": {
             "url": "$url.sha256"
         }
