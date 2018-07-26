@@ -1,17 +1,17 @@
 {
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "1.8.0.171-1",
+    "version": "1.8.0.181-1",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.171-1/java-1.8.0-openjdk-1.8.0.171-1.b10.ojdkbuild.windows.x86_64.zip",
-            "hash": "35104f658ed51d1b24cf6f0f6d1d21524d7640d3e3e7b64d8d7ac86cbfbc2ab9",
-            "extract_dir": "java-1.8.0-openjdk-1.8.0.171-1.b10.ojdkbuild.windows.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.181-1/java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86_64.zip",
+            "hash": "dd7d2ea7951c06857523e95359e5e94630039a1eae5b5223e4b8c308afc95ebb",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86_64"
         },
         "32bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.171-1/java-1.8.0-openjdk-1.8.0.171-1.b10.ojdkbuild.windows.x86.zip",
-            "hash": "942b08c99bfdf68eed03020a66aa5713a44bc5b3b7ca2fe563b033251d1096e0",
-            "extract_dir": "java-1.8.0-openjdk-1.8.0.171-1.b10.ojdkbuild.windows.x86"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.181-1/java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86.zip",
+            "hash": "a53df589820b6ce6d8cfbc813661297314518df7aeafe8f09b3caac79921cb3a",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86"
         }
     },
     "env_add_path": "bin",
