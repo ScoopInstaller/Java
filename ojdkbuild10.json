@@ -1,17 +1,17 @@
 {
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "10.0.1-1",
+    "version": "10.0.2-1",
     "license": "http://openjdk.java.net/legal/gplv2+ce.html",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/10.0.1-1/java-10-openjdk-10.0.1-1.b10.ojdkbuild.windows.x86_64.zip",
-            "hash": "64664f2e28db55022d90beefd097779c59f843cacf1afeed8a7456ee64c603f1",
-            "extract_dir": "java-10-openjdk-10.0.1-1.b10.ojdkbuild.windows.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/10.0.2-1/java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86_64.zip",
+            "hash": "39801db76f04b9f1491b0d0a64258535f14e319a3cd08d3e161b18a6af7a842d",
+            "extract_dir": "java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86_64"
         },
         "32bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/10.0.1-1/java-10-openjdk-10.0.1-1.b10.ojdkbuild.windows.x86.zip",
-            "hash": "d23857e51946d8edd9ae66e60e7a4ded34ec19bcf6a9afd15fb9531076bd922a",
-            "extract_dir": "java-10-openjdk-10.0.1-1.b10.ojdkbuild.windows.x86"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/10.0.2-1/java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86.zip",
+            "hash": "ea3a8b6a7106ea47f1841d92f211270f28c27b6e265efdae2c2eb78d628be39f",
+            "extract_dir": "java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86"
         }
     },
     "env_add_path": "bin",
