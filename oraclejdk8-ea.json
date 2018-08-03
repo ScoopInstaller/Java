@@ -1,0 +1,36 @@
+{
+    "homepage": "http://jdk.java.net/8",
+    "version": "8u192-b02",
+    "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.java.net/java/jdk8u192/archive/b02/binaries/jdk-8u192-ea-bin-b02-windows-x64-19_jul_2018.tar.gz",
+            "hash": "8adec562f90d6b7e8c1a5a6b3552c36be4d77c35f7251afc1383f3d6bef4c0fc"
+        },
+        "32bit": {
+            "url": "https://download.java.net/java/jdk8u192/archive/b02/binaries/jdk-8u192-ea-bin-b02-windows-i586-19_jul_2018.tar.gz",
+            "hash": "0d5ab6c319bb47f7da1a55905c8bcb8d01e91eff732cac48dad2632d85fdff2c"
+        }
+    },
+    "extract_dir": "jdk1.8.0_192",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "https://download.java.net/java/jdk(?<version>8u(?<update>[\\d]+))/archive/(?<build>[\\db]+)/binaries/jdk-(?:[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).tar.gz",
+        "replace": "${version}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jdk-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.tar.gz"
+            },
+            "32bit": {
+                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jdk-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.tar.gz"
+            }
+        },
+        "extract_dir": "jdk1.8.0_$matchUpdate"
+    },
+    "notes": "This is an Early-access (EA) release."
+}
