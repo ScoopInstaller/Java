@@ -5,28 +5,37 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu10.2+3-jdk10.0.1-win_x64.zip",
-            "hash": "md5:a473376d1504e181c009b8082119a1b8"
+            "hash": "md5:a473376d1504e181c009b8082119a1b8",
+            "extract_dir": "zulu10.2+3-jdk10.0.1-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu10.2+3-jdk10.0.1-win_i686.zip",
+            "hash": "md5:a285cf6153c8b182283339af957bae9d",
+            "extract_dir": "zulu10.2+3-jdk10.0.1-win_i686"
         }
     },
-    "extract_dir": "zulu10.2+3-jdk10.0.1-win_x64",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu10(?<major>[\\d.]+)\\+(?<build>[\\d]+)-jdk(?<openver>[\\d.]+)-win_x64).zip",
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu10(?<major>[\\d.]+)\\+(?<build>[\\d]+)-jdk(?<openver>[\\d.]+)-win)_x64.zip",
         "replace": "10${major}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.azul.com/zulu/bin/$matchName.zip"
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686"
             }
         },
         "hash": {
             "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
             "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
-        },
-        "extract_dir": "$matchName"
+        }
     }
 }
