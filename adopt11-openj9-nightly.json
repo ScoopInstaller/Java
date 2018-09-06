@@ -1,0 +1,34 @@
+{
+    "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM (Nightly builds)",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "11-27_8",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://ci.adoptopenjdk.net/job/openjdk11_openj9_build_x86-64_windows/8/artifact/OpenJDK11_x64_Windows_201821080916.zip",
+            "hash": "3662315d1d8fcf2ae14d18614a49521b00d7be187e36da5f34d055c0553631b6"
+        }
+    },
+    "extract_dir": "jdk-11+27",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://ci.adoptopenjdk.net/job/openjdk11_openj9_build_x86-64_windows/lastStableBuild/consoleFull",
+        "re": "(?sm)<title>openjdk(?<jdk>[\\d]+)(?<jvm>_openj9)?_build_x86-64_windows #(?<jbuild>[\\d]+)(?:.*?)OpenJDK repo tag is (?<fullname>jdk-(?<major>[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+))(?:.*?)Moving the artifacts to /(?:.*?)/(?<filename>OpenJDK[\\d]+_x64_Windows_(?<bdate>[\\d]{12})).zip",
+        "replace": "${major}-${build}_${jbuild}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ci.adoptopenjdk.net/job/openjdk$matchJdk$matchJvm_build_x86-64_windows/$matchJbuild/artifact/$matchFilename.zip",
+                "hash": {
+                    "url": "$url/*fingerprint*/",
+                    "find": "MD5: ([a-fA-F0-9]{32})"
+                }
+            }
+        },
+        "extract_dir": "$matchFullname"
+    }
+}

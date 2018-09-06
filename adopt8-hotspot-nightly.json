@@ -1,0 +1,40 @@
+{
+    "description": "AdoptOpenJDK 8 with Oracle HotSpot JVM (Nightly builds)",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "201809051300",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-nightly/releases/download/201809051300/OpenJDK8_x64_Windows_201809051300.zip",
+            "hash": "d1b2d7e23519bdacd72aa64bc3326579ab152b02bf36a514956d6b090f7c6ecc"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
+            "rm -r \"$dir\\tmp\""
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk8?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].checksum_link",
+        "re": "(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?)).sha256.txt",
+        "replace": "${year}${month}${day}${hour}${minute}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "$matchUrl.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        }
+    }
+}

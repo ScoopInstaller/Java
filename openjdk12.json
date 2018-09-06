@@ -1,0 +1,32 @@
+{
+    "description": "Official production-ready open-source builds of OpenJDK 11 (Early Access)",
+    "homepage": "http://jdk.java.net/12",
+    "version": "12-9",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.java.net/java/early_access/jdk12/9/GPL/openjdk-12-ea+9_windows-x64_bin.zip",
+            "hash": "49eb49f808d2beff6c977f2f60aa75f17c8adbb3280bea482816aa6a083b0952"
+        }
+    },
+    "extract_dir": "jdk-12",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.(?<zip>tar.gz|zip)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.$matchZip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    },
+    "notes": "This is an Early-access (EA) release."
+}

@@ -1,0 +1,63 @@
+{
+    "description": "Oracle JDK 8",
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "8u181-b13",
+    "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-windows-x64.exe#/dl.7z",
+            "hash": "6d1e254081d56fa460505d5b0f10ce1e33426c44dfbcab838c2be620f35997a4"
+        },
+        "32bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-windows-i586.exe#/dl.7z",
+            "hash": "37b090d99104dab7aeae582dbad07731d5550aeb8ebd5eaf0b131e559dd2e30b"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "# Java Source (src.zip)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB9\\110\" \"$dir\"",
+            "# JDK (tools.zip)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB10\\111\" \"$dir\\tmp\"",
+            "extract_7zip \"$dir\\tmp\\tools.zip\" \"$dir\"",
+            "# Copyright (COPYRIGHT)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB11\\112\" \"$dir\"",
+            "# Convert .pack to .jar, and remove .pack",
+            "pushd \"$dir\"",
+            "ls \"$dir\" -recurse | ? name -match '^[^_].*?\\.(?i)pack$' | % {",
+            "    $name = $_.fullname -replace '\\.(?i)pack$', ''",
+            "    $pack = \"$name.pack\"",
+            "    $jar = \"$name.jar\"",
+            "    & \"bin\\unpack200.exe\" \"-r\" \"$pack\" \"$jar\"",
+            "}",
+            "rm -r tmp | out-null",
+            "popd"
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
+        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/jdk-(?<short>[u\\d]+)-windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/jdk-$matchShort-windows-i586.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

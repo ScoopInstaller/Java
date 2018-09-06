@@ -1,0 +1,34 @@
+{
+    "description": "AdoptOpenJDK 8 with Oracle HotSpot JVM",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "8u172-b11",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-releases/releases/download/jdk8u172-b11/OpenJDK8_x64_Win_jdk8u172-b11.zip",
+            "hash": "626f65b33080e78d9618ad97effac61046a821e392cf0d2b3e434f518c9217b2"
+        }
+    },
+    "extract_dir": "jdk8u172-b11",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].binary_link",
+        "re": "(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)).*?).zip",
+        "replace": "${major}${update}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "$matchUrl.sha256.txt"
+        },
+        "extract_dir": "$matchTag"
+    }
+}

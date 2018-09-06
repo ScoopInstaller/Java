@@ -1,0 +1,57 @@
+{
+    "description": "Oracle JDK 8 (Early Access)",
+    "homepage": "http://jdk.java.net/8",
+    "version": "8u192-b04",
+    "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.java.net/java/jdk8u192/archive/b04/binaries/jdk-8u192-ea-bin-b04-windows-x64-01_aug_2018.exe#/dl.7z",
+            "hash": "c3b939abd4f51a9f5dce8a946487a6ba6711920bf5fbcbe4c6cdc91cc527caca"
+        },
+        "32bit": {
+            "url": "https://download.java.net/java/jdk8u192/archive/b04/binaries/jdk-8u192-ea-bin-b04-windows-i586-01_aug_2018.exe#/dl.7z",
+            "hash": "9e83c62fbed8a4e3f0e8b8673559b9c6697fe4ec606877204a9043c042e03bb0"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "# Java Source (src.zip)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB9\\110\" \"$dir\"",
+            "# JDK (tools.zip)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB10\\111\" \"$dir\\tmp\"",
+            "extract_7zip \"$dir\\tmp\\tools.zip\" \"$dir\"",
+            "# Copyright (COPYRIGHT)",
+            "extract_7zip \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB11\\112\" \"$dir\"",
+            "# Convert .pack to .jar, and remove .pack",
+            "pushd \"$dir\"",
+            "ls \"$dir\" -recurse | ? name -match '^[^_].*?\\.(?i)pack$' | % {",
+            "    $name = $_.fullname -replace '\\.(?i)pack$', ''",
+            "    $pack = \"$name.pack\"",
+            "    $jar = \"$name.jar\"",
+            "    & \"bin\\unpack200.exe\" \"-r\" \"$pack\" \"$jar\"",
+            "}",
+            "rm -r tmp | out-null",
+            "popd"
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "//download.java.net/java/jdk(?<version>8u(?<update>[\\d]+))/archive/(?<build>[\\db]+)/binaries/jdk-(?:[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
+        "replace": "${version}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jdk-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jdk-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.7z"
+            }
+        }
+    },
+    "notes": "This is an Early-access (EA) release."
+}

@@ -1,0 +1,40 @@
+{
+    "description": "AdoptOpenJDK 8 with Eclipse OpenJ9 JVM (Nightly builds)",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "201809061330",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-openj9-nightly/releases/download/201809061330/OpenJDK8-OPENJ9_x64_Windows_201809061330.zip",
+            "hash": "54e36d3a48782385371c105c150d9fc09b1befc3f29ae1c6124e6a0a924422aa"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
+            "rm -r \"$dir\\tmp\""
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk8?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].checksum_link",
+        "re": "(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?)).sha256.txt",
+        "replace": "${year}${month}${day}${hour}${minute}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "$matchUrl.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        }
+    }
+}

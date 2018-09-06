@@ -1,0 +1,36 @@
+{
+    "description": "Oracle Server-JRE 8",
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "8u181-b13",
+    "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/server-jre-8u181-windows-x64.tar.gz",
+            "hash": "7799b9007760663da32a3b177a0b9ea42ec268afaa69dcf8518cdce5136c3768"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jdk1.8.0_181",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html",
+        "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/server-jre-(?<short>(?<release>[\\d]+)u(?<update>[\\d]+))-windows-x64.tar.gz"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$version/$matchRandom/server-jre-$matchShort-windows-x64.tar.gz"
+            }
+        },
+        "extract_dir": "jdk1.$matchRelease.0_$matchUpdate",
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

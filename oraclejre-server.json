@@ -1,0 +1,37 @@
+{
+    "description": "Oracle Server-JRE",
+    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
+    "version": "10.0.2-13",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/serverjre-10.0.2_windows-x64_bin.tar.gz",
+            "hash": "d54f57d574a0eaac231f486d6b15fe6d3d3857d3df74789675f08eb13b61076f"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jdk-10.0.2",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "http://www.oracle.com/technetwork/java/javase/downloads/sjre10-downloads-4417025.html",
+        "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/serverjre-(?:.*?)_windows-x64_bin.tar.gz)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath"
+            }
+        },
+        "extract_dir": "jdk-$matchMajor",
+        "hash": {
+            "url": "http://www.oracle.com/technetwork/java/javase/downloads/sjre10-downloads-4417025.html",
+            "find": "$basename.*([a-fA-F0-9]{64})\"};"
+        }
+    }
+}

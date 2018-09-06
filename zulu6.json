@@ -1,0 +1,33 @@
+{
+    "description": "Zulu 6 is certified build of OpenJDK 6",
+    "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
+    "version": "6.21.0.3",
+    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu6.21.0.3-jdk6.0.113-win_x64.zip",
+            "hash": "md5:0709ab10df0c6c89e4cd72a5742d9200",
+            "extract_dir": "zulu6.21.0.3-jdk6.0.113-win_x64"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu6(?<major>[\\d.]+)-jdk(?<openver>[\\d.]+)-win)_x64.zip",
+        "replace": "6${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
+            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
+        }
+    }
+}

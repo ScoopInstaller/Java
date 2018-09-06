@@ -1,0 +1,35 @@
+{
+    "description": "AdoptOpenJDK 9 with Eclipse OpenJ9 JVM",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "9.0.4-12_0.9.0",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-openj9-releases/releases/download/jdk-9.0.4%2B12_openj9-0.9.0/OpenJDK9-OPENJ9_x64_Windows_jdk-9.0.4.12_openj9-0.9.0.zip",
+            "hash": "ff028e200ae490f6e8e3daa3df6cb0733ceeb3dcc9c806bb7bc6d69a5391170f"
+        }
+    },
+    "extract_dir": "jdk-9.0.4+12",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk9?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].binary_link",
+        "re": "(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<jvm>_openj9-(?<jvmver>[\\d.]+))?).*?).zip",
+        "replace": "${major}-${build}_${jvmver}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "$matchUrl.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        },
+        "extract_dir": "jdk-$matchMajor+$matchBuild"
+    }
+}

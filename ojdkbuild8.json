@@ -1,0 +1,41 @@
+{
+    "description": "OpenJDK 8 binaries built using source code from the CentOS project",
+    "homepage": "https://github.com/ojdkbuild/ojdkbuild",
+    "version": "1.8.0.181-1",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.181-1/java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86_64.zip",
+            "hash": "dd7d2ea7951c06857523e95359e5e94630039a1eae5b5223e4b8c308afc95ebb",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86_64"
+        },
+        "32bit": {
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.181-1/java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86.zip",
+            "hash": "a53df589820b6ce6d8cfbc813661297314518df7aeafe8f09b3caac79921cb3a",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://github.com/ojdkbuild/ojdkbuild/releases",
+        "re": "download/(?<version>1.8[\\d.-]+)/java-(?<short>1.8[\\d.]+)-openjdk-(?<build>[\\d.-]+)(?<tail>.*).x86_64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$matchBuild$matchTail.x86_64.zip",
+                "extract_dir": "java-$matchShort-openjdk-$matchBuild$matchTail.x86_64"
+            },
+            "32bit": {
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$version/java-$matchShort-openjdk-$matchBuild$matchTail.x86.zip",
+                "extract_dir": "java-$matchShort-openjdk-$matchBuild$matchTail.x86"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
