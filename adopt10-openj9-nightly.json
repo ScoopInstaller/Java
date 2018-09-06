@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 10 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201809051700",
+    "version": "201809061700",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/201809051700/OpenJDK10-OPENJ9_x64_Windows_201809051700.zip",
-            "hash": "349c25fb85021d7e9d8ed53e83fa0e67be20a685cabe184caefe4f75ebd80687"
+            "url": "https://github.com/AdoptOpenJDK/openjdk10-openj9-nightly/releases/download/201809061700/OpenJDK10-OPENJ9_x64_Windows_201809061700.zip",
+            "hash": "8003c1049536982dc410e89df3f6b401545eb5a37b717b2002504dc7ba327388"
         }
     },
     "extract_to": "tmp",
