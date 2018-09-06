@@ -1,5 +1,5 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK 11 (Early Access)",
+    "description": "Official production-ready open-source builds of OpenJDK 12 (Early Access)",
     "homepage": "http://jdk.java.net/12",
     "version": "12-10",
     "license": "GPL-2.0-with-classpath-exception",
