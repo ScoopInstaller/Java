@@ -6,3 +6,13 @@ To make it easy to install apps from this bucket, run
     `scoop bucket add java`
 
 For more information, read the [wiki](https://github.com/lukesampson/scoop/wiki/Java).
+
+## News
+
+### [2018-09-06] fatal: refusing to merge unrelated histories
+Due to a problem with the git history, the master branch had to be replaced. If you see the message *fatal: refusing to merge unrelated histories* when updating scoop, remove and re-add the java bucket:
+```
+PS C:> scoop bucket rm java
+PS C:> scoop bucket add java
+```
+See issue [#16](https://github.com/se35710/scoop-java/issues/16) for mote information.
