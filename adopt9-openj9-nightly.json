@@ -23,17 +23,17 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk9?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
-        "re": "(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?))(?<zip>.zip)?.sha256.txt",
+        "re": "https://github.com/(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?))(?<zip>.zip)?.sha256.txt",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchUrl.zip"
+                "url": "https://github.com/$matchUrl.zip"
             }
         },
         "hash": {
-            "url": "$matchUrl$matchZip.sha256.txt",
+            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         }
     }
