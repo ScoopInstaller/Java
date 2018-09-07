@@ -5,7 +5,7 @@
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk10-binaries/releases/download/jdk10u-2018-09-03-20-33/OpenJDK10U_x64_windows_hotspot_2018-09-03-20-33.zip.zip",
+            "url": "https://github.com/AdoptOpenJDK/openjdk10-binaries/releases/download/jdk10u-2018-09-03-20-33/OpenJDK10U_x64_windows_hotspot_2018-09-03-20-33.zip",
             "hash": "a825193d4badd791b029bb6d5861f26929a63856ba01ab8f18d5f34ea7076c5c"
         }
     },
@@ -23,7 +23,7 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk10?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?)).sha256.txt",
+        "re": "https://github.com/(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?))(?<zip>.zip)?.sha256.txt",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
@@ -33,7 +33,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/$matchUrl.sha256.txt",
+            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         }
     }
