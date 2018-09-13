@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 12 (Early Access)",
     "homepage": "http://jdk.java.net/12",
-    "version": "12-10",
+    "version": "12-11",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk12/10/GPL/openjdk-12-ea+10_windows-x64_bin.zip",
-            "hash": "ad3954511fda449a1840ecccfabed877581204eb1f64decd69614af1831cf2c4"
+            "url": "https://download.java.net/java/early_access/jdk12/11/GPL/openjdk-12-ea+11_windows-x64_bin.zip",
+            "hash": "1065039397db6f47d45893bf20ecaf301404736b710e0ddd60f49b6480488dfd"
         }
     },
     "extract_dir": "jdk-12",
