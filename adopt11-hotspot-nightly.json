@@ -1,34 +1,40 @@
 {
     "description": "AdoptOpenJDK 11 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11-27_10",
+    "version": "201809132234",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://ci.adoptopenjdk.net/job/openjdk11_build_x86-64_windows/10/artifact/OpenJDK11_x64_Windows_201821080915.zip",
-            "hash": "9e2288b17087f5ad443bccd7268cde14daabd16b13842ec975461aa978fc09d7"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11-2018-09-13-22-34/OpenJDK11_x64_windows_hotspot_2018-09-13-22-34.zip",
+            "hash": "b6b45725d2f45dc64f238b5dbde5ed4974289cf0406c3f1b45445c1ff6037d1d"
         }
     },
-    "extract_dir": "jdk-11+27",
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
+            "rm -r \"$dir\\tmp\""
+        ]
+    },
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://ci.adoptopenjdk.net/job/openjdk11_build_x86-64_windows/lastSuccessfulBuild/consoleFull",
-        "re": "(?sm)<title>openjdk(?<jdk>[\\d]+)(?<jvm>_openj9)?_build_x86-64_windows #(?<jbuild>[\\d]+)(?:.*?)OpenJDK repo tag is (?<fullname>jdk-(?<major>[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+))(?:.*?)Moving the artifacts to /(?:.*?)/(?<filename>OpenJDK[\\d]+_x64_Windows_(?<bdate>[\\d]{12})).zip",
-        "replace": "${major}-${build}_${jbuild}"
+        "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk11?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].checksum_link",
+        "re": "https://github.com/(?<url>.*?(?:(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?|(?<year>[\\d]{4})(?<month>[\\d]{2})(?<day>[\\d]{2})(?<hour>[\\d]{2})(?<minute>[\\d]{2}).*?))(?<zip>.zip)?.sha256.txt",
+        "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ci.adoptopenjdk.net/job/openjdk$matchJdk$matchJvm_build_x86-64_windows/$matchJbuild/artifact/$matchFilename.zip",
-                "hash": {
-                    "url": "$url/*fingerprint*/",
-                    "find": "MD5: ([a-fA-F0-9]{32})"
-                }
+                "url": "https://github.com/$matchUrl.zip"
             }
         },
-        "extract_dir": "$matchFullname"
+        "hash": {
+            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        }
     }
 }
