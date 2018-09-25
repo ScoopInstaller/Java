@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 9 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201809240904",
+    "version": "201809250929",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk9-binaries/releases/download/jdk9u-2018-09-24-09-04/OpenJDK9U_x64_windows_hotspot_2018-09-24-09-04.zip",
-            "hash": "344936d9f4b3440f838c7472928b664162bfdee16d1fb0f0a35cd5fa8a636b69"
+            "url": "https://github.com/AdoptOpenJDK/openjdk9-binaries/releases/download/jdk9u-2018-09-25-09-29/OpenJDK9U_x64_windows_hotspot_2018-09-25-09-29.zip",
+            "hash": "2241d28b26b19a298ebc6617d392491efc67c7a9350c963f0df5707f235784af"
         }
     },
     "extract_to": "tmp",
