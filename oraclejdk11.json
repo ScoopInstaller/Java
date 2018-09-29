@@ -1,8 +1,8 @@
 {
     "description": "Oracle JDK 11",
-    "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
     "version": "11-28",
-    "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
+    "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
     "architecture": {
         "64bit": {
             "url": "http://download.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_windows-x64_bin.zip",
