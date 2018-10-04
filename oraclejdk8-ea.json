@@ -1,7 +1,7 @@
 {
     "description": "Oracle JDK 8 (Early Access)",
     "homepage": "http://jdk.java.net/8",
-    "version": "8u192-b04",
+    "version": "8u192-b04-ea",
     "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
     "architecture": {
         "64bit": {
@@ -41,7 +41,7 @@
     },
     "checkver": {
         "re": "//download.java.net/java/jdk(?<version>8u(?<update>[\\d]+))/archive/(?<build>[\\db]+)/binaries/jdk-(?:[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
-        "replace": "${version}-${build}"
+        "replace": "${version}-${build}-ea"
     },
     "autoupdate": {
         "architecture": {

@@ -1,7 +1,7 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 12 (Early Access)",
     "homepage": "http://jdk.java.net/12",
-    "version": "12-14",
+    "version": "12-14-ea",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
@@ -16,7 +16,7 @@
     },
     "checkver": {
         "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.(?<zip>tar.gz|zip)",
-        "replace": "${major}-${build}"
+        "replace": "${major}-${build}-ea"
     },
     "autoupdate": {
         "architecture": {
