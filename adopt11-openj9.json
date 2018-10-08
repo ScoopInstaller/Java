@@ -18,7 +18,7 @@
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<jvm>_openj9-(?<jvmver>[\\d.]+))).*?)(?<zip>.zip)?.sha256.txt",
-        "replace": "${major}-${build}_${jvmver}"
+        "replace": "${major}-${build}_0.9.0"
     },
     "autoupdate": {
         "architecture": {
@@ -27,7 +27,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
+            "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
         "extract_dir": "jdk-$matchMajor+$matchBuild"

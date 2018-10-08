@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%2B28/OpenJDK11-jdk_x64_windows_hotspot_11_28.zip",
-            "hash": "311466765ef02a0a3450571417a63f72f515f00c6cd66cee7fcf630c03374e47"
+            "hash": "11a31d269c6527e9ba2e97cd502869fc130ef206ca5f55cccc0fa825401eb44d"
         }
     },
     "extract_dir": "jdk-11+28",
@@ -27,7 +27,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
+            "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
         "extract_dir": "jdk-$matchMajor+$matchBuild"
