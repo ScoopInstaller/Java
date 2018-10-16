@@ -1,16 +1,16 @@
 {
     "description": "Oracle JDK 8 (PSU)",
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u181-b13",
+    "version": "8u192-b12",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-windows-x64.exe#/dl.7z",
-            "hash": "6d1e254081d56fa460505d5b0f10ce1e33426c44dfbcab838c2be620f35997a4"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/jdk-8u192-windows-x64.exe#/dl.7z",
+            "hash": "588d0882646eaf43b6ac9e40e7de4fb6045632ce49158521980cc632d42032cd"
         },
         "32bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-windows-i586.exe#/dl.7z",
-            "hash": "37b090d99104dab7aeae582dbad07731d5550aeb8ebd5eaf0b131e559dd2e30b"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/jdk-8u192-windows-i586.exe#/dl.7z",
+            "hash": "d4d5bcfd8e3318de9d22fd7f6f1f71df44ce4084e7ff31407492889ef600f1a2"
         }
     },
     "cookie": {
