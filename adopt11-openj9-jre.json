@@ -1,0 +1,35 @@
+{
+    "description": "AdoptOpenJDK JRE with Eclipse OpenJ9 JVM",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "11-28_0.10.0",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%2B28/OpenJDK11-jre_x64_windows_openj9_11_28.zip",
+            "hash": "4ad2454b4485300d8c37b1a7bf44ec11a4fc5b4d51e92dfbbead94d8d80bf47a"
+        }
+    },
+    "extract_dir": "jdk-11+28-jre",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jre",
+        "jp": "$.binaries[0].checksum_link",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<jvm>_openj9-(?<jvmver>[\\d.]+))?).*?)(?<zip>.zip)?.sha256.txt",
+        "replace": "${major}-${build}_0.10.0"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/$matchUrl$matchZip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        },
+        "extract_dir": "jdk-$matchMajor+$matchBuild-jre"
+    }
+}
