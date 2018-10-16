@@ -1,7 +1,7 @@
 {
     "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11-28_0.9.0",
+    "version": "11-28_0.10.0",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
@@ -18,7 +18,7 @@
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<jvm>_openj9-(?<jvmver>[\\d.]+))?).*?)(?<zip>.zip)?.sha256.txt",
-        "replace": "${major}-${build}_0.9.0"
+        "replace": "${major}-${build}_0.10.0"
     },
     "autoupdate": {
         "architecture": {
