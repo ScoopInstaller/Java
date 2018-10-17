@@ -1,13 +1,13 @@
 {
     "description": "Zulu 7 is certified build of OpenJDK 7",
     "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
-    "version": "7.23.0.1",
+    "version": "7.24.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu7.23.0.1-jdk7.0.181-win_x64.zip",
-            "hash": "md5:285044f18972b11ffa6b65bf719a5c5b",
-            "extract_dir": "zulu7.23.0.1-jdk7.0.181-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu7.24.0.1-jdk7.0.191-win_x64.zip",
+            "hash": "md5:c7346b0b77f9e3c3e290913814b4ac5a",
+            "extract_dir": "zulu7.24.0.1-jdk7.0.191-win_x64"
         }
     },
     "env_add_path": "bin",
