@@ -1,7 +1,7 @@
 {
     "description": "AdoptOpenJDK 8 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u192-b12_",
+    "version": "8u192-b12",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
@@ -18,7 +18,7 @@
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:_openj9-(?<jvmver>[\\d.]+))?).*?)(?<zip>.zip)?.sha256.txt",
-        "replace": "${major}${update}-${build}_${jvmver}"
+        "replace": "${major}${update}-${build}"
     },
     "autoupdate": {
         "architecture": {
