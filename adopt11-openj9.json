@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11-28",
+    "version": "11.0.1-13",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%2B28/OpenJDK11-jdk_x64_windows_openj9_11_28.zip",
-            "hash": "5d487cd38fbf3b66687b0d28c428db1b0754d58bafad32c95399a6d754c681eb"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.1%2B13/OpenJDK11-jdk_x64_windows_openj9_11.0.1_13.zip",
+            "hash": "d104c7337ff3cd03fb37d048860192a3de5cbab4b158a681bc20cc521b6da954"
         }
     },
-    "extract_dir": "jdk-11+28",
+    "extract_dir": "jdk-11.0.1+13",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
