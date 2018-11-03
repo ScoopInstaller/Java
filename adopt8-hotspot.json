@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u192-b12/OpenJDK8U-jdk_x64_windows_hotspot_8u192b12.zip",
-            "hash": "586f3360ebe96c81cc7e8984c1fb34461f3c64dea57e5fbb78c862be0b0fd670"
+            "hash": "305e2346534cd71dedbacddd2956bf5001bc8c5a79503b0f23c93a1c52031361"
         }
     },
     "extract_dir": "jdk8u192-b12",
