@@ -1,0 +1,35 @@
+{
+    "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "8u192-b13",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u192-b13-0.11.0/OpenJDK8U-jre_x64_windows_openj9_8u192b13-0.11.0.zip",
+            "hash": "be21efdb40f46a1035146ff455007643163e4e87ca148fc082d008d023dc62d2"
+        }
+    },
+    "extract_dir": "jdk8u192-b13-0.11.0-jre",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jre",
+        "jp": "$.binaries[0].checksum_link",
+        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:-(?<jvmver>[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
+        "replace": "${major}${update}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        },
+        "extract_dir": "jdk$matchMajor$matchUpdate-$matchBuild-$matchJvmver-jre"
+    }
+}
