@@ -1,18 +1,13 @@
 {
     "description": "Zulu 8 is certified build of OpenJDK 8",
     "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
-    "version": "8.31.0.1",
+    "version": "8.33.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.31.0.1-jdk8.0.181-win_x64.zip",
-            "hash": "md5:2de0418ea2d66a3c6a150a7f4ac4db44",
-            "extract_dir": "zulu8.31.0.1-jdk8.0.181-win_x64"
-        },
-        "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.31.0.1-jdk8.0.181-win_i686.zip",
-            "hash": "md5:fd968d4ed2b8bf25a43fbb9d05a0664a",
-            "extract_dir": "zulu8.31.0.1-jdk8.0.181-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.33.0.1-jdk8.0.192-win_x64.zip",
+            "hash": "md5:2a8ff91f97fda23045c9d0882c6993b6",
+            "extract_dir": "zulu8.33.0.1-jdk8.0.192-win_x64"
         }
     },
     "env_add_path": "bin",
@@ -28,10 +23,6 @@
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
                 "extract_dir": "$matchName_x64"
-            },
-            "32bit": {
-                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
-                "extract_dir": "$matchName_i686"
             }
         },
         "hash": {
