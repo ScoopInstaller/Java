@@ -9,7 +9,7 @@
             "hash": "7db6cd9fdc3ac6e25d7e7cea83dfb8c327546c5a5e3058c678b409e988d65cbf"
         }
     },
-    "extract_dir": "jdk8u192-b12--jre",
+    "extract_dir": "jdk8u192-b12-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -17,8 +17,8 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:-(?<jvmver>[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
-        "replace": "${major}${update}-${build}"
+        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
+        "replace": "${major}${update}-${build}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
@@ -30,6 +30,6 @@
             "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk$matchMajor$matchUpdate-$matchBuild-$matchJvmver-jre"
+        "extract_dir": "jdk$matchMajor$matchUpdate-$matchBuild$matchJvmver-jre"
     }
 }

@@ -1,7 +1,7 @@
 {
     "description": "AdoptOpenJDK 10 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "10.0.2-13",
+    "version": "10.0.2-13-0.9.0",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
@@ -17,8 +17,8 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk10?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<jvm>_openj9-(?<jvmver>[\\d.]+))?).*?)(?<zip>.zip)?.sha256.txt",
-        "replace": "${major}-${build}"
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
+        "replace": "${major}-${build}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
