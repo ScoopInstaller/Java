@@ -35,16 +35,16 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//(?<url>download.java.net/java/early_access/jdk(?<major>[\\d]+)/(?<build>[\\db]+)/BCL)/jre-(?<version>[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
+        "re": "//download.java.net/(?<url>java/early_access/jdk(?<major>[\\d]+)/(?<build>[\\db]+)/BCL)/jre-(?<version>[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
         "replace": "${version}-${build}-ea"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.7z"
+                "url": "https://download.java.net/$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.7z"
+                "url": "https://download.java.net/$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.7z"
             }
         }
     },

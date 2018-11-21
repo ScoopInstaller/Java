@@ -16,13 +16,13 @@
     },
     "checkver": {
         "url": "https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html",
-        "re": "//(?<url>(?:.*?).cloudfront.net/Amazon-Corretto(?<preview>-preview?)-(?<major>[\\d]+)u(?<build>[\\d]+).msi)",
+        "re": "//(?<url>.*?).cloudfront.net/(?<file>Amazon-Corretto(?<preview>-preview?)-(?<major>[\\d]+)u(?<build>[\\d]+).msi)",
         "replace": "${major}u${build}${preview}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchUrl"
+                "url": "https://d3pxv6yz143wms.cloudfront.net/$matchFile"
             }
         },
         "hash": {
