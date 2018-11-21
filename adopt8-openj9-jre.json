@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u192-b12-0.11.0",
+    "version": "8u192-b99",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u192-b12_openj9-0.11.0/OpenJDK8U-jre_x64_windows_openj9_8u192b12_openj9-0.11.0.zip",
-            "hash": "81af9b3290dbaa9e5e494e5ab9ca3ccc70da7df4d3127ac62d9b01598f64d02e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u192-b99/OpenJDK8U-jre_x64_windows_openj9_sxaj9ignore-0.11.0_8u192b99.zip",
+            "hash": "caa316c106f233120158c80bbde26e039bc0339f2c0fdc14d78b4f9e667c3f58"
         }
     },
-    "extract_dir": "jdk8u192-b12-0.11.0-jre",
+    "extract_dir": "jdk8u192-b99-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
