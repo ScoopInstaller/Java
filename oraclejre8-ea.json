@@ -1,16 +1,16 @@
 {
     "description": "Oracle JRE 8 (Early Access)",
     "homepage": "http://jdk.java.net/8",
-    "version": "8u192-b04",
+    "version": "8u202-b03-ea",
     "license": "http://www.oracle.com/technetwork/licenses/ea-license-noexhibits-1938914.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/jdk8u192/archive/b04/binaries/jre-8u192-ea-bin-b04-windows-x64-01_aug_2018.exe#/dl.7z",
-            "hash": "9bdc9c0452699831bc2c19712359a6894b474f95a6fff194f53bcb1db9800dc0"
+            "url": "https://download.java.net/java/early_access/jdk8/b03/BCL/jre-8u202-ea-bin-b03-windows-x64-07_nov_2018.exe#/dl.7z",
+            "hash": "14fad91c257412eca5935c834f79ca104d46592b92ecc71fcc8f2ffe0f6cf222"
         },
         "32bit": {
-            "url": "https://download.java.net/java/jdk8u192/archive/b04/binaries/jre-8u192-ea-bin-b04-windows-i586-01_aug_2018.exe#/dl.7z",
-            "hash": "e72d6a63308824da82a6a39105a5f6d2105d9ddfad0ba6e16ca2fd47b7cc49e4"
+            "url": "https://download.java.net/java/early_access/jdk8/b03/BCL/jre-8u202-ea-bin-b03-windows-i586-07_nov_2018.exe#/dl.7z",
+            "hash": "fa9048b35485179c6e51137d077a67cb1457666516d276e5d1837584d9717d17"
         }
     },
     "extract_to": "tmp",
@@ -35,16 +35,16 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//download.java.net/java/jdk(?<version>8u(?<update>[\\d]+))/archive/(?<build>[\\db]+)/binaries/jre-(?:[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
-        "replace": "${version}-${build}"
+        "re": "//(?<url>download.java.net/java/early_access/jdk(?<major>[\\d]+)/(?<build>[\\db]+)/BCL)/jre-(?<version>[\\du]+)-ea-bin-(?:[\\db]+)-windows-x64-(?<date>[\\da-z_]+).exe",
+        "replace": "${version}-${build}-ea"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jre-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.7z"
+                "url": "https://$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-x64-$matchDate.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://download.java.net/java/jdk$matchVersion/archive/$matchBuild/binaries/jre-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.7z"
+                "url": "https://$matchUrl/jre-$matchVersion-ea-bin-$matchBuild-windows-i586-$matchDate.exe#/dl.7z"
             }
         }
     },
