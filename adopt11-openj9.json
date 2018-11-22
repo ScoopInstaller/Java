@@ -5,8 +5,8 @@
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.1%2B13/OpenJDK11-jdk_x64_windows_openj9_11.0.1_13.zip",
-            "hash": "d104c7337ff3cd03fb37d048860192a3de5cbab4b158a681bc20cc521b6da954"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.1%2B13/OpenJDK11U-jdk_x64_windows_openj9_jdk-11.0.1_13_openj9-0.11.0_11.0.1_13.zip",
+            "hash": "ef7c411c3b3e06f93874b15b598c36020b192a1a3096c5d9d5eae7799f8bcd49"
         }
     },
     "extract_dir": "jdk-11.0.1+13",
@@ -16,8 +16,8 @@
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
-        "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
+        "jp": "$.binaries[0].binary_link",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
         "replace": "${major}-${build}${jvmver}"
     },
     "autoupdate": {

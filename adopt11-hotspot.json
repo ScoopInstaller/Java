@@ -16,8 +16,8 @@
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jdk",
-        "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)).*?)(?<zip>.zip)?.sha256.txt",
+        "jp": "$.binaries[0].binary_link",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)).*?).zip",
         "replace": "${major}-${build}"
     },
     "autoupdate": {

@@ -16,8 +16,8 @@
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jre",
-        "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)).*?)(?<zip>.zip)?.sha256.txt",
+        "jp": "$.binaries[0].binary_link",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)).*?).zip",
         "replace": "${major}${update}-${build}"
     },
     "autoupdate": {
@@ -27,7 +27,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
+            "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
         "extract_dir": "$matchTag-jre"
