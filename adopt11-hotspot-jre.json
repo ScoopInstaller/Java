@@ -1,5 +1,5 @@
 {
-    "description": "AdoptOpenJDK JRE with Oracle HotSpot JVM",
+    "description": "AdoptOpenJDK 11 JRE with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
     "version": "11-28",
     "license": "GPL-2.0-with-classpath-exception",
