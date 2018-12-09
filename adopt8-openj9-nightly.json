@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 8 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201812081446",
+    "version": "201812090635",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2018-12-08-14-46/OpenJDK8U-jdk_x64_windows_openj9_2018-12-08-14-46.zip",
-            "hash": "7e892bd9bc7b9df09415e05e81e1cd2fa43e5520c94af6d23997324bd2b3d726"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2018-12-09-06-35/OpenJDK8U-jdk_x64_windows_openj9_2018-12-09-06-35.zip",
+            "hash": "b60129aabdc5d43709fcbf073f12e7df49033bc7ff70a5f58e2cbee5941a629c"
         }
     },
     "extract_to": "tmp",
