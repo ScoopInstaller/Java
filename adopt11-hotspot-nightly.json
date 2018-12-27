@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 11 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201812251416",
+    "version": "201812270053",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2018-12-25-14-16/OpenJDK11U-jdk_x64_windows_hotspot_2018-12-25-14-16.zip",
-            "hash": "465c93f0a6111f90bf265887933fbff98f112ccca15ee355e229b733b92d426d"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2018-12-27-00-53/OpenJDK11U-jdk_x64_windows_hotspot_2018-12-27-00-53.zip",
+            "hash": "d5472f4ab91d872ea9c3cfb599544360c84f6a41209820bdf3d5671fdfbcec26"
         }
     },
     "extract_to": "tmp",
