@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 8 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201812281443",
+    "version": "201812300900",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2018-12-28-14-43/OpenJDK8U-jdk_x64_windows_hotspot_2018-12-28-14-43.zip",
-            "hash": "bfed31e7169b19bf2455bc8a49b2252eef5e9837f9eade7300120a92f04e5363"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2018-12-30-09-00/OpenJDK8U-jdk_x64_windows_hotspot_2018-12-30-09-00.zip",
+            "hash": "75474815452148e4f38be30ca1ae95f044696bf29162a62df5e42c1a9181e18c"
         }
     },
     "extract_to": "tmp",
