@@ -1,18 +1,18 @@
 {
     "description": "Oracle Server-JRE 8 (PSU)",
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u192-b12",
+    "version": "8u202-b08",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/server-jre-8u192-windows-x64.tar.gz",
-            "hash": "2a5d6dec7b6c8c03af97c86e8c96188706eecae3aee71ee5259c0895b3e860d0"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/server-jre-8u202-windows-x64.tar.gz",
+            "hash": "7c46e565a353f4b318760aa7082a435458f9bba7e5b89d9e3fd6c190242093d9"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk1.8.0_192",
+    "extract_dir": "jdk1.8.0_202",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
