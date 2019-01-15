@@ -1,22 +1,22 @@
 {
     "description": "Oracle JRE 8 (PSU)",
     "homepage": "http://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u192-b12",
+    "version": "8u202-b08",
     "license": "http://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/jre-8u192-windows-x64.tar.gz",
-            "hash": "59f08889a665ac1ead0feea2abf9510f8b577211ece7fbce6f8443f1860dd68a"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jre-8u202-windows-x64.tar.gz",
+            "hash": "4f4655b95882147dba2fdccc36d345bb93185aa07aa066f0f8ce1a2766d30dc2"
         },
         "32bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/jre-8u192-windows-i586.tar.gz",
-            "hash": "0bf56f2e53d8613be3cc4e15073a47da9667647aa6b77b873ac34b1c1dd2e72f"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jre-8u202-windows-i586.tar.gz",
+            "hash": "076069219d591f3bc20483d786ca0af36811b2e5d1e7fbc5093608cf6925bf35"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jre1.8.0_192",
+    "extract_dir": "jre1.8.0_202",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
