@@ -1,12 +1,12 @@
 {
     "description": "Oracle JDK 11",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "11.0.2-7",
+    "version": "11.0.2-9",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/11.0.2+7/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_windows-x64_bin.zip",
-            "hash": "e5306bf87dfeb070c7bd0aa4623f10d196e0667fb1cc818202d33fcee77bce4c"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/11.0.2+9/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_windows-x64_bin.zip",
+            "hash": "f38976b64633920ed27821fbd80ca924ce55d51b88f4de1933cacc8beecc5a60"
         }
     },
     "cookie": {
