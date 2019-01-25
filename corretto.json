@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchUrl.cloudfront.net/$matchFile-x64-jdk.zip"
+                "url": "https://d1f2yzg3dx5xke.cloudfront.net/$matchFile-x64-jdk.zip"
             },
             "32bit": {
-                "url": "https://$matchUrl.cloudfront.net/$matchFile-x86-jdk.zip"
+                "url": "https://d1f2yzg3dx5xke.cloudfront.net/$matchFile-x86-jdk.zip"
             }
         },
         "hash": {
