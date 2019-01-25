@@ -1,13 +1,13 @@
 {
     "description": "OpenJDK binaries built using source code from the CentOS project",
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "11.0.1.13-1",
+    "version": "10.0.2-1.b13",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/11.0.1-1/java-11-openjdk-11.0.1.13-1.ojdkbuild.windows.x86_64.zip",
-            "hash": "a02cc84ba0fbb0a4d8acc48b5d2e6a9e5b447fee6d005096e2010f333db6af85",
-            "extract_dir": "java-11-openjdk-11.0.1.13-1.ojdkbuild.windows.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/10.0.2-1/java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86_64.zip",
+            "hash": "39801db76f04b9f1491b0d0a64258535f14e319a3cd08d3e161b18a6af7a842d",
+            "extract_dir": "java-10-openjdk-10.0.2-1.b13.ojdkbuild.windows.x86_64"
         }
     },
     "env_add_path": "bin",
