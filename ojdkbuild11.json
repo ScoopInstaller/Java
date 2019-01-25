@@ -16,7 +16,7 @@
     },
     "checkver": {
         "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
-        "re": "download/(?<version>11[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+).ojdkbuild.windows).x86_64.zip"
+        "re": "download/(?<version>11[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+)\\..*).x86_64.zip"
     },
     "autoupdate": {
         "architecture": {
