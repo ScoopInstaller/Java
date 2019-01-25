@@ -1,13 +1,13 @@
 {
     "description": "OpenJDK 11 binaries built using source code from the CentOS project",
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "11.0.1.13-1",
+    "version": "11.0.2.7-1",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/11.0.1-1/java-11-openjdk-11.0.1.13-1.ojdkbuild.windows.x86_64.zip",
-            "hash": "a02cc84ba0fbb0a4d8acc48b5d2e6a9e5b447fee6d005096e2010f333db6af85",
-            "extract_dir": "java-11-openjdk-11.0.1.13-1.ojdkbuild.windows.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/11.0.2-1/java-11-openjdk-11.0.2.7-1.windows.ojdkbuild.x86_64.zip",
+            "hash": "7f34bb39c19a82d453a0dc2182bee6b16182e9475a4b22d4143172b26ea68e0d",
+            "extract_dir": "java-11-openjdk-11.0.2.7-1.windows.ojdkbuild.x86_64"
         }
     },
     "env_add_path": "bin",
@@ -16,7 +16,7 @@
     },
     "checkver": {
         "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
-        "re": "download/(?<version>11[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+)\\..*).x86_64.zip"
+        "re": "download/(?<version>[\\d]{2}[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+)(.ojdkbuild|.windows){2}).x86_64.zip"
     },
     "autoupdate": {
         "architecture": {
