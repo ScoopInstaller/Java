@@ -1,18 +1,18 @@
 {
     "description": "OpenJDK 8 binaries built using source code from the CentOS project",
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "1.8.0.191-1.b12",
+    "version": "1.8.0.201-1.b09",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.191-1/java-1.8.0-openjdk-1.8.0.191-1.b12.ojdkbuild.windows.x86_64.zip",
-            "hash": "d52167198912e239bba19e059870c5742558096ad7b82fe73d51461361b149bd",
-            "extract_dir": "java-1.8.0-openjdk-1.8.0.191-1.b12.ojdkbuild.windows.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.201-1/java-1.8.0-openjdk-1.8.0.201-1.b09.ojdkbuild.windows.x86_64.zip",
+            "hash": "d74066dc7d6e017388b1eeeb4f4cc0af20337aa6eea8e3a818017ae8d15b988a",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.201-1.b09.ojdkbuild.windows.x86_64"
         },
         "32bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.191-1/java-1.8.0-openjdk-1.8.0.191-1.b12.ojdkbuild.windows.x86.zip",
-            "hash": "b620ad08bcb4b293f8e24dc067b1a3c26f91ea948779634efc29b748f03052b7",
-            "extract_dir": "java-1.8.0-openjdk-1.8.0.191-1.b12.ojdkbuild.windows.x86"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.201-1/java-1.8.0-openjdk-1.8.0.201-1.b09.ojdkbuild.windows.x86.zip",
+            "hash": "2501a52ee871338bdd2408ae9555912e9113ee11fcdb05c05da8219be2a098dc",
+            "extract_dir": "java-1.8.0-openjdk-1.8.0.201-1.b09.ojdkbuild.windows.x86"
         }
     },
     "env_add_path": "bin",
