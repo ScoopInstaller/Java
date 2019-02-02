@@ -5,7 +5,7 @@
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://d1f2yzg3dx5xke.cloudfront.net/amazon-corretto-8.202.08.2-windows-x64-jdk.zip",
+            "url": "https://d2znqt9b1bc64u.cloudfront.net/amazon-corretto-8.202.08.2-windows-x64-jdk.zip",
             "hash": "md5:b91c14d1ae32149aaccbeb3fb841a696"
         },
         "32bit": {
