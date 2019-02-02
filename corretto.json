@@ -9,7 +9,7 @@
             "hash": "md5:b91c14d1ae32149aaccbeb3fb841a696"
         },
         "32bit": {
-            "url": "https://d1f2yzg3dx5xke.cloudfront.net/amazon-corretto-8.202.08.2-windows-x86-jdk.zip",
+            "url": "https://d2znqt9b1bc64u.cloudfront.net/amazon-corretto-8.202.08.2-windows-x86-jdk.zip",
             "hash": "md5:ddeb128a1c149853ba03ad8f46acb8e6"
         }
     },
@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://d1f2yzg3dx5xke.cloudfront.net/$matchFile-x64-jdk.zip"
+                "url": "https://d2znqt9b1bc64u.cloudfront.net/$matchFile-x64-jdk.zip"
             },
             "32bit": {
-                "url": "https://d1f2yzg3dx5xke.cloudfront.net/$matchFile-x86-jdk.zip"
+                "url": "https://d2znqt9b1bc64u.cloudfront.net/$matchFile-x86-jdk.zip"
             }
         },
         "hash": {
