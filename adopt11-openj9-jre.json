@@ -9,7 +9,7 @@
             "hash": "81bc849b00bb536d860d5ff1d4fd3c6247dbf672ef27e2ffa37144ab5bd8b734"
         }
     },
-    "extract_dir": "jdk-11.0.2+9-jre",
+    "extract_dir": "jdk-11.0.2+9_openj9-0.12.1-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
         "replace": "${major}-${build}${jvmver}"
     },
     "autoupdate": {
@@ -30,6 +30,6 @@
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild-jre"
+        "extract_dir": "jdk-$matchMajor+$matchBuild$matchOj$matchJvmver-jre"
     }
 }
