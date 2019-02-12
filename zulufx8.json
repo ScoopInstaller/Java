@@ -1,13 +1,13 @@
 {
     "description": "Open Source Builds of Zulu 8 With OpenJFX",
     "homepage": "https://www.azul.com/downloads/zulu/zulufx/",
-    "version": "8.33.0.1",
+    "version": "8.36.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.33.0.1-ca-fx-jdk8.0.192-win_x64.zip",
-            "hash": "md5:2736421ad36906cd104b554a3544907d",
-            "extract_dir": "zulu8.33.0.1-ca-fx-jdk8.0.192-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.36.0.1-ca-fx-jdk8.0.202-win_x64.zip",
+            "hash": "md5:3bdf04cd229d5854377b27b0e027b054",
+            "extract_dir": "zulu8.36.0.1-ca-fx-jdk8.0.202-win_x64"
         }
     },
     "env_add_path": "bin",
