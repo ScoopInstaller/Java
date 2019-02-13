@@ -2,7 +2,7 @@
     "description": "Open Source Builds of Zulu 8 With OpenJFX",
     "homepage": "https://www.azul.com/downloads/zulu/zulufx/",
     "version": "8.36.0.1",
-    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu8.36.0.1-ca-fx-jdk8.0.202-win_x64.zip",
