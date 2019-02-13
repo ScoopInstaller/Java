@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu11.29.3-ca-fx-jdk11.0.2-win_x64.zip",
-            "hash": "md5:3bdf04cd229d5854377b27b0e027b054",
+            "hash": "md5:da2aa10fe575f75a6713b915cba7f504",
             "extract_dir": "zulu11.29.3-ca-fx-jdk11.0.2-win_x64"
         }
     },
@@ -27,7 +27,7 @@
         },
         "hash": {
             "url": "https://www.azul.com/downloads/zulu/zulufx/",
-            "find": "(?s)([a-fA-F0-9]{32})</td>(?:.*?)http(?:[s]?)://cdn.azul.com/zulu/bin/$basename"
+            "find": "($md5)</td><[\\w. =\":;]*><[\\w. =\":/]*$basename"
         }
     }
 }

@@ -27,7 +27,7 @@
         },
         "hash": {
             "url": "https://www.azul.com/downloads/zulu/zulufx/",
-            "find": "(?s)([a-fA-F0-9]{32})</td>(?:.*?)http(?:[s]?)://cdn.azul.com/zulu/bin/$basename"
+            "find": "($md5)</td><[\\w. =\":;]*><[\\w. =\":/]*$basename"
         }
     }
 }
