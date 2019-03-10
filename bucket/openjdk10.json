@@ -13,20 +13,5 @@
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
-    },
-    "checkver": {
-        "re": "https://download.java.net/java/GA/jdk10/(?<version>[\\d.]+)/(?<random>[a-fA-F0-9]{32})/(?<build>[\\d]+)/",
-        "replace": "${version}-${build}"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.java.net/java/GA/jdk10/$matchVersion/$matchRandom/$matchBuild/openjdk-$matchVersion_windows-x64_bin.tar.gz"
-            }
-        },
-        "extract_dir": "jdk-$matchVersion",
-        "hash": {
-            "url": "$url.sha256"
-        }
     }
 }
