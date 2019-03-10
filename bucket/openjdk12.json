@@ -1,12 +1,12 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK 12 (Early Access)",
+    "description": "Official production-ready open-source builds of OpenJDK 12",
     "homepage": "http://jdk.java.net/12",
-    "version": "12-30-ea",
+    "version": "12-33",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk12/30/GPL/openjdk-12-ea+30_windows-x64_bin.zip",
-            "hash": "c2aa69aed6fa14de46b2f0b21bc9ad0157220a3e8e13fbf47b9c9bde2aff5121"
+            "url": "https://download.java.net/java/GA/jdk12/33/GPL/openjdk-12_windows-x64_bin.zip",
+            "hash": "35a8d018f420fb05fe7c2aa9933122896ca50bd23dbd373e90d8e2f3897c4e92"
         }
     },
     "extract_dir": "jdk-12",
@@ -15,18 +15,17 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.(?<zip>tar.gz|zip)",
-        "replace": "${major}-${build}-ea"
+        "re": "/(?<type>early_access|GA)/jdk(?<major>[\\d]+)/(?<build>[\\d]+)/GPL/openjdk-(?:[\\d]+)(?<ea>(-ea)?)(?<eabuild>[+\\d]*)_windows-x64_bin.(?<zip>tar.gz|zip)",
+        "replace": "${major}-${build}${ea}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.$matchZip"
+                "url": "https://download.java.net/java/$matchType/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor$matchEa$matchEabuild_windows-x64_bin.$matchZip"
             }
         },
         "hash": {
             "url": "$url.sha256"
         }
-    },
-    "notes": "This is an Early-access (EA) release."
+    }
 }

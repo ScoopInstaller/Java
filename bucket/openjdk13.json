@@ -1,5 +1,5 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK 13 (Early Access)",
+    "description": "Official production-ready open-source builds of OpenJDK 13",
     "homepage": "http://jdk.java.net/13",
     "version": "13-11-ea",
     "license": "GPL-2.0-with-classpath-exception",
@@ -15,18 +15,17 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "openjdk-(?<major>[u\\d]+)-ea\\+(?<build>[b\\d]+)_windows-x64_bin.(?<zip>tar.gz|zip)",
-        "replace": "${major}-${build}-ea"
+        "re": "/(?<type>early_access|GA)/jdk(?<major>[\\d]+)/(?<build>[\\d]+)/GPL/openjdk-(?:[\\d]+)(?<ea>(-ea)?)(?<eabuild>[+\\d]*)_windows-x64_bin.(?<zip>tar.gz|zip)",
+        "replace": "${major}-${build}${ea}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/early_access/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor-ea+$matchBuild_windows-x64_bin.$matchZip"
+                "url": "https://download.java.net/java/$matchType/jdk$matchMajor/$matchBuild/GPL/openjdk-$matchMajor$matchEa$matchEabuild_windows-x64_bin.$matchZip"
             }
         },
         "hash": {
             "url": "$url.sha256"
         }
-    },
-    "notes": "This is an Early-access (EA) release."
+    }
 }
