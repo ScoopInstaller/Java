@@ -1,0 +1,46 @@
+{
+    "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK)",
+    "homepage": "https://aws.amazon.com/corretto/",
+    "version": "8.202.08.2",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://d2znqt9b1bc64u.cloudfront.net/amazon-corretto-8.202.08.2-windows-x64-jdk.zip",
+            "hash": "md5:b91c14d1ae32149aaccbeb3fb841a696"
+        },
+        "32bit": {
+            "url": "https://d2znqt9b1bc64u.cloudfront.net/amazon-corretto-8.202.08.2-windows-x86-jdk.zip",
+            "hash": "md5:ddeb128a1c149853ba03ad8f46acb8e6"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
+            "rm -r \"$dir\\tmp\""
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html",
+        "re": "//(?<url>.*?).cloudfront.net/(?<file>amazon-corretto-([\\d.]+)-windows)-x64-jdk.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://d2znqt9b1bc64u.cloudfront.net/$matchFile-x64-jdk.zip"
+            },
+            "32bit": {
+                "url": "https://d2znqt9b1bc64u.cloudfront.net/$matchFile-x86-jdk.zip"
+            }
+        },
+        "hash": {
+            "url": "https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html",
+            "find": "(?s)$basename</a>.*?([a-fA-F0-9]{32})"
+        },
+        "extract_dir": "Amazon Corretto\\jdk1.$matchMajor.0_$matchBuild"
+    }
+}
