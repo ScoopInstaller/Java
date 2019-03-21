@@ -1,24 +1,24 @@
 {
     "description": "Oracle JDK 11",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "11.0.2-9",
+    "version": "12-33",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/11.0.2+9/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_windows-x64_bin.zip",
-            "hash": "f38976b64633920ed27821fbd80ca924ce55d51b88f4de1933cacc8beecc5a60"
+            "url": "http://download.oracle.com/otn-pub/java/jdk/12+33/312335d836a34c7c8bba9d963e26dc23/jdk-12_windows-x64_bin.zip",
+            "hash": "e79abe2b5620aa01f051c9718ba6806f8882883eef8569e87a44fc2feed36d40"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk-11.0.2",
+    "extract_dir": "jdk-12",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html",
+        "url": "https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html",
         "re": "otn-pub/java/jdk/(?<path>(?<major>[\\d.]+)\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jdk-(?:.*?)_windows-x64_bin.zip)",
         "replace": "${major}-${build}"
     },
@@ -29,7 +29,7 @@
             }
         },
         "hash": {
-            "url": "https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html",
+            "url": "https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html",
             "find": "$basename.*([a-fA-F0-9]{64})\"};"
         },
         "extract_dir": "jdk-$matchMajor"
