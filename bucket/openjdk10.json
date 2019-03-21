@@ -1,6 +1,6 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 10",
-    "homepage": "http://jdk.java.net/10",
+    "homepage": "https://jdk.java.net/10",
     "version": "10.0.2-13",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {

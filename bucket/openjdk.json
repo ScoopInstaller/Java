@@ -1,6 +1,6 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 11",
-    "homepage": "http://jdk.java.net/11",
+    "homepage": "https://jdk.java.net/11",
     "version": "11.0.2-9",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {

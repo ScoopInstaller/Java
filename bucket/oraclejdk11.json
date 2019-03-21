@@ -5,7 +5,7 @@
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
     "architecture": {
         "64bit": {
-            "url": "http://download.oracle.com/otn-pub/java/jdk/11.0.2+9/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_windows-x64_bin.zip",
+            "url": "https://download.oracle.com/otn-pub/java/jdk/11.0.2+9/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_windows-x64_bin.zip",
             "hash": "f38976b64633920ed27821fbd80ca924ce55d51b88f4de1933cacc8beecc5a60"
         }
     },
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://download.oracle.com/otn-pub/java/jdk/$matchPath"
+                "url": "https://download.oracle.com/otn-pub/java/jdk/$matchPath"
             }
         },
         "hash": {

@@ -1,6 +1,6 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 12",
-    "homepage": "http://jdk.java.net/12",
+    "homepage": "https://jdk.java.net/12",
     "version": "12-33",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {

@@ -1,6 +1,6 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 13",
-    "homepage": "http://jdk.java.net/13",
+    "homepage": "https://jdk.java.net/13",
     "version": "13-13-ea",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
