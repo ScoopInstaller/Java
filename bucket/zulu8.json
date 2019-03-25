@@ -1,13 +1,13 @@
 {
     "description": "Zulu 8 is certified build of OpenJDK 8",
     "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
-    "version": "8.33.0.1",
+    "version": "8.36.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.33.0.1-jdk8.0.192-win_x64.zip",
-            "hash": "md5:2a8ff91f97fda23045c9d0882c6993b6",
-            "extract_dir": "zulu8.33.0.1-jdk8.0.192-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.36.0.1-ca-jdk8.0.202-win_x64.zip",
+            "hash": "md5:8cc25a06a9d3c582d163a9d9c6515dac",
+            "extract_dir": "zulu8.36.0.1-ca-jdk8.0.202-win_x64"
         }
     },
     "env_add_path": "bin",
@@ -15,7 +15,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu8(?<major>[\\d.]+)-jdk(?<openver>[\\d.]+)-win)_x64.zip",
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu8(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip",
         "replace": "8${major}"
     },
     "autoupdate": {
