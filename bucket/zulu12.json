@@ -1,0 +1,33 @@
+{
+    "description": "Zulu 12 is a build of OpenJDK 12",
+    "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
+    "version": "12.1.3",
+    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu12.1.3-ca-jdk12-win_x64.zip",
+            "hash": "md5:7cf2976b9c242dee19c893d805ae366f",
+            "extract_dir": "zulu12.1.3-ca-jdk12-win_x64"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu12(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip",
+        "replace": "12${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
+            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32}).*?<a href=\"http(?:[s]?)://cdn.azul.com/zulu/bin/$basename\" class=\"r-download\""
+        }
+    }
+}
