@@ -6,8 +6,13 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu12.1.3-ca-jdk12-win_x64.zip",
-            "hash": "md5:7cf2976b9c242dee19c893d805ae366f",
+            "hash": "md5:9befe203ca29773ec67661e23ac915cf",
             "extract_dir": "zulu12.1.3-ca-jdk12-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu12.1.3-ca-jdk12-win_i686.zip",
+            "hash": "md5:7cf2976b9c242dee19c893d805ae366f",
+            "extract_dir": "zulu12.1.3-ca-jdk12-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -23,11 +28,15 @@
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
                 "extract_dir": "$matchName_x64"
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686"
             }
         },
         "hash": {
             "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
-            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32}).*?<a href=\"http(?:[s]?)://cdn.azul.com/zulu/bin/$basename\" class=\"r-download\""
+            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
         }
     }
 }
