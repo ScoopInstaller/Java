@@ -1,0 +1,40 @@
+{
+    "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM (Nightly builds)",
+    "homepage": "https://adoptopenjdk.net",
+    "version": "201903251817",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-03-25-18-17/OpenJDK12U-jdk_x64_windows_openj9_2019-03-25-18-17.zip",
+            "hash": "761ac16002ca8798fe099c29509eed14f6b36299af2439ccde0d183d6c68eda3"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
+            "rm -r \"$dir\\tmp\""
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk12?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
+        "jp": "$.binaries[0].binary_link",
+        "re": "https://github.com/(?<url>.*?(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?).zip",
+        "replace": "${year}${month}${day}${hour}${minute}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/$matchUrl.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256.txt",
+            "find": "^([a-fA-F0-9]+)\\s"
+        }
+    }
+}
