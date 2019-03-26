@@ -1,5 +1,5 @@
 {
-    "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM",
+    "description": "AdoptOpenJDK 12 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
     "version": "12-33-0.13.0",
     "license": "GPL-2.0-with-classpath-exception",
