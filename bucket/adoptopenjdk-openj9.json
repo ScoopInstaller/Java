@@ -1,21 +1,21 @@
 {
     "description": "AdoptOpenJDK with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11.0.2-9-0.12.1",
+    "version": "12-33-0.13.0",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9_openj9-0.12.1/OpenJDK11U-jdk_x64_windows_openj9_11.0.2_9_openj9-0.12.1_openj9-0.12.1.zip",
-            "hash": "61931118fee85afec919941ec32af19b1799df51d3573b02c60f9da53d14ef04"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12%2B33_openj9-0.13.0/OpenJDK12U-jdk_x64_windows_openj9_12_33_openj9-0.13.0.zip",
+            "hash": "2e79ba9a0ad623c6c3052ff017a4f5e178e81013c281e533ae422524aea5031e"
         }
     },
-    "extract_dir": "jdk-11.0.2+9_openj9-0.12.1",
+    "extract_dir": "jdk-12+33_openj9-0.13.0",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk12?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].binary_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
         "replace": "${major}-${build}${jvmver}"
