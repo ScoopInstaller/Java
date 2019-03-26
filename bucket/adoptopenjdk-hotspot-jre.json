@@ -1,21 +1,21 @@
 {
     "description": "AdoptOpenJDK JRE with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11.0.2-9",
+    "version": "12-33",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9/OpenJDK11U-jre_x64_windows_hotspot_11.0.2_9.zip",
-            "hash": "7ea566935b171903dbf11a5ea4d0b2301393b9cc1454dd0e2f35ce1c825d7ec3"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12%2B33/OpenJDK12U-jre_x64_windows_hotspot_12_33.zip",
+            "hash": "37dfdcf4d81387ad8c45161fcaba9e5a82778c55cf49d938b98b367b4ba2b99e"
         }
     },
-    "extract_dir": "jdk-11.0.2+9-jre",
+    "extract_dir": "jdk-12+33-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jre",
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk12?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)).*?).zip",
         "replace": "${major}-${build}"
