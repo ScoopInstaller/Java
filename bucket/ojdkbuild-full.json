@@ -1,0 +1,32 @@
+{
+    "description": "OpenJDK binaries built using source code from the CentOS project",
+    "homepage": "https://github.com/ojdkbuild/ojdkbuild",
+    "version": "11.0.2.7-1",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/11.0.2-1/java-11-openjdk-11.0.2.7-1.windows.ojdkbuild.x86_64.msi",
+            "hash": "3bda34eab7f3f567f861a331b1cac31b3a30dcf092db6fa55b4d72a5631b2827",
+            "extract_dir": "ojdkbuild\\java-11-openjdk-11.0.2-1"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
+        "re": "download/(?<version>[\\d]{2}[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+)(.ojdkbuild|.windows){2}).x86_64.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$matchVersion/$matchUrl.x86_64.msi",
+                "extract_dir": "ojdkbuild\\java-$matchShort-openjdk-$matchVersion"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
