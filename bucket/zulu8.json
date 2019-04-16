@@ -1,6 +1,6 @@
 {
     "description": "Zulu 8 is certified build of OpenJDK 8",
-    "homepage": "https://www.azul.com/downloads/zulu/zulu-windows/",
+    "homepage": "https://www.azul.com/downloads/zulu/",
     "version": "8.36.0.1",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
@@ -26,7 +26,7 @@
             }
         },
         "hash": {
-            "url": "https://www.azul.com/downloads/zulu/zulu-windows/",
+            "url": "https://www.azul.com/downloads/zulu/",
             "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
         }
     }
