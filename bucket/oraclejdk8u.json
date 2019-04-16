@@ -1,16 +1,16 @@
 {
     "description": "Oracle JDK 8 (PSU)",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u202-b08",
+    "version": "8u212-b10",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe#/dl.7z",
-            "hash": "b3bcdd6007e30c7b9d459b5bef766ac49f1e0b1cc92b11b19af3cf0439c3bc9f"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/8u212-b10/59066701cf1a433da9770636fbc4c9aa/jdk-8u212-windows-x64.exe#/dl.7z",
+            "hash": "330a6396fcc97c57a951170bb9ac5a00b75974da8f002cb7e62fdf09d15018c5"
         },
         "32bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-i586.exe#/dl.7z",
-            "hash": "88d6f861cc57866bfe85889798f18e0a0771ec0283ed81f3288049eb98d7c285"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/8u212-b10/59066701cf1a433da9770636fbc4c9aa/jdk-8u212-windows-i586.exe#/dl.7z",
+            "hash": "2ea45edb83303d87cabef2e872abb8a7c80da578e4e7a468bd27d9e3b8595b1b"
         }
     },
     "cookie": {
