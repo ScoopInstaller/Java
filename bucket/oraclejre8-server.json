@@ -1,18 +1,18 @@
 {
     "description": "Oracle Server-JRE 8",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u201-b09",
+    "version": "8u211-b12",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/server-jre-8u201-windows-x64.tar.gz",
-            "hash": "9d24e8d6b86a9f9929bb8559f10cdf3dce520fba28b88a6cc5207ecadb0f9980"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/8u211-b12/478a62b7d4e34b78b671c754eaaf38ab/server-jre-8u211-windows-x64.tar.gz",
+            "hash": "11dabdae4f9f7d5ce9e004bc99ed4ecf6d616f45be36150616388620b60e77b9"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk1.8.0_201",
+    "extract_dir": "jdk1.8.0_211",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
