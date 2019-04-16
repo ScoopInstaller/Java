@@ -1,13 +1,13 @@
 {
     "description": "Zulu 11 is a build of OpenJDK 11",
     "homepage": "https://www.azul.com/downloads/zulu/",
-    "version": "11.29.11",
+    "version": "11.31.11",
     "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu11.29.11-ca-jdk11.0.2-win_x64.zip",
-            "hash": "md5:c160559d36e9478bd1bd471f4caf33d2",
-            "extract_dir": "zulu11.29.11-ca-jdk11.0.2-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-jdk11.0.3-win_x64.zip",
+            "hash": "md5:15dbf94e16b53abeaa62f6eeddb3aa3b",
+            "extract_dir": "zulu11.31.11-ca-jdk11.0.3-win_x64"
         }
     },
     "env_add_path": "bin",
