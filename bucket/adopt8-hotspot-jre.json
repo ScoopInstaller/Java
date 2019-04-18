@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u202-b08",
+    "version": "8u212-b03",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u202-b08/OpenJDK8U-jre_x64_windows_hotspot_8u202b08.zip",
-            "hash": "6689bc1d726969e95976c7d8f6ae1730abcb31d2d0c3e2d1489a0bacd7867ab7"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03/OpenJDK8U-jre_x64_windows_hotspot_8u212b03.zip",
+            "hash": "c09bab89cd82483c371597c5c364094a145c1fbba43a1d3d7c3e350b89dedc89"
         }
     },
-    "extract_dir": "jdk8u202-b08-jre",
+    "extract_dir": "jdk8u212-b03-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
