@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK 12 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "12-33-0.13.0",
+    "version": "12.0.1-12-0.14.1",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12%2B33_openj9-0.13.0/OpenJDK12U-jdk_x64_windows_openj9_12_33_openj9-0.13.0.zip",
-            "hash": "2e79ba9a0ad623c6c3052ff017a4f5e178e81013c281e533ae422524aea5031e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.1%2B12_openj9-0.14.1/OpenJDK12U-jdk_x64_windows_openj9_12.0.1_12_openj9-0.14.1.zip",
+            "hash": "c788c03d58ecb875b1a719591b455cfe89a204293d1fabb7fa88767d545d47cd"
         }
     },
-    "extract_dir": "jdk-12+33",
+    "extract_dir": "jdk-12.0.1+12",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
