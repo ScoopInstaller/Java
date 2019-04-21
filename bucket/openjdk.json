@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 11",
-    "homepage": "https://jdk.java.net/11",
-    "version": "11.0.2-9",
+    "homepage": "https://jdk.java.net/12",
+    "version": "12.0.1-12",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip",
-            "hash": "cf39490fe042dba1b61d6e9a395095279a69e70086c8c8d5466d9926d80976d8"
+            "url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_windows-x64_bin.zip",
+            "hash": "fc7d9eee3c09ea6548b00ca25dbf34a348b3942c815405a1428e0bfef268d08d"
         }
     },
     "extract_dir": "jdk-11.0.2",
@@ -15,18 +15,17 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/(?<type>early_access|GA)/jdk(?<major>[\\d]+)/(?<build>[\\d]+)/(?<random>([a-fA-F0-9]{32}|GPL)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+        "re": "/jdk(?<major>[\\d.]+)/(?<random>[a-fA-F0-9]{32})/(?<build>[\\d]+)/GPL/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/GA/jdk$matchMajor/$matchBuild/$matchRandom/$matchFile"
+                "url": "https://download.java.net/java/GA/jdk$matchMajor/$matchRandom/$matchBuild/GPL/$matchFile"
             }
         },
         "hash": {
             "url": "$url.sha256"
-        },
-        "extract_dir": "jdk-$matchVersion"
+        }
     }
 }
