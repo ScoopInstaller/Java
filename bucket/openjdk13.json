@@ -15,7 +15,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/(?<type>early_access|GA)/jdk(?<major>[\\d]+)/(?<build>[\\d]+)/(?<random>([a-fA-F0-9]{32}|GPL)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+        "re": "/(?<type>early_access|GA)/jdk(?<major>13[\\d.]*)/(?<build>[\\d]+)/(?<random>([a-fA-F0-9]{32}|GPL|binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
     "autoupdate": {
