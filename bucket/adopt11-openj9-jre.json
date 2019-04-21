@@ -9,7 +9,7 @@
             "hash": "afb5097f8cb03749198c441b89b9e6997835a23c69b3fe16a3d76f8912b97cfe"
         }
     },
-    "extract_dir": "jdk-11.0.3+7_openj9-0.14.0-jre",
+    "extract_dir": "jdk-11.0.3+7-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -30,6 +30,6 @@
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild$matchOj$matchJvmver-jre"
+        "extract_dir": "jdk-$matchMajor+$matchBuild-jre"
     }
 }
