@@ -1,5 +1,5 @@
 {
-    "description": "Oracle JDK 11",
+    "description": "Oracle JDK 12",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
     "version": "12.0.1-12",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",

@@ -26,6 +26,7 @@
         },
         "hash": {
             "url": "$url.sha256"
-        }
+        },
+        "extract_dir": "jdk-$matchVersion"
     }
 }

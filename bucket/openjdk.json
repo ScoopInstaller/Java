@@ -9,7 +9,7 @@
             "hash": "fc7d9eee3c09ea6548b00ca25dbf34a348b3942c815405a1428e0bfef268d08d"
         }
     },
-    "extract_dir": "jdk-11.0.2",
+    "extract_dir": "jdk-12.0.1",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -26,6 +26,7 @@
         },
         "hash": {
             "url": "$url.sha256"
-        }
+        },
+        "extract_dir": "jdk-$matchVersion"
     }
 }
