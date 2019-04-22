@@ -1,0 +1,30 @@
+{
+    "description": "Unaltered builds from the OpenJDK mercurial JDK8u code stream, built by Red Hat",
+    "homepage": "https://adoptopenjdk.net/upstream.html",
+    "version": "8u212-b03",
+    "license": "GPL-2.0-with-classpath-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u212-b03/OpenJDK8U-x64_windows_8u212b03.zip",
+            "hash": "9942e99168d1d582820a2db56922a702f3909379e1e302de983d7df9111aad8f"
+        }
+    },
+    "extract_dir": "openjdk-8u212-b03",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries",
+        "re": "jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)",
+        "replace": "${major}${update}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AdoptOpenJDK/openjdk$matchMajor-upstream-binaries/releases/download/jdk$version/OpenJDK$matchMajorU-x64_windows_$matchMajor$matchUpdate$matchBuild.zip"
+            }
+        },
+        "extract_dir": "openjdk-$version"
+    }
+}
