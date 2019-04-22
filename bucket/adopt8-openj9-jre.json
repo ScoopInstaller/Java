@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jre_x64_windows_openj9_8u212b03_openj9-0.14.0.zip",
             "hash": "3e42b62b6aa7c4a4731dbf988e4e3ed4f837a5d4ae2e19283abc4b5224e1d83a"
+        },
+        "32bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jre_x86-32_windows_openj9_8u212b03_openj9-0.14.0.zip",
+            "hash": "70198397d838a5bdb5288a86518abfa47699025971390a3108281eec9e42a659"
         }
     },
     "extract_dir": "jdk8u212-b03-jre",
@@ -17,13 +21,16 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
+        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?))/",
         "replace": "${major}${update}-${build}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x64_windows_openj9_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x86-32_windows_openj9_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
             }
         },
         "hash": {

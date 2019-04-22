@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03/OpenJDK8U-jre_x64_windows_hotspot_8u212b03.zip",
             "hash": "c09bab89cd82483c371597c5c364094a145c1fbba43a1d3d7c3e350b89dedc89"
+        },
+        "32bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03/OpenJDK8U-jre_x86-32_windows_hotspot_8u212b03.zip",
+            "hash": "359abd23a559addf535f82e92525e6086edf0596a105dfb803b2d8cd83e39284"
         }
     },
     "extract_dir": "jdk8u212-b03-jre",
@@ -17,13 +21,16 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)).*?).zip",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)))/",
         "replace": "${major}${update}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x64_windows_hotspot_$matchMajor$matchUpdate$matchBuild.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x86-32_windows_hotspot_$matchMajor$matchUpdate$matchBuild.zip"
             }
         },
         "hash": {

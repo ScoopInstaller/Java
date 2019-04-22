@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-04-12-12-23/OpenJDK11U-jre_x64_windows_hotspot_2019-04-12-12-23.zip",
             "hash": "3194d0ad14fb7a04f657b3b1ebba07104e1af3acca2a21209030cba19c79779c"
+        },
+        "32bit": {
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-04-12-12-23/OpenJDK11U-jre_x86-32_windows_hotspot_2019-04-12-12-23.zip",
+            "hash": "7e94a5074fbcbcda71367bd71768d3af1781116aaff3adf409f225ad7ea10a48"
         }
     },
     "extract_to": "tmp",
@@ -23,13 +27,16 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk11?openjdk_impl=hotspot&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?).zip",
+        "re": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2})))",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x64_windows_hotspot_$matchDate.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x86-32_windows_hotspot_$matchDate.zip"
             }
         },
         "hash": {
