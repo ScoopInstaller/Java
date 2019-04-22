@@ -5,11 +5,11 @@
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://d3pxv6yz143wms.cloudfront.net/amazon-corretto-8.212.04.2-windows-x64-jdk.zip",
+            "url": "https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/amazon-corretto-8.212.04.2-windows-x64-jdk.zip",
             "hash": "md5:b84eece357bbab8597baa3a415664fc3"
         },
         "32bit": {
-            "url": "https://d3pxv6yz143wms.cloudfront.net/amazon-corretto-8.212.04.2-windows-x86-jdk.zip",
+            "url": "https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/amazon-corretto-8.212.04.2-windows-x86-jdk.zip",
             "hash": "md5:0e69cdded96c99c65485ba75b569a4d6"
         }
     },
@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://d3pxv6yz143wms.cloudfront.net/$matchFile-x64-jdk.zip"
+                "url": "https://d3pxv6yz143wms.cloudfront.net/$version/$matchFile-x64-jdk.zip"
             },
             "32bit": {
-                "url": "https://d3pxv6yz143wms.cloudfront.net/$matchFile-x86-jdk.zip"
+                "url": "https://d3pxv6yz143wms.cloudfront.net/$version/$matchFile-x86-jdk.zip"
             }
         },
         "hash": {
