@@ -15,13 +15,13 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/jdk(?<major>12[\\d.]*)/(?<random>[a-fA-F0-9]{32})/(?<build>[\\d]+)/GPL/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+        "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.java.net/java/GA/jdk$matchMajor/$matchRandom/$matchBuild/GPL/$matchFile"
+                "url": "https://download.java.net/java/$matchType/$matchPath/$matchFile"
             }
         },
         "hash": {
