@@ -9,7 +9,7 @@
             "hash": "94be7be2a9c201f8ea4718be168b461b6c01043b48801ff67cf32c801a32b5e5"
         }
     },
-    "extract_dir": "jdk-$matchMajor+",
+    "extract_dir": "sapmachine-jdk-12.0.1",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -30,6 +30,6 @@
             "url": "https://github.com/SAP/SapMachine/releases/download/$matchSap.sha256.txt",
             "find": "^($sha256)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild"
+        "extract_dir": "sapmachine-jdk-$matchVersion"
     }
 }
