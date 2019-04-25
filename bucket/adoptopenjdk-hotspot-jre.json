@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK JRE with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "12-33",
+    "version": "12.0.1-12",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12%2B33/OpenJDK12U-jre_x64_windows_hotspot_12_33.zip",
-            "hash": "37dfdcf4d81387ad8c45161fcaba9e5a82778c55cf49d938b98b367b4ba2b99e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.1%2B12/OpenJDK12U-jre_x64_windows_hotspot_12.0.1_12.zip",
+            "hash": "415242a5dd288fa3559a729912ff79916f5c74827c7819980912285165ad2d3a"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12%2B33/OpenJDK12U-jre_x86-32_windows_hotspot_12_33.zip",
-            "hash": "d69415a8ccbc0a296b71bce2c8e756a372b8ca30f47e620f0c8dfadc53866c42"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.1%2B12/OpenJDK12U-jre_x86-32_windows_hotspot_12.0.1_12.zip",
+            "hash": "1ff8857945f8920798c655c4b183ae92320f5039e9d883464ee30ded758e040b"
         }
     },
-    "extract_dir": "jdk-12+33-jre",
+    "extract_dir": "jdk-12.0.1+12-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
