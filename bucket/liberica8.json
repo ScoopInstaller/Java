@@ -1,7 +1,7 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java 8 implementation",
-    "homepage": "https://bell-sw.com/pages/java-8u192",
-    "version": "1.8.0.212",
+    "homepage": "https://bell-sw.com/java.html",
+    "version": "8u212",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
@@ -19,22 +19,22 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/pages/java-8u(?<minor>[\\d]+)",
-        "replace": "1.8.0.${minor}"
+        "url": "https://bell-sw.com/pages/java-8u192",
+        "re": "/pages/java-(8[\\du]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.bell-sw.com/java/8u$matchMinor/bellsoft-jdk8u$matchMinor-windows-amd64.zip"
+                "url": "https://download.bell-sw.com/java/$version/bellsoft-jdk$version-windows-amd64.zip"
             },
             "32bit": {
-                "url": "https://download.bell-sw.com/java/8u$matchMinor/bellsoft-jdk8u$matchMinor-windows-i586.zip"
+                "url": "https://download.bell-sw.com/java/$version/bellsoft-jdk$version-windows-i586.zip"
             }
         },
         "hash": {
-            "url": "https://bell-sw.com/pages/java-8u$matchMinor/",
+            "url": "https://bell-sw.com/pages/java-$version/",
             "find": "(?smi)$url(?:.*?)<code>($sha1)</code>"
         },
-        "extract_dir": "jdk-8u$matchMinor"
+        "extract_dir": "jdk-$version"
     }
 }
