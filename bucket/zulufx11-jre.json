@@ -1,0 +1,42 @@
+{
+    "description": "Open Source Builds of Zulu With OpenJFX",
+    "homepage": "https://www.azul.com/downloads/zulu/zulufx/",
+    "version": "11.31.11",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-fx-jre11.0.3-win_x64.zip",
+            "hash": "md5:aca0853a9916621c768af651c349e320",
+            "extract_dir": "zulu11.31.11-ca-fx-jre11.0.3-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-fx-jre11.0.3-win_i686.zip",
+            "hash": "md5:edaabbbc844beb29853a916937f60dbf",
+            "extract_dir": "zulu11.31.11-ca-fx-jre11.0.3-win_i686"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu11(?<major>[\\d.]+)-ca-fx-jre(?<openver>[\\d.]+)-win)_x64.zip",
+        "replace": "11${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/downloads/zulu/zulufx/",
+            "find": "($md5)</td><[\\w. =\":;]*><[\\w. =\":/]*$basename"
+        }
+    }
+}

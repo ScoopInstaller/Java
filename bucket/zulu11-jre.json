@@ -1,0 +1,33 @@
+{
+    "description": "Zulu 11 is a build of OpenJDK 11",
+    "homepage": "https://www.azul.com/downloads/zulu/",
+    "version": "11.31.11",
+    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-jre11.0.3-win_x64.zip",
+            "hash": "md5:edee997589d206037748bf4f5f99c7bb",
+            "extract_dir": "zulu11.31.11-ca-jre11.0.3-win_x64"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu11(?<major>[\\d.]+)-ca-jre(?<openver>[\\d.]+)-win)_x64.zip",
+        "replace": "11${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/downloads/zulu/",
+            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
+        }
+    }
+}
