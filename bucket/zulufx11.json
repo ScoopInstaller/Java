@@ -8,6 +8,11 @@
             "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-fx-jdk11.0.3-win_x64.zip",
             "hash": "md5:d10136882862b30d063a72881510205e",
             "extract_dir": "zulu11.31.11-ca-fx-jdk11.0.3-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-fx-jdk11.0.3-win_i686.zip",
+            "hash": "md5:eec354ee4fb1c66a4f86cb3199ba6dce",
+            "extract_dir": "zulu11.31.11-ca-fx-jdk11.0.3-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -23,6 +28,10 @@
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
                 "extract_dir": "$matchName_x64"
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686"
             }
         },
         "hash": {
