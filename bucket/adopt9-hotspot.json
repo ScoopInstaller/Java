@@ -2,7 +2,7 @@
     "description": "AdoptOpenJDK 9 with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
     "version": "9.0.4-11",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk9-binaries/releases/download/jdk-9.0.4%2B11/OpenJDK9U-jdk_x64_windows_hotspot_9.0.4_11.zip",

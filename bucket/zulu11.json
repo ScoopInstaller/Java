@@ -2,7 +2,10 @@
     "description": "Zulu 11 is a build of OpenJDK 11",
     "homepage": "https://www.azul.com/downloads/zulu/",
     "version": "11.31.11",
-    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "license": {
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
+        "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-jdk11.0.3-win_x64.zip",

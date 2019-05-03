@@ -2,7 +2,7 @@
     "description": "OpenJDK 7 Unofficial build",
     "homepage": "https://bitbucket.org/alexkasko/openjdk-unofficial-builds",
     "version": "7u80-b32",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "32bit": {
             "url": "https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u80-unofficial-windows-i586-image.zip",

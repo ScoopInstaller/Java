@@ -2,7 +2,7 @@
     "description": "Official production-ready open-source builds of OpenJDK",
     "homepage": "https://jdk.java.net/12",
     "version": "12.0.1-12",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_windows-x64_bin.zip",

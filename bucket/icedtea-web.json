@@ -2,7 +2,7 @@
     "description": "The IcedTea-Web project provides a Free Software web browser plugin running applets written in the Java programming language and an implementation of Java Web Start, originally based on the NetX project",
     "homepage": "https://icedtea.classpath.org/wiki/IcedTea-Web",
     "version": "1.8",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "http://icedtea.wildebeest.org/download/icedtea-web-binaries/1.8/windows/icedtea-web-1.8.win.bin.zip",

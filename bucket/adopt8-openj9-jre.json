@@ -2,7 +2,7 @@
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
     "version": "8u212-b03-0.14.0",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jre_x64_windows_openj9_8u212b03_openj9-0.14.0.zip",

@@ -2,7 +2,10 @@
     "description": "Zulu 9 is certified build of OpenJDK 9",
     "homepage": "https://www.azul.com/downloads/zulu/",
     "version": "9.0.7.1",
-    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "license": {
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
+        "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu9.0.7.1-jdk9.0.7-win_x64.zip",

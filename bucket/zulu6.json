@@ -2,7 +2,10 @@
     "description": "Zulu 6 is certified build of OpenJDK 6",
     "homepage": "https://www.azul.com/downloads/zulu/",
     "version": "6.22.0.3",
-    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "license": {
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
+        "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu6.22.0.3-jdk6.0.119-win_x64.zip",

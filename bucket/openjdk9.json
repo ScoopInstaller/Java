@@ -2,7 +2,7 @@
     "description": "Official production-ready open-source builds of OpenJDK 9",
     "homepage": "https://jdk.java.net/9/",
     "version": "9.0.4-12",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://download.java.net/java/GA/jdk9/9.0.4/binaries/openjdk-9.0.4_windows-x64_bin.tar.gz",

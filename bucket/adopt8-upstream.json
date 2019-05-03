@@ -2,7 +2,7 @@
     "description": "Unaltered builds from the OpenJDK mercurial JDK8u code stream, built by Red Hat",
     "homepage": "https://adoptopenjdk.net/upstream.html",
     "version": "8u212-b04",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u212-b04/OpenJDK8U-x64_windows_8u212b04.zip",

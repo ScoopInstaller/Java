@@ -2,7 +2,7 @@
     "description": "AdoptOpenJDK 10 with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
     "version": "10.0.2-13",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AdoptOpenJDK/openjdk10-releases/releases/download/jdk-10.0.2%2B13/OpenJDK10_x64_Win_jdk-10.0.2%2B13.zip",

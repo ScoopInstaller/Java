@@ -2,7 +2,7 @@
     "description": "BellSoft Liberica is a 100% open-source Java implementation",
     "homepage": "https://bell-sw.com/java.html",
     "version": "12.0.1",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://download.bell-sw.com/java/12.0.1/bellsoft-jdk12.0.1-windows-amd64.zip",

@@ -2,7 +2,10 @@
     "description": "Zulu 10 is certified build of OpenJDK 10",
     "homepage": "https://www.azul.com/downloads/zulu/",
     "version": "10.3-5",
-    "license": "https://www.azulsystems.com/license/zulu_third_party_licenses.html",
+    "license": {
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
+        "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu10.3+5-jdk10.0.2-win_x64.zip",

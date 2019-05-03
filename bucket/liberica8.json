@@ -2,7 +2,7 @@
     "description": "BellSoft Liberica is a 100% open-source Java 8 implementation",
     "homepage": "https://bell-sw.com/java.html",
     "version": "8u212",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://download.bell-sw.com/java/8u212/bellsoft-jdk8u212-windows-amd64.zip",

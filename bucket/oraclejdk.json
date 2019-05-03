@@ -2,7 +2,7 @@
     "description": "Oracle JDK",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
     "version": "12.0.1-12",
-    "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
+    "license": "https://java.com/otnlicense",
     "architecture": {
         "64bit": {
             "url": "https://download.oracle.com/otn-pub/java/jdk/12.0.1+12/69cfe15208a647278a19ef0990eea691/jdk-12.0.1_windows-x64_bin.zip",

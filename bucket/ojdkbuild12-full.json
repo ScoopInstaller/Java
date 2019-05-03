@@ -2,7 +2,7 @@
     "description": "OpenJDK 11 binaries built using source code from the CentOS project",
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
     "version": "12.0.1.12-1",
-    "license": "GPL-2.0-with-classpath-exception",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/12.0.1-1/java-12-openjdk-12.0.1.12-1.windows.ojdkbuild.x86_64.msi",
