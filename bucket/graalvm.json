@@ -11,7 +11,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/oracle/graal"
+        "github": "https://github.com/oracle/graal",
+        "re": "vm-([\\d\\w.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/oracle/graal/releases/download/vm-$version/graalvm-ce-windows-amd64-$version.zip",
