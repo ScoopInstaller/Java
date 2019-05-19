@@ -12,8 +12,8 @@
     "extract_to": "tmp",
     "installer": {
         "script": [
-            "gci -dir \"$dir\\tmp\" | % { mv \"$dir\\tmp\\$_\\*\" \"$dir\" }",
-            "rm -r \"$dir\\tmp\""
+            "(Get-ChildItem -Directory \"$dir\\tmp\").FullName | % { Move-Item \"$_\\*\" \"$dir\" }",
+            "Remove-Item -Recurse \"$dir\\tmp\""
         ]
     },
     "env_add_path": "bin",
