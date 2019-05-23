@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u212-b03-0.14.0",
+    "version": "8u212-b04-0.14.2",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jre_x64_windows_openj9_8u212b03_openj9-0.14.0.zip",
-            "hash": "3e42b62b6aa7c4a4731dbf988e4e3ed4f837a5d4ae2e19283abc4b5224e1d83a"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b04_openj9-0.14.2/OpenJDK8U-jre_x64_windows_openj9_8u212b04_openj9-0.14.2.zip",
+            "hash": "53ca7c871a448e09d22af33e6b184f9df87066a5af87be9bf56bed5448999be1"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jre_x86-32_windows_openj9_8u212b03_openj9-0.14.0.zip",
-            "hash": "70198397d838a5bdb5288a86518abfa47699025971390a3108281eec9e42a659"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b04_openj9-0.14.2/OpenJDK8U-jre_x86-32_windows_openj9_8u212b04_openj9-0.14.2.zip",
+            "hash": "7dba551779d7691dea6c32b4f91825d16c09df10ef5d0284de75ccdf61ff1455"
         }
     },
-    "extract_dir": "jdk8u212-b03-jre",
+    "extract_dir": "jdk8u212-b04-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
