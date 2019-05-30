@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 8 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201905290156",
+    "version": "201905300515",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-05-29-01-56/OpenJDK8U-jdk_x64_windows_hotspot_2019-05-29-01-56.zip",
-            "hash": "e07e8b1c781c98370b50f458b4513fedff70c587c3af00790b3ff38319b64ecc"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-05-30-05-15/OpenJDK8U-jdk_x64_windows_hotspot_2019-05-30-05-15.zip",
+            "hash": "c376a58cb10277daad797061e0125a0ad3e3be947475a6fa165b710d2fd94064"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-05-29-01-56/OpenJDK8U-jdk_x86-32_windows_hotspot_2019-05-29-01-56.zip",
-            "hash": "9fa2f55255d9321e6ac19de59208ac520842e58fd9e59d385a6b500cf4c31a8f"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-05-30-05-15/OpenJDK8U-jdk_x86-32_windows_hotspot_2019-05-30-05-15.zip",
+            "hash": "5cd10b7eb1a7fea37be7f40d4be1e8a0631056e99a6aa662f0fc9e02c179fe05"
         }
     },
     "extract_to": "tmp",
