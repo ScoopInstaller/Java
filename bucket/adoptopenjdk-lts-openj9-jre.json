@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK JRE with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11.0.3-7-0.14.0",
+    "version": "11.0.3-7-0.14.3",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7_openj9-0.14.0/OpenJDK11U-jre_x64_windows_openj9_11.0.3_7_openj9-0.14.0.zip",
-            "hash": "afb5097f8cb03749198c441b89b9e6997835a23c69b3fe16a3d76f8912b97cfe"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7_openj9-0.14.3/OpenJDK11U-jre_x64_windows_openj9_11.0.3_7_openj9-0.14.3.zip",
+            "hash": "97feea8885701a0efe35a4506e93ca7b2d02fde6888e1e28b9e729b6a3ef8656"
         }
     },
     "extract_dir": "jdk-11.0.3+7-jre",
