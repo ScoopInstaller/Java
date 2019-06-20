@@ -19,7 +19,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/pages/java-(11[\\d.]*)"
+        "re": "/pages/java-(11[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
