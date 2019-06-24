@@ -1,0 +1,35 @@
+{
+    "description": "SapMachine 14: An OpenJDK release maintained and supported by SAP",
+    "homepage": "https://sap.github.io/SapMachine/",
+    "version": "14-2-ea",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-14%2B2/sapmachine-jdk-14-ea.2_windows-x64_bin.zip",
+            "hash": "2bcc295dad73b1cfef87ec07478ddda7a0bb193bf2f407465baa6a2d5dbec360"
+        }
+    },
+    "extract_dir": "sapmachine-jdk-14",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://sap.github.io/SapMachine/assets/data/sapmachine_releases.json",
+        "jp": "$.assets.14.releases[0].windows-x64",
+        "re": "(?<sap>/sapmachine-(?:[\\d.]+)(?:\\%2B|\\+)?(?:[\\d]*)/sapmachine-jdk-(?<version>[\\d.]+)(?:(?<dash>-)(?<ea>ea)\\.(?<build>[\\d]+))?_windows-x64_bin).zip",
+        "replace": "${version}${dash}${build}${dash}${ea}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SAP/SapMachine/releases/download/$matchSap.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/SAP/SapMachine/releases/download/$matchSap.sha256.txt",
+            "find": "^($sha256)\\s"
+        },
+        "extract_dir": "sapmachine-jdk-$matchVersion"
+    }
+}
