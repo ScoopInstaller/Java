@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.azul.com/products/zulu-mission-control",
-    "version": "7.0.0",
+    "version": "7.0.0.49",
     "description": "Zulu Mission Control",
     "license": "UPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "http://static.azul.com/zmc/bin/zmc7.0.0-EA-win_x64.zip",
-            "hash": "c210156b0b75a8a3e84b452359006d8e5023a66d8efe895061d836cd7b5dfd3f",
-            "extract_dir": "zmc7.0.0-EA-win_x64",
+            "url": "http://static.azul.com/zmc/bin/zmc7.0.0.49-ca-win_x64.zip",
+            "hash": "b0cc73a11fa6b84aaee2552e12ec6cf49df5208c56a743d3d5358b3b30a0eaa6",
+            "extract_dir": "zmc7.0.0.49-ca-win_x64",
             "shortcuts": [
                 [
                     "zmc.exe",
@@ -17,12 +17,12 @@
         }
     },
     "persist": "configuration",
-    "checkver": "zmc([\\d.]+)(?<ea>-EA)?-win",
+    "checkver": "zmc([\\d.]+)(?<eaca>-EA|-ca)?-win",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://static.azul.com/zmc/bin/zmc$version$matchEa-win_x64.zip",
-                "extract_dir": "zmc$version$matchEa-win_x64"
+                "url": "http://static.azul.com/zmc/bin/zmc$version$matchEaca-win_x64.zip",
+                "extract_dir": "zmc$version$matchEaca-win_x64"
             }
         }
     }
