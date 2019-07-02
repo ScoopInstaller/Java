@@ -1,11 +1,11 @@
 {
     "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
-    "version": "19.0.2",
+    "version": "19.1.0",
     "homepage": "https://graalvm.org",
     "license": "GPL-2.0",
-    "url": "https://github.com/oracle/graal/releases/download/vm-19.0.2/graalvm-ce-windows-amd64-19.0.2.zip",
-    "hash": "f8550b6b11fac991069dfce63ce1cd20d0a0c044c8ef9348acc560ddff37807e",
-    "extract_dir": "graalvm-ce-19.0.2",
+    "url": "https://github.com/oracle/graal/releases/download/vm-19.1.0/graalvm-ce-windows-amd64-19.1.0.zip",
+    "hash": "54d71bc3d43f7f05d1736547fd24add42a6199c5790413a948974e558739b0aa",
+    "extract_dir": "graalvm-ce-19.1.0",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
