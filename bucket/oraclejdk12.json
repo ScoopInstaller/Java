@@ -1,18 +1,18 @@
 {
     "description": "Oracle JDK 12",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "12.0.1-12",
+    "version": "12.0.2-10",
     "license": "https://java.com/otnlicense",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/12.0.1+12/69cfe15208a647278a19ef0990eea691/jdk-12.0.1_windows-x64_bin.zip",
-            "hash": "55144c11c89353cc821b721d4d11f31067d37d95c57421bb6e633aed22b0b186"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/12.0.2+10/e482c34c86bd4bf8b56c0b35558996b9/jdk-12.0.2_windows-x64_bin.zip",
+            "hash": "306a1e44b1584b720bb99194d302a7652c28db608cfba5df38586985d835c6bd"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk-12.0.1",
+    "extract_dir": "jdk-12.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
