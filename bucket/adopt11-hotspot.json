@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK 11 with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "11.0.3-7",
+    "version": "11.0.4-11",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.zip",
-            "hash": "d653cc3910c48b01e1523b59ec881fe5f9104c11fcc16dcac99ee10003f7aef0"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.4%2B11/OpenJDK11U-jdk_x64_windows_hotspot_11.0.4_11.zip",
+            "hash": "6e49694fa9462433f08c131fa11d8d1c78f89afbc5a0249886c262ae1c8dd8f4"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7/OpenJDK11U-jdk_x86-32_windows_hotspot_11.0.3_7.zip",
-            "hash": "fe2ef3096432b3de6be7b554250be7dfb94868d11f3c6341fa6d902edafc3e3b"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.4%2B11/OpenJDK11U-jdk_x86-32_windows_hotspot_11.0.4_11.zip",
+            "hash": "a1028aed1234e27e1260d3adb6d28400f362a49c91716ca208cdcf470b0d2c84"
         }
     },
-    "extract_dir": "jdk-11.0.3+7",
+    "extract_dir": "jdk-11.0.4+11",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
