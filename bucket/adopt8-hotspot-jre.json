@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u212-b04",
+    "version": "8u222-b10",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b04/OpenJDK8U-jre_x64_windows_hotspot_8u212b04.zip",
-            "hash": "aa28a53af06dddc09980197c6884f09c004a8a4a6886f8ad7a653f3eac7391e6"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u222-b10/OpenJDK8U-jre_x64_windows_hotspot_8u222b10.zip",
+            "hash": "5f6bca48f9a5670e87b878bff4c93e2deb895099458edeb410fa5e4f5f3daa7d"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b04/OpenJDK8U-jre_x86-32_windows_hotspot_8u212b04.zip",
-            "hash": "a83d8ed72766308d28932cbe65012b526cc977b669832f8868e46c1450b44748"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u222-b10/OpenJDK8U-jre_x86-32_windows_hotspot_8u222b10.zip",
+            "hash": "67613547e663b4427014d3ab1bce107ba4d4fdb458d8832d62d8bdde41973ae7"
         }
     },
-    "extract_dir": "jdk8u212-b04-jre",
+    "extract_dir": "jdk8u222-b10-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
