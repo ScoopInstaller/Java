@@ -1,12 +1,12 @@
 {
     "description": "SapMachine 11: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
-    "version": "11.0.4",
+    "version": "11.0.4-11-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-11.0.4/sapmachine-jdk-11.0.4_windows-x64_bin.zip",
-            "hash": "f05c34c08b0ef79755f84820184ab1f811b4f54be74cde8d5344cded6e596404"
+            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-11.0.4%2B11/sapmachine-jdk-11.0.4-ea.11_windows-x64_bin.zip",
+            "hash": "30e3d935a2babd4383036bf6822ebb09678e210086405234dbe601a2a7856474"
         }
     },
     "extract_dir": "sapmachine-jdk-11.0.4",
