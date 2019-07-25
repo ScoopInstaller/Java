@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 14",
     "homepage": "https://jdk.java.net/14",
-    "version": "14-6-ea",
+    "version": "14-7-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk14/6/GPL/openjdk-14-ea+6_windows-x64_bin.zip",
-            "hash": "1ac7b7b3aeda182bbc47cf739227830284d25a29c67c10b729037d94726c0fc9"
+            "url": "https://download.java.net/java/early_access/jdk14/7/GPL/openjdk-14-ea+7_windows-x64_bin.zip",
+            "hash": "fc76b8d59b575a110b330334d268ecacee43c467756c31b7983345293b7e8cb9"
         }
     },
     "extract_dir": "jdk-14",
