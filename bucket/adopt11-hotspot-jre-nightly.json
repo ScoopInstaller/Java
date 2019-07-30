@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 11 JRE with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201907290223",
+    "version": "201907301948",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-07-29-02-23/OpenJDK11U-jre_x64_windows_hotspot_2019-07-29-02-23.zip",
-            "hash": "322f11e66164173baefca741d72890a0082dc60d3213290a738c30609fa606c4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-07-30-19-48/OpenJDK11U-jre_x64_windows_hotspot_2019-07-30-19-48.zip",
+            "hash": "ddca630cc53399273f6d4b490bc4a13c5ade4436b8bac464010284506efd04ad"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-07-29-02-23/OpenJDK11U-jre_x86-32_windows_hotspot_2019-07-29-02-23.zip",
-            "hash": "d0c43cd4798fa5cdb81a3a236b063d39721a0515395a57263e2e897ab539deb4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2019-07-30-19-48/OpenJDK11U-jre_x86-32_windows_hotspot_2019-07-30-19-48.zip",
+            "hash": "bb72b1f396e64d5cdde4360342c821ac5a560bfe55c8051fa93be357c00bb9e1"
         }
     },
     "extract_to": "tmp",
