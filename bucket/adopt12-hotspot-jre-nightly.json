@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 12 JRE with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201908030947",
+    "version": "201908031738",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-03-09-47/OpenJDK12U-jre_x64_windows_hotspot_2019-08-03-09-47.zip",
-            "hash": "bc58091e953b537f109caa6320efe7ab508297774728aca10e30e2a31cf11dd4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-03-17-38/OpenJDK12U-jre_x64_windows_hotspot_2019-08-03-17-38.zip",
+            "hash": "96f221cb785c66c6ac462146dda4581ae08a5ae85bcbe54b11fb494908d061af"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-03-09-47/OpenJDK12U-jre_x86-32_windows_hotspot_2019-08-03-09-47.zip",
-            "hash": "d80d4a87761400b814a8c6a14ec52db3f45487c82a3c22bf29b793784e4aceb3"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-03-17-38/OpenJDK12U-jre_x86-32_windows_hotspot_2019-08-03-17-38.zip",
+            "hash": "9d2aeaf9c6a8cb1241d4e6c6aeb4f396f604fe10ba2fc7ccaf9a409949515d33"
         }
     },
     "extract_to": "tmp",
