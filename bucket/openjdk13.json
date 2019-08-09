@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 13",
     "homepage": "https://jdk.java.net/13",
-    "version": "13-32-ea",
+    "version": "13-33",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk13/32/GPL/openjdk-13-ea+32_windows-x64_bin.zip",
-            "hash": "f00de5fc21fa0300cdb3b20cc850882cad74467f8ddf72121d49e24abfc6276e"
+            "url": "https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f6/33/GPL/openjdk-13_windows-x64_bin.zip",
+            "hash": "053d8c87bb34347478512911a6218a389720bffcde4e496be5a54d51ad7c9c2f"
         }
     },
     "extract_dir": "jdk-13",
