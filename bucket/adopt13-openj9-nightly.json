@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 13 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201908101243",
+    "version": "201908141540",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-10-12-43/OpenJDK13U-jdk_x64_windows_openj9_2019-08-10-12-43.zip",
-            "hash": "88f66aac4648c0ee14929d771934685aba788d1902ec47f40ec0b9f83b9b6418"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-14-15-40/OpenJDK13U-jdk_x64_windows_openj9_2019-08-14-15-40.zip",
+            "hash": "ceb148fae2add241126acdc95119c96a0ae9d1eedab67780302ea7cfb07c7980"
         }
     },
     "extract_to": "tmp",
