@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 13 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201908171302",
+    "version": "201908181312",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-17-13-02/OpenJDK13U-jdk_x64_windows_hotspot_2019-08-17-13-02.zip",
-            "hash": "8ed6a7c50a1846b6488571b7f77c1dcfe54e7ea69d7518400d318015bebffd1c"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-18-13-12/OpenJDK13U-jdk_x64_windows_hotspot_2019-08-18-13-12.zip",
+            "hash": "3cad8b93789d9e9afee29da6863cc9bc854ad1293addf8d49487d88572d3cf86"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-17-13-02/OpenJDK13U-jdk_x86-32_windows_hotspot_2019-08-17-13-02.zip",
-            "hash": "86a995cdccd72c859e583176c013b387a4cde8d2b19ef269d30edbff5dbf623e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2019-08-18-13-12/OpenJDK13U-jdk_x86-32_windows_hotspot_2019-08-18-13-12.zip",
+            "hash": "8c3b1e6f7267ca8514cdaf764f6f006920ad397f2f8858126b23c4a660e9405a"
         }
     },
     "extract_to": "tmp",
