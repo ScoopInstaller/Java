@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 12 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201908181841",
+    "version": "201908191215",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-18-18-41/OpenJDK12U-jdk_x64_windows_openj9_2019-08-18-18-41.zip",
-            "hash": "0bc5535739796655833d696f63b32e9bd96d7a26bf76cd82a145844c756c1ddd"
+            "url": "https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk12u-2019-08-19-12-15/OpenJDK12U-jdk_x64_windows_openj9_2019-08-19-12-15.zip",
+            "hash": "c11e34d588188270084d101d1d10835d36d5b3f3b9df328adb553df628df122f"
         }
     },
     "extract_to": "tmp",
