@@ -1,0 +1,21 @@
+{
+    "description": "Oracle JRE 8",
+    "homepage": "https://github.com/frekele/oracle-java",
+    "version": "8u211-b12",
+    "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/frekele/oracle-java/releases/download/8u211-b12/jre-8u211-windows-x64.tar.gz",
+            "hash": "79fa21f4bc1e15e61432290247a0f7aead612f6a72117923fa6fe80c77232caf"
+        },
+        "32bit": {
+            "url": "https://github.com/frekele/oracle-java/releases/download/8u211-b12/jre-8u211-windows-i586.tar.gz",
+            "hash": "e56bc73d00ceacf0163cf12ee34b6e86bd923afe384944da4f91978918670e94"
+        }
+    },
+    "extract_dir": "jre1.8.0_211",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    }
+}

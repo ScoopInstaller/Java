@@ -1,0 +1,42 @@
+{
+    "description": "Oracle JDK 8 (PSU)",
+    "homepage": "https://github.com/frekele/oracle-java",
+    "version": "8u212-b10",
+    "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/frekele/oracle-java/releases/download/8u212-b10/jdk-8u212-windows-x64.exe#/dl.7z",
+            "hash": "330a6396fcc97c57a951170bb9ac5a00b75974da8f002cb7e62fdf09d15018c5"
+        },
+        "32bit": {
+            "url": "https://github.com/frekele/oracle-java/releases/download/8u212-b10/jdk-8u212-windows-i586.exe#/dl.7z",
+            "hash": "2ea45edb83303d87cabef2e872abb8a7c80da578e4e7a468bd27d9e3b8595b1b"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "# Java Source (src.zip)",
+            "Expand-7zipArchive \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB9\\110\" \"$dir\"",
+            "# JDK (tools.zip)",
+            "Expand-7zipArchive \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB10\\111\" \"$dir\\tmp\"",
+            "Expand-7zipArchive \"$dir\\tmp\\tools.zip\" \"$dir\"",
+            "# Copyright (COPYRIGHT)",
+            "Expand-7zipArchive \"$dir\\tmp\\.rsrc\\1033\\JAVA_CAB11\\112\" \"$dir\"",
+            "# Convert .pack to .jar, and remove .pack",
+            "pushd \"$dir\"",
+            "ls \"$dir\" -recurse | ? name -match '^[^_].*?\\.(?i)pack$' | % {",
+            "    $name = $_.fullname -replace '\\.(?i)pack$', ''",
+            "    $pack = \"$name.pack\"",
+            "    $jar = \"$name.jar\"",
+            "    & \"bin\\unpack200.exe\" \"-r\" \"$pack\" \"$jar\"",
+            "}",
+            "rm -r tmp | out-null",
+            "popd"
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    }
+}
