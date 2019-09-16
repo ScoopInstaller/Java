@@ -1,12 +1,12 @@
 {
     "description": "SapMachine 14: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
-    "version": "14-13-ea",
+    "version": "14-14-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-14%2B13/sapmachine-jdk-14-ea.13_windows-x64_bin.zip",
-            "hash": "0dda164fb61fc389ec99902e52e6ff5dc59ad3e0ec9f07f86341e270863c2a95"
+            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-14%2B14/sapmachine-jdk-14-ea.14_windows-x64_bin.zip",
+            "hash": "a5fb7491bb72953da7316ec583e0de55f8bfe9342d06a64f788c57cdfb498ca5"
         }
     },
     "extract_dir": "sapmachine-jdk-14",
