@@ -1,12 +1,12 @@
 {
     "description": "SapMachine 13: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
-    "version": "13-33-ea",
+    "version": "13",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-13%2B33/sapmachine-jdk-13-ea.33_windows-x64_bin.zip",
-            "hash": "c4616c2635352b69e00c421f68109db734498e56c3ee00363fb6cca0a63498d5"
+            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-13/sapmachine-jdk-13_windows-x64_bin.zip",
+            "hash": "3823d88d764cb301afa16c3c91cf98d226bf031ad174518fb01909f3c0ee1b05"
         }
     },
     "extract_dir": "sapmachine-jdk-13",
