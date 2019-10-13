@@ -1,5 +1,5 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK",
+    "description": "Official General-Availability Release of OpenJDK",
     "homepage": "https://jdk.java.net/",
     "version": "13-33",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
