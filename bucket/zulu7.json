@@ -1,16 +1,16 @@
 {
-    "description": "Zulu 7 is certified build of OpenJDK 7",
+    "description": "Zulu 7 is a build of OpenJDK 7",
     "homepage": "https://www.azul.com/downloads/zulu/",
-    "version": "7.29.0.5",
+    "version": "7.31.0.5",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu7.29.0.5-ca-jdk7.0.222-win_x64.zip",
-            "hash": "md5:1a06f2653b917719a4db6f7cb794c3f3",
-            "extract_dir": "zulu7.29.0.5-ca-jdk7.0.222-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu7.31.0.5-ca-jdk7.0.232-win_x64.zip",
+            "hash": "md5:2bd186e7e9d1c884b33ef31dd3f62f91",
+            "extract_dir": "zulu7.31.0.5-ca-jdk7.0.232-win_x64"
         }
     },
     "env_add_path": "bin",
@@ -18,19 +18,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu7(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip",
-        "replace": "7${major}"
+        "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=7&ext=zip",
+        "re": "(?<name>zulu(?<version>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
-                "extract_dir": "$matchName_x64"
+                "extract_dir": "$matchName_x64",
+                "hash": {
+                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=7&ext=zip",
+                    "mode": "json",
+                    "jsonpath": "$.md5_hash"
+                }
             }
-        },
-        "hash": {
-            "url": "https://www.azul.com/downloads/zulu/",
-            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
         }
     }
 }
