@@ -1,16 +1,21 @@
 {
     "description": "Zulu 11 is a build of OpenJDK 11",
     "homepage": "https://www.azul.com/downloads/zulu/",
-    "version": "11.31.11",
+    "version": "11.33.15",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-jdk11.0.3-win_x64.zip",
-            "hash": "md5:15dbf94e16b53abeaa62f6eeddb3aa3b",
-            "extract_dir": "zulu11.31.11-ca-jdk11.0.3-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.33.15-ca-jdk11.0.4-win_x64.zip",
+            "hash": "md5:c094449b60412717d75dc9b901c17b58",
+            "extract_dir": "zulu11.33.15-ca-jdk11.0.4-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.33.15-ca-jdk11.0.4-win_i686.zip",
+            "hash": "md5:1c5fe8ee18c6118f17ac107abbc0b89b",
+            "extract_dir": "zulu11.33.15-ca-jdk11.0.4-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -18,19 +23,29 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu11(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip",
-        "replace": "11${major}"
+        "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=11&ext=zip",
+        "re": "(?<name>zulu(?<version>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
-                "extract_dir": "$matchName_x64"
+                "extract_dir": "$matchName_x64",
+                "hash": {
+                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=11&ext=zip",
+                    "mode": "json",
+                    "jsonpath": "$.md5_hash"
+                }
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686",
+                "hash": {
+                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x86&version=11&ext=zip",
+                    "mode": "json",
+                    "jsonpath": "$.md5_hash"
+                }
             }
-        },
-        "hash": {
-            "url": "https://www.azul.com/downloads/zulu/",
-            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
         }
     }
 }
