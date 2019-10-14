@@ -1,20 +1,21 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK",
-    "homepage": "https://jdk.java.net/12",
-    "version": "12.0.2-10",
+    "description": "Official General-Availability Release of OpenJDK",
+    "homepage": "https://jdk.java.net/",
+    "version": "13-33",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_windows-x64_bin.zip",
-            "hash": "a30bed3d6d62f6ae1052aaf3c6956aaee8e3deb2f50f155575112f3f29411fba"
+            "url": "https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f6/33/GPL/openjdk-13_windows-x64_bin.zip",
+            "hash": "053d8c87bb34347478512911a6218a389720bffcde4e496be5a54d51ad7c9c2f"
         }
     },
-    "extract_dir": "jdk-12.0.2",
+    "extract_dir": "jdk-13",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
+        "url": "https://jdk.java.net/13/",
         "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
