@@ -1,15 +1,15 @@
 {
     "description": "Official General-Availability Release of OpenJDK",
     "homepage": "https://jdk.java.net/",
-    "version": "13-33",
+    "version": "13.0.1-9",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f6/33/GPL/openjdk-13_windows-x64_bin.zip",
-            "hash": "053d8c87bb34347478512911a6218a389720bffcde4e496be5a54d51ad7c9c2f"
+            "url": "https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_windows-x64_bin.zip",
+            "hash": "438a6920f1851b1eeb6f09f05d9f91c4423c6586f7a1a7ccbb19df76ea5901ee"
         }
     },
-    "extract_dir": "jdk-13",
+    "extract_dir": "jdk-13.0.1",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
