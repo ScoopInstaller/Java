@@ -1,16 +1,16 @@
 {
     "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK)",
     "homepage": "https://aws.amazon.com/corretto/",
-    "version": "8.222.10.1",
+    "version": "8.232.09.1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://d3pxv6yz143wms.cloudfront.net/8.222.10.1/amazon-corretto-8.222.10.3-windows-x64-jdk.zip",
-            "hash": "md5:9879a7f69c0bd7d8c1bbb916df7b5f82"
+            "url": "https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon-corretto-8.232.09.1-windows-x64-jdk.zip",
+            "hash": "md5:b0d375cbcfcda6d04e87888c6c6763d3"
         },
         "32bit": {
-            "url": "https://d3pxv6yz143wms.cloudfront.net/8.222.10.1/amazon-corretto-8.222.10.3-windows-x86-jdk.zip",
-            "hash": "md5:85dfaf1ee4117649d9bdf94fe9c05a64"
+            "url": "https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon-corretto-8.232.09.1-windows-x86-jdk.zip",
+            "hash": "md5:463d8c7d19bafbf9b307c19e7b516c44"
         }
     },
     "extract_to": "tmp",
