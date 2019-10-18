@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK 8 with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u222-b10-0.15.1",
+    "version": "8u232-b09-0.17.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u222-b10_openj9-0.15.1/OpenJDK8U-jdk_x64_windows_openj9_8u222b10_openj9-0.15.1.zip",
-            "hash": "3b7745b83698623122d86255df8f2a717143b69aa0c1ca6f9559c43c597894a8"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u232-b09_openj9-0.17.0/OpenJDK8U-jdk_x64_windows_openj9_8u232b09_openj9-0.17.0.zip",
+            "hash": "b83053501fcbe69595c2d0919e567c8728b793d7c66ad7bed73f0540894c7397"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u222-b10_openj9-0.15.1/OpenJDK8U-jdk_x86-32_windows_openj9_8u222b10_openj9-0.15.1.zip",
-            "hash": "b19fba42110aaaac2011b0e785e8a2c30c6752390fe97cd7c4d3fcec9ad8e886"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u232-b09_openj9-0.17.0/OpenJDK8U-jdk_x86-32_windows_openj9_8u232b09_openj9-0.17.0.zip",
+            "hash": "28c463e2648709586d851e11203e834f10f6f83f7603e0b1e20ee9850d87a295"
         }
     },
-    "extract_dir": "jdk8u222-b10",
+    "extract_dir": "jdk8u232-b09",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
