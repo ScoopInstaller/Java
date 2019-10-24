@@ -1,12 +1,12 @@
 {
     "description": "Official Early-Access Builds of OpenJDK",
     "homepage": "https://jdk.java.net/",
-    "version": "14-19-ea",
+    "version": "14-20-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk14/19/GPL/openjdk-14-ea+19_windows-x64_bin.zip",
-            "hash": "0af212130351ebe8534d9116b54f7d7727e723de2264f99d7fc58ca723443cc4"
+            "url": "https://download.java.net/java/early_access/jdk14/20/GPL/openjdk-14-ea+20_windows-x64_bin.zip",
+            "hash": "f0ee0a24fdbecfad7e5f5c3b184bd4f15ad713d99609c1874d1b7a5aab69da3e"
         }
     },
     "extract_dir": "jdk-14",
