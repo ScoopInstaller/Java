@@ -1,19 +1,19 @@
 {
     "description": "AdoptOpenJDK 13 with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "13-33",
+    "version": "13.0.1-9",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13%2B33/OpenJDK13U-jdk_x64_windows_hotspot_13_33.zip",
-            "hash": "65d71a954167d538c7a260e64d9868ceffe60edd1108817a9c44fddf60d13569"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.1%2B9/OpenJDK13U-jdk_x64_windows_hotspot_13.0.1_9.zip",
+            "hash": "69132fdf7a7316244af59ed26b89d159584e62b0021165e2742115c767522b29"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13%2B33/OpenJDK13U-jdk_x86-32_windows_hotspot_13_33.zip",
-            "hash": "076ec1da83805929322946bffdd7a99380ec7d1e6cfbd8eb6a6c880f8d89eda1"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.1%2B9/OpenJDK13U-jdk_x86-32_windows_hotspot_13.0.1_9.zip",
+            "hash": "c1f64b17b54870122c63c6f5944ec54b6407f031fb9a74e0e3d59e695d252cd8"
         }
     },
-    "extract_dir": "jdk-13+33",
+    "extract_dir": "jdk-13.0.1+9",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
