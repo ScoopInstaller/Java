@@ -1,32 +1,17 @@
 {
-    "description": "OpenJDK 11 binaries built using source code from the CentOS project",
+    "description": "OpenJDK 12 binaries built using source code from the CentOS project",
     "homepage": "https://github.com/ojdkbuild/ojdkbuild",
-    "version": "12.0.1.12-1",
+    "version": "12.0.2.9-1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/12.0.1-1/java-12-openjdk-12.0.1.12-1.windows.ojdkbuild.x86_64.zip",
-            "hash": "6534807820bd1ed0617ad8ac3d33b30c290f36835ae0f562cc10f3d526f51580",
-            "extract_dir": "java-12-openjdk-12.0.1.12-1.windows.ojdkbuild.x86_64"
+            "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/java-12-openjdk-12.0.2.9-1/java-12-openjdk-12.0.2.9-1.windows.ojdkbuild.x86_64.zip",
+            "hash": "513e5b8f70cbc43e478aaaa1a1334b5148195521163f9bc4a30a6a4005f65705",
+            "extract_dir": "java-12-openjdk-12.0.2.9-1.windows.ojdkbuild.x86_64"
         }
     },
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
-    },
-    "checkver": {
-        "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
-        "re": "download/(?<version>12[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+)(.ojdkbuild|.windows){2}).x86_64.zip"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$matchVersion/$matchUrl.x86_64.zip",
-                "extract_dir": "$matchUrl.x86_64"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
     }
 }
