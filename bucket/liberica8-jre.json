@@ -1,26 +1,26 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java 8 implementation",
     "homepage": "https://bell-sw.com/java.html",
-    "version": "8u212",
+    "version": "8u232",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.bell-sw.com/java/8u212/bellsoft-jre8u212-windows-amd64.zip",
-            "hash": "sha1:03e91dfb9df0b88ec100eac0f70b8702b719eec8"
+            "url": "https://download.bell-sw.com/java/8u232+10/bellsoft-jre8u232+10-windows-amd64.zip",
+            "hash": "sha1:c35e0af72d062c197ace9ff5f84f2327caea26f8"
         },
         "32bit": {
-            "url": "https://download.bell-sw.com/java/8u212/bellsoft-jre8u212-windows-i586.zip",
-            "hash": "sha1:3adcf108faea8c54433dde710f2566b519a53e03"
+            "url": "https://download.bell-sw.com/java/8u232+10/bellsoft-jre8u232+10-windows-i586.zip",
+            "hash": "sha1:a01a84041da8ba38b572e7451ae43e8eaddf17e7"
         }
     },
-    "extract_dir": "jdk-8u212",
+    "extract_dir": "jdk-8u232",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
         "url": "https://bell-sw.com/pages/java-8u192",
-        "re": "/pages/java-(8[\\du]+)"
+        "re": "bs-link-current-release(?:.*?)/pages/java-(8[\\du]+)"
     },
     "autoupdate": {
         "architecture": {

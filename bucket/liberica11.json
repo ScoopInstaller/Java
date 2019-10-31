@@ -5,12 +5,12 @@
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.bell-sw.com/java/11.0.5/bellsoft-jdk11.0.5-windows-amd64.zip",
-            "hash": "sha1:bfe201e90e2b05dbf0b8cfb0116dd850acba5cb3"
+            "url": "https://download.bell-sw.com/java/11.0.5+11/bellsoft-jdk11.0.5+11-windows-amd64.zip",
+            "hash": "sha1:9956658bdc98f844bacbf451b8e8f0622544b539"
         },
         "32bit": {
-            "url": "https://download.bell-sw.com/java/11.0.5/bellsoft-jdk11.0.5-windows-i586.zip",
-            "hash": "sha1:fd57ec93096d257ab878f8ec3e348af5e24d3b3d"
+            "url": "https://download.bell-sw.com/java/11.0.5+11/bellsoft-jdk11.0.5+11-windows-i586.zip",
+            "hash": "sha1:ef4fb21d567d30470744745763ecde6854f21dec"
         }
     },
     "extract_dir": "jdk-11.0.5",
@@ -19,7 +19,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/pages/java-(11[\\d.]+)"
+        "re": "bs-link-current-release(?:.*?)/pages/java-(11[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

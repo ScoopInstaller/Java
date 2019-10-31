@@ -17,23 +17,5 @@
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
-    },
-    "checkver": {
-        "re": "/pages/java-(12[\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.bell-sw.com/java/$version/bellsoft-jdk$version-windows-amd64.zip"
-            },
-            "32bit": {
-                "url": "https://download.bell-sw.com/java/$version/bellsoft-jdk$version-windows-i586.zip"
-            }
-        },
-        "hash": {
-            "url": "https://bell-sw.com/pages/java-$version/",
-            "find": "(?smi)$url(?:.*?)<code>($sha1)</code>"
-        },
-        "extract_dir": "jdk-$version"
     }
 }
