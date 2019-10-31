@@ -18,24 +18,5 @@
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
-    },
-    "checkver": {
-        "url": "https://raw.githubusercontent.com/ojdkbuild/ojdkbuild/master/README.md",
-        "re": "download/(?<version>10[\\d.-]+)/(?<url>java-(?<short>[\\d.]+)-openjdk-([\\db.-]+).ojdkbuild.windows).x86_64.zip"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$matchVersion/$matchUrl.x86_64.zip",
-                "extract_dir": "$matchUrl.x86_64"
-            },
-            "32bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$matchVersion/$matchUrl.x86.zip",
-                "extract_dir": "$matchUrl.x86"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
     }
 }
