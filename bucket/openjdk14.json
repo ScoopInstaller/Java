@@ -1,0 +1,32 @@
+{
+    "description": "Official production-ready open-source builds of OpenJDK 14",
+    "homepage": "https://jdk.java.net/14",
+    "version": "14-20-ea",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.java.net/java/early_access/jdk14/20/GPL/openjdk-14-ea+20_windows-x64_bin.zip",
+            "hash": "f0ee0a24fdbecfad7e5f5c3b184bd4f15ad713d99609c1874d1b7a5aab69da3e"
+        }
+    },
+    "extract_dir": "jdk-14",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+        "replace": "${version}-${build}${ea}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.java.net/java/$matchType/$matchPath/$matchFile"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "extract_dir": "jdk-$matchVersion"
+    }
+}
