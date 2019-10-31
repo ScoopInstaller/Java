@@ -1,6 +1,6 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java implementation",
-    "homepage": "https://bell-sw.com/java.html",
+    "description": "BellSoft Liberica is a 100% open-source Java 13 implementation",
+    "homepage": "https://bell-sw.com/pages/java-12",
     "version": "13.0.1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
@@ -19,7 +19,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "bs-link-current-release(?:.*?)/pages/java-([\\d.]+)"
+        "re": "bs-link-current-release(?:.*?)/pages/java-(13[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
