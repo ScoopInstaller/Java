@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-11.0.5/sapmachine-jdk-11.0.5_windows-x64_bin.zip",
-            "hash": "dc0e79b8af329d0502dc40797654325878796d38f4a43ade0124a229389f4746"
+            "hash": "6ba510971984dd4cc4975c1447cefa600c25ffd6ff6759e899196200aba59290"
         }
     },
     "extract_dir": "sapmachine-jdk-11.0.5",
