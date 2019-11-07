@@ -1,16 +1,16 @@
 {
     "description": "Open Source Builds of Zulu With OpenJFX",
-    "homepage": "https://www.azul.com/downloads/zulu/zulufx/",
-    "version": "11.31.11",
+    "homepage": "https://www.azul.com/downloads/zulu-community/",
+    "version": "11.33.15",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu11.31.11-ca-fx-jdk11.0.3-win_x64.zip",
-            "hash": "md5:d10136882862b30d063a72881510205e",
-            "extract_dir": "zulu11.31.11-ca-fx-jdk11.0.3-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.33.15-ca-fx-jdk11.0.4-win_x64.zip",
+            "hash": "md5:99239641d1b0d236099e3ed21fad7143",
+            "extract_dir": "zulu11.33.15-ca-fx-jdk11.0.4-win_x64"
         }
     },
     "env_add_path": "bin",
@@ -18,20 +18,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu(?<major>[\\d.]+)-ca-fx-jdk(?<openver>[\\d.]+)-win)_x64.zip",
-        "reverse": true,
-        "replace": "${major}"
+        "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?os=windows&arch=x86&hw_bitness=64&bundle_type=jdk&features=fx&ext=zip",
+        "re": "(?<name>zulu(?<version>[\\d.]+)-ca-fx-jdk(?<openver>[\\d.]+)-win)_x64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
-                "extract_dir": "$matchName_x64"
+                "extract_dir": "$matchName_x64",
+                "hash": {
+                    "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?os=windows&arch=x86&hw_bitness=64&bundle_type=jdk&features=fx&ext=zip",
+                    "mode": "json",
+                    "jsonpath": "$.md5_hash"
+                }
             }
-        },
-        "hash": {
-            "url": "https://www.azul.com/downloads/zulu/zulufx/",
-            "find": "($md5)</td><[\\w. =\":;]*><[\\w. =\":/]*$basename"
         }
     }
 }
