@@ -1,16 +1,16 @@
 {
     "description": "Zulu 7 is a build of OpenJDK 7",
     "homepage": "https://www.azul.com/downloads/zulu/",
-    "version": "7.31.0.5",
+    "version": "7.34.0.5",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu7.31.0.5-ca-jdk7.0.232-win_x64.zip",
-            "hash": "md5:2bd186e7e9d1c884b33ef31dd3f62f91",
-            "extract_dir": "zulu7.31.0.5-ca-jdk7.0.232-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu7.34.0.5-ca-jdk7.0.242-win_x64.zip",
+            "hash": "md5:3611c39f78794089db47a7d3c532f05e",
+            "extract_dir": "zulu7.34.0.5-ca-jdk7.0.242-win_x64"
         }
     },
     "env_add_path": "bin",
