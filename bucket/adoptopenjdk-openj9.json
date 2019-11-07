@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk13?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d.]+)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
         "replace": "${major}-${build}${jvmver}"
     },
     "autoupdate": {
