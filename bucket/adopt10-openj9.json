@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk10?openjdk_impl=openj9&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].checksum_link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
+        "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>(?<bmajor>[\\d]+)[\\d.]*)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?)(?<zip>.zip)?.sha256.txt",
         "replace": "${major}-${build}${jvmver}"
     },
     "autoupdate": {
@@ -30,6 +30,6 @@
             "url": "https://github.com/$matchUrl$matchZip.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild"
+        "extract_dir": "jdk-$matchMajor+$matchBmajor"
     }
 }
