@@ -9,12 +9,29 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu6.22.0.3-jdk6.0.119-win_x64.zip",
-            "hash": "md5:79916039b5128bdea73d822df40cf2d6",
+            "hash": "24059e8915d675074a80047c75cd6e0672b5c2cadf5b398fb6a6c51d035c54ca",
             "extract_dir": "zulu6.22.0.3-jdk6.0.119-win_x64"
         }
     },
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu6(?<major>[\\d.]+)-jdk(?<openver>[\\d.]+)-win)_x64.zip</a>",
+        "replace": "6${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
+        }
     }
 }

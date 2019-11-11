@@ -1,21 +1,21 @@
 {
     "description": "Zulu 8 is certified build of OpenJDK 8",
     "homepage": "https://www.azul.com/downloads/zulu/",
-    "version": "8.38.0.13",
+    "version": "8.42.0.23",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.38.0.13-ca-jre8.0.212-win_x64.zip",
-            "hash": "md5:0c8256716ad91e6a770f9b03d23c87e2",
-            "extract_dir": "zulu8.38.0.13-ca-jre8.0.212-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.42.0.23-ca-jre8.0.232-win_x64.zip",
+            "hash": "0aced5d0d9543a35a87d8f9218a570323dc9240b5c3e95d61579d4e8fad38c04",
+            "extract_dir": "zulu8.42.0.23-ca-jre8.0.232-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.38.0.13-ca-jre8.0.212-win_i686.zip",
-            "hash": "md5:9ebb79c3b54e7dc4162133d52dd480ab",
-            "extract_dir": "zulu8.38.0.13-ca-jre8.0.212-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.42.0.23-ca-jre8.0.232-win_i686.zip",
+            "hash": "c5eadc1229f4cf56177f76c75e4e8085d3e524180b17fceca7dbf73e731c6d26",
+            "extract_dir": "zulu8.42.0.23-ca-jre8.0.232-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -23,7 +23,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu8(?<major>[\\d.]+)-ca-jre(?<openver>[\\d.]+)-win)_x64.zip",
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu8(?<major>[\\d.]+)-ca-jre(?<openver>[\\d.]+)-win)_x64.zip</a>",
         "replace": "8${major}"
     },
     "autoupdate": {
@@ -38,8 +39,8 @@
             }
         },
         "hash": {
-            "url": "https://www.azul.com/downloads/zulu/",
-            "find": "(?s)Checksum \\(MD5\\): ([a-fA-F0-9]{32})(?:[\\s]*<br><span><a href=\"http(?:[s]?)://cdn.azul.com/zulu/pdf/cert.$basename)"
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
         }
     }
 }
