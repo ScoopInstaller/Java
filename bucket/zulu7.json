@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu7.34.0.5-ca-jdk7.0.242-win_x64.zip",
-            "hash": "md5:3611c39f78794089db47a7d3c532f05e",
+            "hash": "d95394844ccfeb62baf7b872d147250cdd8339939c6e9790ddaef6b025678f01",
             "extract_dir": "zulu7.34.0.5-ca-jdk7.0.242-win_x64"
         }
     },
@@ -18,20 +18,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=7&ext=zip",
-        "re": "(?<name>zulu(?<version>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip"
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu7(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip</a>",
+        "replace": "7${major}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
-                "extract_dir": "$matchName_x64",
-                "hash": {
-                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=7&ext=zip",
-                    "mode": "json",
-                    "jsonpath": "$.md5_hash"
-                }
+                "extract_dir": "$matchName_x64"
             }
+        },
+        "hash": {
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
         }
     }
 }

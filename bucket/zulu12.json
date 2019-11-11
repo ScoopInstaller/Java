@@ -9,12 +9,12 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-win_x64.zip",
-            "hash": "md5:c5df84953d6a0d50b08e61eb923a6699",
+            "hash": "7b5c7d74e6abc38dfcd4b157f37c9faf9ec359008770c48e6e2f76eae435ac4e",
             "extract_dir": "zulu12.3.11-ca-jdk12.0.2-win_x64"
         },
         "32bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu12.3.11-ca-jdk12.0.2-win_i686.zip",
-            "hash": "md5:edd960154f98348ae97252897930c5be",
+            "hash": "3c7d05a6ed5a5a6fc6858496d079a021351671a68b11de3d80897500f4a3144b",
             "extract_dir": "zulu12.3.11-ca-jdk12.0.2-win_i686"
         }
     },
@@ -23,29 +23,24 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=12&ext=zip",
-        "re": "(?<name>zulu(?<version>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip"
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu12(?<major>[\\d.]+)-ca-jdk(?<openver>[\\d.]+)-win)_x64.zip</a>",
+        "replace": "12${major}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
-                "extract_dir": "$matchName_x64",
-                "hash": {
-                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x64&version=12&ext=zip",
-                    "mode": "json",
-                    "jsonpath": "$.md5_hash"
-                }
+                "extract_dir": "$matchName_x64"
             },
             "32bit": {
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
-                "extract_dir": "$matchName_i686",
-                "hash": {
-                    "url": "https://zulu.api.azul.com/api/v1/bundles/latest/?os=win&arch=x86&version=12&ext=zip",
-                    "mode": "json",
-                    "jsonpath": "$.md5_hash"
-                }
+                "extract_dir": "$matchName_i686"
             }
+        },
+        "hash": {
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
         }
     }
 }

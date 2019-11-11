@@ -1,21 +1,21 @@
 {
     "description": "Open Source Builds of Zulu 8 With OpenJFX",
     "homepage": "https://www.azul.com/downloads/zulu/zulufx/",
-    "version": "8.38.0.13",
+    "version": "8.40.0.25",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.38.0.13-ca-fx-jdk8.0.212-win_x64.zip",
-            "hash": "md5:75d0860cca759004c239bda1cd800ed1",
-            "extract_dir": "zulu8.38.0.13-ca-fx-jdk8.0.212-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.40.0.25-ca-fx-jdk8.0.222-win_x64.zip",
+            "hash": "a1f28a0b90a37471ecfb539148429cc2993f73e9d45c5f21c03d0ff4a8a29618",
+            "extract_dir": "zulu8.40.0.25-ca-fx-jdk8.0.222-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.38.0.13-ca-fx-jdk8.0.212-win_i686.zip",
-            "hash": "md5:85ff1bc684e3d381a9cc81160f09cffc",
-            "extract_dir": "zulu8.38.0.13-ca-fx-jdk8.0.212-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.40.0.25-ca-fx-jdk8.0.222-win_i686.zip",
+            "hash": "0f692cadc1034c5101dfb37595450cb21d957a31e7d6788878bbe34e140d6c0d",
+            "extract_dir": "zulu8.40.0.25-ca-fx-jdk8.0.222-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -23,7 +23,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "//cdn.azul.com/zulu/bin/(?<name>zulu8(?<major>[\\d.]+)-ca-fx-jdk(?<openver>[\\d.]+)-win)_x64.zip",
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu8(?<major>[\\d.]+)-ca-fx-jdk(?<openver>[\\d.]+)-win)_x64.zip</a>",
         "replace": "8${major}"
     },
     "autoupdate": {
@@ -38,8 +39,8 @@
             }
         },
         "hash": {
-            "url": "https://www.azul.com/downloads/zulu/zulufx/",
-            "find": "($md5)</td><[\\w. =\":;]*><[\\w. =\":/]*$basename"
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
         }
     }
 }
