@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "201911291515",
+    "version": "201911301518",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-11-29-15-15/OpenJDK8U-jre_x64_windows_openj9_2019-11-29-15-15.zip",
-            "hash": "8cff25bd19ebfa9c75df782314f4f0aecf0bdb7f66be9141f6830086b8708661"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-11-30-15-18/OpenJDK8U-jre_x64_windows_openj9_2019-11-30-15-18.zip",
+            "hash": "bea8d7076ec5a38b65e583dbf43bc440913b15c72a562ac9e00b3155948b7697"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-11-29-15-15/OpenJDK8U-jre_x86-32_windows_openj9_2019-11-29-15-15.zip",
-            "hash": "0d8d36b7235cd7b6ad6ea4268042ab5bafcc5abdb8adb5f7d1d29bde3586c296"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2019-11-30-15-18/OpenJDK8U-jre_x86-32_windows_openj9_2019-11-30-15-18.zip",
+            "hash": "36711290578be177a7e230fe40b538b003161932d4f5a0c61954f4a565ec6e7e"
         }
     },
     "extract_to": "tmp",
