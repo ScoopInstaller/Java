@@ -1,0 +1,46 @@
+{
+    "description": "Zulu is certified build of OpenJDK",
+    "homepage": "https://www.azul.com/downloads/zulu/",
+    "version": "13.28.11",
+    "license": {
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
+        "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.28.11-ca-jre13.0.1-win_x64.zip",
+            "hash": "7eba9fd0f8546280068a1103ebc704fc983780b87ac026bdd435e8a5237f5c58",
+            "extract_dir": "zulu13.28.11-ca-jre13.0.1-win_x64"
+        },
+        "32bit": {
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.28.11-ca-jre13.0.1-win_i686.zip",
+            "hash": "6ab38f694502c8556a2b0bcae1edf55c5216c1b4a3c105eb80790f8d2c815532",
+            "extract_dir": "zulu13.28.11-ca-jre13.0.1-win_i686"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://cdn.azul.com/zulu/bin/?C=M;O=D",
+        "re": ">(?<name>zulu13(?<major>[\\d.]+)-ca-jre(?<openver>[\\d.]+)-win)_x64.zip</a>",
+        "replace": "13${major}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
+                "extract_dir": "$matchName_x64"
+            },
+            "32bit": {
+                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
+                "extract_dir": "$matchName_i686"
+            }
+        },
+        "hash": {
+            "url": "https://www.azul.com/wp-admin/admin-ajax.php?action=search_bundles",
+            "jp": "$..[?(@.link=='$url')].checksum"
+        }
+    }
+}
