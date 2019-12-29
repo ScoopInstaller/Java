@@ -1,21 +1,21 @@
 {
     "description": "Official Early-Access Builds of OpenJDK",
     "homepage": "https://jdk.java.net/",
-    "version": "14-29-ea",
+    "version": "15-3-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk14/29/GPL/openjdk-14-ea+29_windows-x64_bin.zip",
-            "hash": "083c06147216ce2163d4e6e0fdbad095c35769bf98f8020b20801660b22c38e0"
+            "url": "https://download.java.net/java/early_access/jdk15/3/GPL/openjdk-15-ea+3_windows-x64_bin.zip",
+            "hash": "f5fa522efcff995e783f91a964103bced301c4d4deb6ab3bd231367f0e14a30a"
         }
     },
-    "extract_dir": "jdk-14",
+    "extract_dir": "jdk-15",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://jdk.java.net/14",
+        "url": "https://jdk.java.net/15",
         "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
