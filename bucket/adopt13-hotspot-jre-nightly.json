@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 13 JRE with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202001072124",
+    "version": "202001090613",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2020-01-07-21-24/OpenJDK13U-jre_x64_windows_hotspot_2020-01-07-21-24.zip",
-            "hash": "f5384c2dc45cc96a349eea8ddc2ddcaab313c63308569ac29b0c6684f8b72194"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2020-01-09-06-13/OpenJDK13U-jre_x64_windows_hotspot_2020-01-09-06-13.zip",
+            "hash": "83900567b31f0154a0d8c65173350b71a1affea4b4ac5ceffb6053f54cecd57d"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2020-01-07-21-24/OpenJDK13U-jre_x86-32_windows_hotspot_2020-01-07-21-24.zip",
-            "hash": "d7e89da4e341e92c25b2febcced8f8ff73716f9f9ec9ace9e21cd1f9efc87134"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk13u-2020-01-09-06-13/OpenJDK13U-jre_x86-32_windows_hotspot_2020-01-09-06-13.zip",
+            "hash": "0fdfdb3ae26618ccecaa15a8370c285b6a348b353119da4e9b8cc254e66d8630"
         }
     },
     "extract_to": "tmp",
