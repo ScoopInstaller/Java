@@ -13,7 +13,7 @@
             "hash": "sha1:a01a84041da8ba38b572e7451ae43e8eaddf17e7"
         }
     },
-    "extract_dir": "jdk-8u232",
+    "extract_dir": "jre8u232",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -35,6 +35,6 @@
             "url": "https://bell-sw.com/pages/java-$version/",
             "find": "(?smi)$url(?:.*?)<code>($sha1)</code>"
         },
-        "extract_dir": "jdk-$version"
+        "extract_dir": "jre$version"
     }
 }
