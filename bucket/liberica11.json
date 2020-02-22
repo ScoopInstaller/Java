@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://download.bell-sw.com/java/11.0.6+10/bellsoft-jdk11.0.6+10-windows-amd64.zip",
-            "hash": "sha1:9956658bdc98f844bacbf451b8e8f0622544b539"
+            "hash": "sha1:80B647C57345C1B01F386666C340445FFCEDED74"
         },
         "32bit": { 
             "url": "https://download.bell-sw.com/java/11.0.6+10/bellsoft-jdk11.0.6+10-windows-i586.zip",
-            "hash": "sha1:ef4fb21d567d30470744745763ecde6854f21dec"
+            "hash": "sha1:4C5FAE1A8B35E21CD98F67B1AAF3E14C91A5B1D5"
         }
     },
     "extract_dir": "jdk-11.0.6",
