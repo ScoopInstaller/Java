@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://download.bell-sw.com/java/8u242+7/bellsoft-jdk8u242+7-windows-amd64.zip",
-            "hash": "sha1:f7b8483e7832287547d503ad68e9cef091ef0f48"
+            "hash": "sha1:4E636E7DE7612466F1681A5107BE252A4E9D38B1"
         },
         "32bit": {
             "url": "https://download.bell-sw.com/java/8u242+7/bellsoft-jdk8u242+7-windows-i586.zip",
-            "hash": "sha1:ba9b119748b5682305a288a92e025a7d9e509ace"
+            "hash": "sha1:4BE39D535BC46A00B761A76A93807891CAAD3F06"
         }
     },
     "extract_dir": "jdk8u242",
