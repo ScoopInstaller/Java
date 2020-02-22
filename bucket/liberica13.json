@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://download.bell-sw.com/java/13.0.2/bellsoft-jdk13.0.2-windows-amd64.zip",
-            "hash": "sha1:77d14c9c35baad7664f70380cf552538134fc68b"
+            "hash": "sha1:653876CD70A20ED8EAA3A6FE915C5FA02FDF2544"
         },
         "32bit": {
             "url": "https://download.bell-sw.com/java/13.0.2/bellsoft-jdk13.0.2-windows-i586.zip",
-            "hash": "sha1:9540e645ccbee315888aadb3e8dd87f822999474"
+            "hash": "sha1:3152D20417C78522595F63E2CD6A22C2677E367C"
         }
     },
     "extract_dir": "jdk-13.0.2",
