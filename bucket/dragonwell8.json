@@ -9,6 +9,7 @@
             "hash": "fe5f4c420f10e20bd8a6de5325aacdfc4c0b4f908885c17929a015ff69994d22"
         }
     },
+    "extract_dir": "j2sdk-image",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
