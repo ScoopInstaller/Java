@@ -16,8 +16,7 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/SAP/SapMachine/releases",
-        "re": "(?<sap>/sapmachine-(?:13[\\d.]*)(?:\\%2B|\\+)?(?:[\\d]*)/sapmachine-jdk-(?<version>[\\d.]+)(?:(?<dash>-)(?<ea>ea)\\.(?<build>[\\d]+))?_windows-x64_bin).zip",
-        "replace": "${version}${dash}${build}${dash}${ea}"
+        "re": "(?<sap>/sapmachine-(?:13[\\d.]*)(?:\\%2B|\\+)?(?:[\\d]*)/sapmachine-jdk-(?<version>[\\d.]+)_windows-x64_bin).zip"
     },
     "autoupdate": {
         "architecture": {
