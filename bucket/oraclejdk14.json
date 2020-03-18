@@ -1,24 +1,24 @@
 {
-    "description": "Oracle JDK 13",
+    "description": "Oracle JDK 14",
     "homepage": "https://www.oracle.com/java/",
-    "version": "13.0.2-8",
+    "version": "14-36",
     "license": "https://www.oracle.com/downloads/licenses/javase-license1.html",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_windows-x64_bin.zip",
-            "hash": "73cb9a7d389746cb01a546bae54e36feaf978930c1b49bd40e751a83417869d9"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/14+36/076bab302c7b4508975440c56f6cc26a/jdk-14_windows-x64_bin.zip",
+            "hash": "80212f7748c2671b89b6085000717c747851db004409dce3bb97f3a2aeb91cdd"
         }
     },
     "cookie": {
         "oraclelicense": "accept-securebackup-cookie"
     },
-    "extract_dir": "jdk-13.0.2",
+    "extract_dir": "jdk-14",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.oracle.com/java/technologies/javase-jdk13-downloads.html",
+        "url": "https://www.oracle.com/java/technologies/javase-jdk14-downloads.html",
         "re": "otn-pub/java/jdk/(?<path>(?<major>(?<feature>[\\d]+).0.(?<update>[\\d]+))\\+(?<build>[\\d]+)/(?<hash>[a-fA-F0-9]{32})/jdk-(?:.*?)_windows-x64_bin.zip)",
         "replace": "${major}-${build}"
     },
