@@ -17,13 +17,13 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk8?openjdk_impl=openj9&heap_size=large&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?))/",
-        "replace": "${major}${update}-${build}${jvmver}"
+        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
+        "replace": "${major}${update}-${build}${patch}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x64_windows_openj9_windowsXL_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+                "url": "https://github.com/$matchUrl.zip"
             }
         },
         "hash": {
