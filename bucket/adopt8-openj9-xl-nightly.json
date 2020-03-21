@@ -23,13 +23,13 @@
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v2/info/nightly/openjdk8?openjdk_impl=openj9&heap_size=large&os=windows&arch=x64&release=latest&type=jdk",
         "jp": "$.binaries[0].binary_link",
-        "re": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2})))",
+        "re": "https://github.com/(?<url>.*?(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}).*?).zip",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jdk_x64_windows_openj9_windowsXL_$matchDate.zip"
+                "url": "https://github.com/$matchUrl.zip"
             }
         },
         "hash": {
