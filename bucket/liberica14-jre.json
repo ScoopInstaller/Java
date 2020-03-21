@@ -1,5 +1,5 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java implementation",
+    "description": "BellSoft Liberica is a 100% open-source Java 14 implementation",
     "homepage": "https://bell-sw.com/java",
     "version": "14-36",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
@@ -19,7 +19,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.bell-sw.com/v1/liberica/releases?bundle-type=jre&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=14&bundle-type=jre&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
         "jsonpath": "$.version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
         "replace": "${major}-${build}"
