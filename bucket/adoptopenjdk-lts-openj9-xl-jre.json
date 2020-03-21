@@ -5,8 +5,8 @@
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_x64_windows_openj9_11.0.6_10_openj9-0.18.1.zip",
-            "hash": "b940e9ef81bc87e5b6cf639cf67ac0628b11da56925c2297d2157d1ec84aa431"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jre_x64_windows_openj9_windowsXL_11.0.6_10_openj9-0.18.1.zip",
+            "hash": "8d676fc797326a2f23b418e28af4d07a7db9a752486c371873e82dea6055326e"
         }
     },
     "extract_dir": "jdk-11.0.6+10-jre",
@@ -15,7 +15,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&heap_size=normal&os=windows&arch=x64&release=latest&type=jre",
+        "url": "https://api.adoptopenjdk.net/v2/info/releases/openjdk11?openjdk_impl=openj9&heap_size=large&os=windows&arch=x64&release=latest&type=jre",
         "jp": "$.binaries[0].binary_link",
         "re": "https://github.com/(?<url>.*?(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>(?<bmajor>[\\d]+)[\\d.]*)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+))?)/.*?).zip",
         "replace": "${major}-${build}${jvmver}"
