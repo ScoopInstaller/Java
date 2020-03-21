@@ -1,5 +1,5 @@
 {
-    "description": "AdoptOpenJDK 12 with Eclipse OpenJ9 JVM",
+    "description": "AdoptOpenJDK 12 with Eclipse OpenJ9 JVM with large heap",
     "homepage": "https://adoptopenjdk.net",
     "version": "12.0.2-10-0.15.1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",

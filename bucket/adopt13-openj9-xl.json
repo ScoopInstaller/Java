@@ -1,5 +1,5 @@
 {
-    "description": "AdoptOpenJDK 13 with Eclipse OpenJ9 JVM",
+    "description": "AdoptOpenJDK 13 with Eclipse OpenJ9 JVM with large heap",
     "homepage": "https://adoptopenjdk.net",
     "version": "13.0.2-8-0.18.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
