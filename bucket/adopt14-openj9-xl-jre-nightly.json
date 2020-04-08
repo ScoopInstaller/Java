@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 14 JRE with Eclipse OpenJ9 JVM with large heap (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202004020140",
+    "version": "202004080359",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-04-02-01-40/OpenJDK14U-jre_x64_windows_openj9_windowsXL_2020-04-02-01-40.zip",
-            "hash": "7daafcb3d9e921724391277e9eb8a1e25ca8240a3839703ee9aeed1349506090"
+            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-04-08-03-59/OpenJDK14U-jre_x64_windows_openj9_windowsXL_2020-04-08-03-59.zip",
+            "hash": "a28b9544fe18a6570efe8e626733cb58536d93264e7330ed2e968ef72c56d692"
         }
     },
     "extract_to": "tmp",
