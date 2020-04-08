@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM with large heap (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202004070426",
+    "version": "202004080430",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-04-07-04-26/OpenJDK8U-jre_x64_windows_openj9_windowsXL_2020-04-07-04-26.zip",
-            "hash": "48cbd7de90255bd9abcaf15b00ccf68254cb58dc403601ab6f0cbfa10e3649ea"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-04-08-04-30/OpenJDK8U-jre_x64_windows_openj9_windowsXL_2020-04-08-04-30.zip",
+            "hash": "98dcaeaeadc0c1b2232eb9b3cc3849b76c91f20878b9ebd99514bc782b05b0af"
         }
     },
     "extract_to": "tmp",
