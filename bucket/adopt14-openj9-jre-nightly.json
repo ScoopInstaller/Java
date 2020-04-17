@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 14 JRE with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202004160556",
+    "version": "202004171047",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-04-16-05-56/OpenJDK14U-jre_x64_windows_openj9_2020-04-16-05-56.zip",
-            "hash": "0e18e65c525e52766357810850e9c50305c0b905f05daa46acf681a6f5884f4b"
+            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-04-17-10-47/OpenJDK14U-jre_x64_windows_openj9_2020-04-17-10-47.zip",
+            "hash": "4a524419b7ceed324f28ae4817dda2f55f03e7736f44b52b89ed4fba2d846d36"
         }
     },
     "extract_to": "tmp",
