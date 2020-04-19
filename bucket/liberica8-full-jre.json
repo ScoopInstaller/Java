@@ -13,7 +13,7 @@
             "hash": "2cfb367e660f690b4e8029a00fe12ef72730bcd1671286a18f562095f3ff59ab"
         }
     },
-    "extract_dir": "jre8u252",
+    "extract_dir": "jre8u252-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"

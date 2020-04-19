@@ -13,7 +13,7 @@
             "hash": "2296165ee44f3ed65c226bb0b35de5002ad55ff2bbec0b719002c1e397c5b6c7"
         }
     },
-    "extract_dir": "jdk8u252",
+    "extract_dir": "jdk8u252-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
