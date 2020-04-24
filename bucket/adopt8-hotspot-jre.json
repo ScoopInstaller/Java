@@ -13,7 +13,7 @@
             "hash": "9314886ca817f5b9b3c9518b4abcb9070e04b767da7eba6e76e13313d97a0f7f"
         }
     },
-    "extract_dir": "jdk8u252-b09.1-jre",
+    "extract_dir": "jdk8u252-b09",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -37,6 +37,6 @@
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "$matchTag-jre"
+        "extract_dir": "jdk$matchMajor$matchUpdate-$matchBuild"
     }
 }
