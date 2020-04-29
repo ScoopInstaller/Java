@@ -13,7 +13,7 @@
             "hash": "9314886ca817f5b9b3c9518b4abcb9070e04b767da7eba6e76e13313d97a0f7f"
         }
     },
-    "extract_dir": "jdk8u252-b09",
+    "extract_dir": "jdk8u252-b09-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
