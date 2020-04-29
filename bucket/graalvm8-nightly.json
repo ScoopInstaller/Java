@@ -1,10 +1,10 @@
 {
     "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
-    "version": "20.2.0-dev-20200428_0200",
+    "version": "20.2.0-dev-20200429_0231",
     "homepage": "https://graalvm.org",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/20.2.0-dev-20200428_0200/graalvm-ce-java8-windows-amd64-20.2.0-dev.zip",
-    "hash": "e2248a364c72f6d07ed4e32ce7c49fb5e856be9667ad158242282e06ad98f38e",
+    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/20.2.0-dev-20200429_0231/graalvm-ce-java8-windows-amd64-20.2.0-dev.zip",
+    "hash": "82d330346444249f2cf14d341e2d3414cc53aa9aa56cd4bdfb6d9d2a37088345",
     "extract_dir": "graalvm-ce-java8-20.2.0-dev",
     "env_add_path": "bin",
     "env_set": {
