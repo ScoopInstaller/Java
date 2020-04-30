@@ -9,7 +9,7 @@
             "hash": "10b89e212c3d6b72cd9365395874900e1f0dfe159ad57fc0f3cd956b4f99a405"
         }
     },
-    "extract_dir": "openjdk-11u-11.0.7+10",
+    "extract_dir": "openjdk-11.0.7_10",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -26,6 +26,6 @@
                 "url": "https://github.com/AdoptOpenJDK/openjdk$matchJdk-upstream-binaries/releases/download/jdk-$matchMajor+$matchBuild/OpenJDK$matchJdkU-jdk_x64_windows_$matchMajor_$matchBuild.zip"
             }
         },
-        "extract_dir": "openjdk-$matchJdku-$matchMajor+$matchBuild"
+        "extract_dir": "openjdk-$matchMajor_$matchBuild"
     }
 }
