@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM with large heap (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202004300812",
+    "version": "202005011103",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2020-04-30-08-12/OpenJDK11U-jdk_x64_windows_openj9_windowsXL_2020-04-30-08-12.zip",
-            "hash": "df24bfed06e469ac19465b3b3d465ee65c0bdf89b2d166ddb6824df8864bb7f4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2020-05-01-11-03/OpenJDK11U-jdk_x64_windows_openj9_windowsXL_2020-05-01-11-03.zip",
+            "hash": "aa7a9346a9dea282224883a8f6ad2c58efef2b6b866705defa990086e359be32"
         }
     },
     "extract_to": "tmp",
