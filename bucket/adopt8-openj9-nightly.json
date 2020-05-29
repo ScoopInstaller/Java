@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 8 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202005290033",
+    "version": "202005292218",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-05-29-00-33/OpenJDK8U-jdk_x64_windows_openj9_2020-05-29-00-33.zip",
-            "hash": "394dfe506da012dd308c003e76f38c653ee090c6c2f72cf6c59517ffcbfbad33"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-05-29-22-18/OpenJDK8U-jdk_x64_windows_openj9_2020-05-29-22-18.zip",
+            "hash": "33a78f7e34fde52f09dc244642dc5fc92ff77086920ae0b35fa64245d958f35c"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-05-29-00-33/OpenJDK8U-jdk_x86-32_windows_openj9_2020-05-29-00-33.zip",
-            "hash": "0b1998198a2c516056b77e30ce734bd9502bcb70b6e76cc6b72e4ac865693dc8"
+            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-05-29-22-18/OpenJDK8U-jdk_x86-32_windows_openj9_2020-05-29-22-18.zip",
+            "hash": "ca1a95544315ef48c171a7d51aba69df0d2dc0dd1172e94b0033440a927330a4"
         }
     },
     "extract_to": "tmp",
