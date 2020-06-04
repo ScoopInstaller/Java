@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK with Oracle HotSpot JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "13.0.2-8",
+    "version": "14.0.1-7.1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jdk_x64_windows_hotspot_13.0.2_8.zip",
-            "hash": "6980db87a3f921801fcf50d1a933304cf4d4b46ef2d35617c96fcc40ac1a1eb9"
+            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7.1/OpenJDK14U-jdk_x64_windows_hotspot_14.0.1_7.zip",
+            "hash": "935e9121ddc83e5ac82ff73bd7a4b94f25824c7a66964ef7cb3b57098ae05599"
         }
     },
-    "extract_dir": "jdk-13.0.2+8",
+    "extract_dir": "jdk-14.0.1+7",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
