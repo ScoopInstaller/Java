@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 14 JRE with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202006040346",
+    "version": "202006050720",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-06-04-03-46/OpenJDK14U-jre_x64_windows_hotspot_2020-06-04-03-46.zip",
-            "hash": "999452d36e24dba16614ef5a66e4954ba4bac110dd11f5367095fbeffc48b894"
+            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk14u-2020-06-05-07-20/OpenJDK14U-jre_x64_windows_hotspot_2020-06-05-07-20.zip",
+            "hash": "4419f9dc0425aab725a95d3391a6f5c74d9c580c3d26006d38f22f87d185fcd2"
         }
     },
     "extract_to": "tmp",
