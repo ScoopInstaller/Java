@@ -1,15 +1,15 @@
 {
     "description": "AdoptOpenJDK JRE with Eclipse OpenJ9 JVM with large heap",
     "homepage": "https://adoptopenjdk.net",
-    "version": "14.0.1-7.1-0.20.0",
+    "version": "13.0.2-8-0.18.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7.1_openj9-0.20.0/OpenJDK14U-jre_x64_windows_openj9_windowsXL_14.0.1_7_openj9-0.20.0.zip",
-            "hash": "60a53cff29583256ca6bf5d39cc5bef04def0a9eaeffba9b9ebdd17e9368399e"
+            "url": "https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8_openj9-0.18.0/OpenJDK13U-jre_x64_windows_openj9_windowsXL_13.0.2_8_openj9-0.18.0.zip",
+            "hash": "f6536b9631784339c684a65d32f7f0db748e416c7d3f98f89b48758ee5e631c2"
         }
     },
-    "extract_dir": "jdk-14.0.1+7-jre",
+    "extract_dir": "jdk-13.0.2+8-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
