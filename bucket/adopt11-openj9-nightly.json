@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 11 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202008190420",
+    "version": "202008210641",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2020-08-19-04-20/OpenJDK11U-jdk_x64_windows_openj9_2020-08-19-04-20.zip",
-            "hash": "02e9b4cd1fe22ca3fa210b70bb5137e93499ca558be6f4f323425d9827b18665"
+            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2020-08-21-06-41/OpenJDK11U-jdk_x64_windows_openj9_2020-08-21-06-41.zip",
+            "hash": "c79af2031369ede9e66039c746406eaab5b4414a5e84011913f707c0434a57c3"
         }
     },
     "extract_to": "tmp",
