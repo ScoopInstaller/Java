@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 15 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202010010418",
+    "version": "202010050816",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk15u-2020-10-01-04-18/OpenJDK15U-jdk_x64_windows_openj9_2020-10-01-04-18.zip",
-            "hash": "0186d029a5b14703f89bbc3df9ac4e5556e5829c495143c592cf9ceb282e0ae4"
+            "url": "https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk15u-2020-10-05-08-16/OpenJDK15U-jdk_x64_windows_openj9_2020-10-05-08-16.zip",
+            "hash": "fdfa206d94ecf8f99ed2c5c0da3c8d49951a0f224f1ad88cb53f5716b375bef4"
         }
     },
     "extract_to": "tmp",
