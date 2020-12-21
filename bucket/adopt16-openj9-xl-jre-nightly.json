@@ -1,5 +1,5 @@
 {
-    "description": "AdoptOpenJDK 15 JRE with Eclipse OpenJ9 JVM with large heap (Nightly builds)",
+    "description": "AdoptOpenJDK 16 JRE with Eclipse OpenJ9 JVM with large heap (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
     "version": "202012180915",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
