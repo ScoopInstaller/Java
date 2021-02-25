@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 16 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202102231920",
+    "version": "202102251017",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk16-2021-02-23-19-20/OpenJDK16-jdk_x64_windows_hotspot_2021-02-23-19-20.zip",
-            "hash": "ab74a21a10bd9e108d4a6894616fd62ef1089b67c030bc227d94c2aa13e4a46d"
+            "url": "https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk16-2021-02-25-10-17/OpenJDK16-jdk_x64_windows_hotspot_2021-02-25-10-17.zip",
+            "hash": "b82102b4728a89f7a0823f93aeeae5a182f2dd1537941f5d6e20ae81e9d79ec8"
         }
     },
     "extract_to": "tmp",
