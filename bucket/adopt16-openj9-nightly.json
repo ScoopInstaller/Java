@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 16 with Eclipse OpenJ9 JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202103301141",
+    "version": "202104010804",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk16u-2021-03-30-11-41/OpenJDK16U-jdk_x64_windows_openj9_2021-03-30-11-41.zip",
-            "hash": "0d1e20cf23b12a384216aed019ef12af4c2d8fee8bba1f69f98cf281eda8a268"
+            "url": "https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk16u-2021-04-01-08-04/OpenJDK16U-jdk_x64_windows_openj9_2021-04-01-08-04.zip",
+            "hash": "523be79163e9a031a1e99cc8db027cb72be14aee346b7d8c9f345c2a40912970"
         }
     },
     "extract_to": "tmp",
