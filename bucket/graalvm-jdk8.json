@@ -3,9 +3,9 @@
     "version": "21.0.0.2",
     "homepage": "https://graalvm.org",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java11-windows-amd64-21.0.0.2.zip",
-    "hash": "fd74127557f05f5a62c71d681aba8cacc7dbd49359458c0981d80823ae2e2dfb",
-    "extract_dir": "graalvm-ce-java11-21.0.0.2",
+    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java8-windows-amd64-21.0.0.2.zip",
+    "hash": "a6c080687f70d7c3ef98d5cb85562544f3cbf514b235652b993905f622a15af7",
+    "extract_dir": "graalvm-ce-java8-21.0.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir",
@@ -16,8 +16,8 @@
         "regex": "graalvm-ce-builds/releases/tag/vm-(21[\\d\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java11-windows-amd64-$version.zip",
-        "extract_dir": "graalvm-ce-java11-$version",
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java8-windows-amd64-$version.zip",
+        "extract_dir": "graalvm-ce-java8-$version",
         "hash": {
             "url": "$url.sha256"
         }
