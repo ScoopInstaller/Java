@@ -13,7 +13,7 @@
             "hash": "9f342a7d967c62bbfa921f6727fd0c68420e9b24a53a06bf240c969b27cf94fc"
         }
     },
-    "extract_dir": "jre1.8.0_271",
+    "extract_dir": "jre1.8.0_281",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
