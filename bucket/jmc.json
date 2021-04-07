@@ -9,7 +9,7 @@
             "hash": "866e3799162f90c230abdd1d0aa9ba82180603904dc6eea03b588732852241d8"
         }
     },
-    "extract_dir": "jmc-8.0.0_windows-x64\\bin",
+    "extract_dir": "jmc-8.0.0_windows-x64\\JDK Mission Control",
     "shortcuts": [
         [
             "jmc.exe",
@@ -32,6 +32,6 @@
             "url": "$url.sha256",
             "find": "$sha256\\s"
         },
-        "extract_dir": "jmc-$matchVersion_windows-x64\\bin"
+        "extract_dir": "jmc-$matchVersion_windows-x64\\JDK Mission Control"
     }
 }
