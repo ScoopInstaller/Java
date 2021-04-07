@@ -1,15 +1,15 @@
 {
     "description": "JDK Mission Control",
     "homepage": "https://openjdk.java.net/projects/jmc/",
-    "version": "8.0.0-13",
+    "version": "7.1.2-04",
     "license": "UPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jmc8/13/binaries/jmc-8.0.0_windows-x64.zip",
-            "hash": "866e3799162f90c230abdd1d0aa9ba82180603904dc6eea03b588732852241d8"
+            "url": "https://download.java.net/java/GA/jmc7/04/binaries/jmc-7.1.2_windows-x64.zip",
+            "hash": "b2dc4cc3e0b32dfcda0e71136452ccd39a3a076dd66c2b7824be0d52bc7c852e"
         }
     },
-    "extract_dir": "jmc-8.0.0_windows-x64\\bin",
+    "extract_dir": "jmc-7.1.2_windows-x64\\bin",
     "shortcuts": [
         [
             "jmc.exe",
@@ -18,7 +18,7 @@
     ],
     "persist": "configuration",
     "checkver": {
-        "url": "https://jdk.java.net/jmc/8/",
+        "url": "https://jdk.java.net/jmc/",
         "re": "/(?<type>early_access|GA)/(?<path>jmc(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries|/UPL)?)/(?<file>jmc-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64(?:_bin)?\\.(?:zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
