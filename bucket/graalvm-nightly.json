@@ -1,11 +1,11 @@
 {
     "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
     "version": "21.1.0-dev-20210406_2231",
-    "homepage": "https://graalvm.org",
+    "homepage": "https://www.graalvm.org/",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/21.1.0-dev-20210406_2231/graalvm-ce-java11-windows-amd64-dev.zip",
-    "hash": "629748f77133d424d1764c6772830e6188be69e1d162a6ff492d6ba7e7f68ceb",
-    "extract_dir": "graalvm-ce-java11-21.1.0-dev",
+    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/21.1.0-dev-20210406_2231/graalvm-ce-java16-windows-amd64-dev.zip",
+    "hash": "433be453f24db66d0a286e4e8bb59a8dea77aa66e7f82d53257824b674875d40",
+    "extract_dir": "graalvm-ce-java16-21.1.0-dev",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir",
@@ -13,11 +13,12 @@
     },
     "checkver": {
         "github": "https://github.com/graalvm/graalvm-ce-dev-builds",
-        "re": "GraalVM CE (?<release>[\\d\\w.-]+)-dev-(?<build>[\\d\\w.-]+)",
-        "replace": "${release}-dev-${build}"
+        "regex": "/(?<release>[\\d\\w.-]+)-dev-(?<build>[\\d\\w.-]+)/graalvm-ce-java(?<java>\\d[\\d]+)-windows-amd64-dev",
+        "replace": "${release}-dev-${build}",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/$version/graalvm-ce-java11-windows-amd64-dev.zip",
-        "extract_dir": "graalvm-ce-java11-$matchRelease-dev"
+        "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/$version/graalvm-ce-java$matchJava-windows-amd64-dev.zip",
+        "extract_dir": "graalvm-ce-java$matchJava-$matchRelease-dev"
     }
 }
