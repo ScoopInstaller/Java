@@ -1,0 +1,20 @@
+{
+    "description": "The Microsoft Build of OpenJDK is a new no-cost long-term supported distribution and Microsoft's new way to collaborate and contribute to the Java ecosystem.",
+    "homepage": "https://www.microsoft.com/openjdk",
+    "version": "16.0.1-9",
+    "license": {
+        "identifier": "GPL2 with Classpath Exception",
+        "url": "https://raw.githubusercontent.com/microsoft/openjdk/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://aka.ms/download-jdk/microsoft-jdk-16.0.1.9.1-windows-x64.zip",
+            "hash": "371c1177923266a6f4971b42b1d58d1128028c1b34a1d1d3c36304552083c2e4",
+            "extract_dir": "jdk-16.0.1+9"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    }
+}
