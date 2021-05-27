@@ -3,7 +3,7 @@
     "homepage": "https://www.microsoft.com/openjdk",
     "version": "16.0.1-9",
     "license": {
-        "identifier": "GPL2 with Classpath Exception",
+        "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://raw.githubusercontent.com/microsoft/openjdk/main/LICENSE"
     },
     "architecture": {
