@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://docs.microsoft.com/java/openjdk/download",
         "regex": "(?<ms>microsoft-jdk-([\\d.]+)-windows-x64).zip",
-        "reverse" : true
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
