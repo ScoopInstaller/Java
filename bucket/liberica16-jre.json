@@ -1,19 +1,19 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java 16 implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "14-36",
+    "version": "16.0.2-7",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/14%2B36/bellsoft-jre14%2B36-windows-amd64.zip",
-            "hash": "sha1:d5f68912a626a6da758e56ea47ffa09a2746f9db"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/16.0.2%2B7/bellsoft-jre16.0.2%2B7-windows-amd64.zip",
+            "hash": "sha1:2439c4faed6ccafc0e64fa33513c36078f25f20a"
         },
         "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/14%2B36/bellsoft-jre14%2B36-windows-i586.zip",
-            "hash": "sha1:827e114e3a8fdbebefe092780753449fc34dddab"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/16.0.2%2B7/bellsoft-jre16.0.2%2B7-windows-i586.zip",
+            "hash": "sha1:b37c0a09c93bc330af5c0d033e8b0ef25739cb20"
         }
     },
-    "extract_dir": "jre-14",
+    "extract_dir": "jre-16.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
