@@ -1,15 +1,15 @@
 {
     "description": "Latest LTS builds for Temurin VM based on OpenJDK by Eclipse Adoptium",
     "homepage": "https://adoptium.net/",
-    "version": "jdk-11.0.12+7",
+    "version": "jdk-17+35",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://api.adoptium.net/v3/binary/version/jdk-11.0.12%2B7/windows/x64/jdk/hotspot/normal/adoptium?project=jdk#/dl.zip",
-            "hash": "c54123dd4b0d6473221539e7003b8ca1c1757c5588c46465565b03bf8781f807"
+            "url": "https://api.adoptium.net/v3/binary/version/jdk-17+35/windows/x64/jdk/hotspot/normal/adoptium?project=jdk#/dl.zip",
+            "hash": "79e1c949f8301eb0a5979bc245829a4419507d7f6ac567c870e5986daf48c1db"
         }
     },
-    "extract_dir": "jdk-11.0.12+7",
+    "extract_dir": "jdk-17+35",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
