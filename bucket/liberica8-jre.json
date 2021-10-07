@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/8u302%2B8/bellsoft-jre8u302%2B8-windows-amd64.zip",
-            "hash": "33521e4d1a3966f18da9f3570d295776132d0fb1307e4e7e4c130a96729a45f3"
+            "hash": "sha1:0fc87afa251b4e8013a76ad205a77304c90b7d40"
         },
         "32bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/8u302%2B8/bellsoft-jre8u302%2B8-windows-i586.zip",
-            "hash": "42727eb52b4bfdef8b3a14bc0b54d5176e1be59e95426d9c4894cd92146326eb"
+            "hash": "sha1:ad0ffb6500f7215c86c00ed6a28e1aa9de0c519c"
         }
     },
     "extract_dir": "jre8u302",

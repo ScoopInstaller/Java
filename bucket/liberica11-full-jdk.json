@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/11.0.12%2B7/bellsoft-jdk11.0.12%2B7-windows-amd64-full.zip",
-            "hash": "f537325c42fca4b7023d50df4ab30954e10ef55d4e50481ed9c260d2dfdf7e46"
+            "hash": "sha1:f8c2ce0a3dec01b8c0f957af6fe439408f61df26"
         },
         "32bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/11.0.12%2B7/bellsoft-jdk11.0.12%2B7-windows-i586-full.zip",
-            "hash": "c3eac30b9ce613e3318858ecb9de4c51be9218f4aaa34b6d65c9bcece32bd4d7"
+            "hash": "sha1:dbfedf6bf3c2e67cfdd470a83a4c2e3a3f40e596"
         }
     },
     "extract_dir": "jdk-11.0.12-full",

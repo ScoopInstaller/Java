@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/11.0.12%2B7/bellsoft-jre11.0.12%2B7-windows-amd64.zip",
-            "hash": "c44fa58da2c8c5be1ff9ce22c2e9b5970e233d2240bc5448ca85bcb4490fb00d"
+            "hash": "sha1:723c3098e27225bbaf6bca4d157f5b2ef418fcc2"
         },
         "32bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/11.0.12%2B7/bellsoft-jre11.0.12%2B7-windows-i586.zip",
-            "hash": "4351d531284190aef7ac9a4f740bd5b1ef5aa8190d2f3064eff42b70da9f26a5"
+            "hash": "sha1:4d3a5e032494ff796e76bd0f5fbd129ee3d1c3fa"
         }
     },
     "extract_dir": "jre-11.0.12",
