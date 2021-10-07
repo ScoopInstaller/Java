@@ -1,0 +1,33 @@
+{
+    "description": "Latest LTS builds for Temurin VM based on OpenJDK by Eclipse Adoptium",
+    "homepage": "https://adoptium.net/",
+    "version": "jdk-17+35",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://api.adoptium.net/v3/binary/version/jdk-17+35/windows/x64/jdk/hotspot/normal/adoptium?project=jdk#/dl.zip",
+            "hash": "79e1c949f8301eb0a5979bc245829a4419507d7f6ac567c870e5986daf48c1db"
+        }
+    },
+    "extract_dir": "jdk-17+35",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.adoptium.net/v3/info/release_names?architecture=x64&heap_size=normal&image_type=jdk&lts=true&os=windows&page=0&page_size=1&project=jdk&release_type=ga&sort_method=DEFAULT&sort_order=DESC&vendor=adoptium",
+        "jp": "$.releases[0]"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://api.adoptium.net/v3/binary/version/$version/windows/x64/jdk/hotspot/normal/adoptium?project=jdk#/dl.zip"
+            }
+        },
+        "hash": {
+            "url": "https://api.adoptium.net/v3/assets/version/$version?architecture=x64&heap_size=normal&image_type=jdk&os=windows&page=0&page_size=1&project=jdk&release_type=ga&sort_method=DEFAULT&sort_order=DESC&vendor=adoptium",
+            "jp": "$[0].binaries[0].package.checksum"
+        },
+        "extract_dir": "$version"
+    }
+}
