@@ -16,8 +16,8 @@
         "regex": "vm-([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java11-windows-amd64-$version.zip",
-        "extract_dir": "graalvm-ce-java11-$version",
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java16-windows-amd64-$version.zip",
+        "extract_dir": "graalvm-ce-java16-$version",
         "hash": {
             "url": "$url.sha256"
         }

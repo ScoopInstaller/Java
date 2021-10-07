@@ -17,7 +17,7 @@
         "replace": "${release}-dev-${build}"
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/$version/graalvm-ce-java16-windows-amd64-dev.zip",
-        "extract_dir": "graalvm-ce-java16-$matchRelease-dev"
+        "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/$version/graalvm-ce-java17-windows-amd64-dev.zip",
+        "extract_dir": "graalvm-ce-java17-$matchRelease-dev"
     }
 }

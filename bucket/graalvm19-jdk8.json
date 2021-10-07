@@ -12,7 +12,7 @@
         "GRAALVM_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.graalvm.org/downloads/20/",
+        "url": "https://www.graalvm.org/downloads/19/",
         "regex": "vm-([\\d.]+)"
     },
     "autoupdate": {
