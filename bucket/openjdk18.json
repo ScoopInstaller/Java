@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 18",
     "homepage": "https://jdk.java.net/18",
-    "version": "18-17-ea",
+    "version": "18-18-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk18/17/GPL/openjdk-18-ea+17_windows-x64_bin.zip",
-            "hash": "cea9afe5f78c3c119b52b565571ce3e2979355f2b0909265037580e5e835d3a2"
+            "url": "https://download.java.net/java/early_access/jdk18/18/GPL/openjdk-18-ea+18_windows-x64_bin.zip",
+            "hash": "bec524192218eb853263397524b61cb644624cd1694194e1c3d0817d29970537"
         }
     },
     "extract_dir": "jdk-18",
