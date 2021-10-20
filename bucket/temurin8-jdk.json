@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://api.adoptium.net/v3/assets/feature_releases/8/ga?jvm_impl=hotspot&heap_size=normal&os=windows&architecture=x64&image_type=jdk&project=jdk&vendor=adoptium&page_size=1&sort_order=DESC",
         "jsonpath": "$..binaries[0].package.link",
-        "re": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)))/",
+        "regex": "https://github.com/(?<url>.*?(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)))/",
         "replace": "${major}${update}-${build}${patch}"
     },
     "autoupdate": {
