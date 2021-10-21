@@ -3,9 +3,9 @@
     "version": "21.3.0",
     "homepage": "https://www.graalvm.org/",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-windows-amd64-21.3.0.zip",
-    "hash": "d9c23ecf4513d0057d3b3f5367b63b6944762f8f9574c5a42bd4522e98e9e9a4",
-    "extract_dir": "graalvm-ce-java11-21.3.0",
+    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java17-windows-amd64-21.3.0.zip",
+    "hash": "dd8b89ad60bf909327fdb6e5711d944c5e581d47add6414757ac9b293febc7be",
+    "extract_dir": "graalvm-ce-java17-21.3.0",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir",
@@ -16,8 +16,8 @@
         "regex": "vm-([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java11-windows-amd64-$version.zip",
-        "extract_dir": "graalvm-ce-java11-$version",
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java17-windows-amd64-$version.zip",
+        "extract_dir": "graalvm-ce-java17-$version",
         "hash": {
             "url": "$url.sha256"
         }
