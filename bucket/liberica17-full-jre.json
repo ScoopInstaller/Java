@@ -1,25 +1,25 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java 16 implementation",
+    "description": "BellSoft Liberica is a 100% open-source Java 17 implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "16.0.2-7",
+    "version": "17-35",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/16.0.2%2B7/bellsoft-jre16.0.2%2B7-windows-amd64-full.zip",
-            "hash": "sha1:494a3036332c9805a3aeaf2e5c5a095429f517b8"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/17%2B35/bellsoft-jre17%2B35-windows-amd64-full.zip",
+            "hash": "sha1:5cecd28ffb82d81a4026ec9b1004ad633f304956"
         },
         "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/16.0.2%2B7/bellsoft-jre16.0.2%2B7-windows-i586-full.zip",
-            "hash": "sha1:e1ef4dd9b817dbe1e1651aadd0f3795a93f91cb3"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/17%2B35/bellsoft-jre17%2B35-windows-i586-full.zip",
+            "hash": "sha1:2ed99dc89587e39530c2e209b0c5ce18254c8cfd"
         }
     },
-    "extract_dir": "jre-16.0.2-full",
+    "extract_dir": "jre-17-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=16&bundle-type=jre-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=17&bundle-type=jre-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
         "jsonpath": "$.version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
         "replace": "${major}-${build}"
