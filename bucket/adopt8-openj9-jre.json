@@ -1,36 +1,36 @@
 {
     "description": "AdoptOpenJDK 8 JRE with Eclipse OpenJ9 JVM",
     "homepage": "https://adoptopenjdk.net",
-    "version": "8u272-b10-0.23.0",
+    "version": "8u302-b08-0.27.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u272-b10_openj9-0.23.0/OpenJDK8U-jre_x64_windows_openj9_8u272b10_openj9-0.23.0.zip",
-            "hash": "51607a032ff3c52bf31e17e5d2529a6192f5a7fd4d005cdaad74db32d2a91836"
+            "url": "https://github.com/AdoptOpenJDK/semeru8-binaries/releases/download/jdk8u302-b08_openj9-0.27.0/ibm-semeru-open-jdk_x64_windows_8u302b08_openj9-0.27.0.zip",
+            "hash": "c3a607440e2eec16ddea659d0662e122af86b34c8f87fb8752eafc3b2b2e5487"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u272-b10_openj9-0.23.0/OpenJDK8U-jre_x86-32_windows_openj9_8u272b10_openj9-0.23.0.zip",
-            "hash": "02ae7d2fa6d9dd8486a8f056458869f67eade7583f3033b4aab30d6c4ca8d8ae"
+            "url": "https://github.com/AdoptOpenJDK/semeru8-binaries/releases/download/jdk8u302-b08_openj9-0.27.0/ibm-semeru-open-jdk_x86-32_windows_8u302b08_openj9-0.27.0.zip",
+            "hash": "f1dbffafc273f8759e54a667f558ad70a063dd039eef36dda9b80dc33bb163b5"
         }
     },
-    "extract_dir": "jdk8u272-b10-jre",
+    "extract_dir": "jdk8u302-b08-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v3/assets/feature_releases/8/ga?jvm_impl=openj9&heap_size=normal&os=windows&architecture=x64&image_type=jre&project=jdk&vendor=adoptopenjdk&page_size=1&sort_order=DESC",
-        "jp": "$..binaries[0].package.link",
-        "re": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?))/",
+        "jsonpath": "$..binaries[0].package.link",
+        "regex": "https://github.com/(?<url>.*?/(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?))/",
         "replace": "${major}${update}-${build}${patch}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x64_windows_openj9_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+                "url": "https://github.com/$matchUrl/ibm-semeru-open-jdk_x64_windows_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
             },
             "32bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jre_x86-32_windows_openj9_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+                "url": "https://github.com/$matchUrl/ibm-semeru-open-jdk_x86-32_windows_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
             }
         },
         "hash": {

@@ -1,16 +1,16 @@
 {
     "description": "AdoptOpenJDK 11 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202105070734",
+    "version": "202110192154",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2021-05-07-07-34/OpenJDK11U-jdk_x64_windows_hotspot_2021-05-07-07-34.zip",
-            "hash": "af0d98ddc4719938ad7b68b65385e12c16e0f39a972cba86286ae71e6d39ce15"
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2021-10-19-21-54-beta/OpenJDK11U-jdk_x64_windows_hotspot_2021-10-19-21-54.zip",
+            "hash": "c072ad2955515aa9a03d9bab07e4700c2f056fd9c747d4a65427ed3e283ab5ee"
         },
         "32bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk11u-2021-05-07-07-34/OpenJDK11U-jdk_x86-32_windows_hotspot_2021-05-07-07-34.zip",
-            "hash": "7ce4b11d0f6d6b2fd51e215d2a5ed4683ebf845cd659ba534fc3671fd584fe01"
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2021-10-19-21-54-beta/OpenJDK11U-jdk_x86-32_windows_hotspot_2021-10-19-21-54.zip",
+            "hash": "47fb18cd60ee8162a0ff8bf077be2d24e07ea8d855b0e36d4ee04419248a61f4"
         }
     },
     "extract_to": "tmp",
@@ -26,17 +26,17 @@
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v3/assets/feature_releases/11/ea?jvm_impl=hotspot&heap_size=normal&os=windows&architecture=x64&image_type=jdk&project=jdk&vendor=adoptopenjdk&page_size=1&sort_order=DESC",
-        "jp": "$..binaries[0].package.link",
-        "re": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2})))",
+        "jsonpath": "$..binaries[0].package.link",
+        "regex": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}))-beta?)/OpenJDK(?:[\\d]+)(?<update>U?)",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jdk_x64_windows_hotspot_$matchDate.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajor$matchUpdate-jdk_x64_windows_hotspot_$matchDate.zip"
             },
             "32bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchMajorU-jdk_x86-32_windows_hotspot_$matchDate.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchMajor$matchUpdate-jdk_x86-32_windows_hotspot_$matchDate.zip"
             }
         },
         "hash": {

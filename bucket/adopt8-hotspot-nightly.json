@@ -1,12 +1,12 @@
 {
     "description": "AdoptOpenJDK 8 with Oracle HotSpot JVM (Nightly builds)",
     "homepage": "https://adoptopenjdk.net",
-    "version": "202011041328",
+    "version": "202110190503",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u-2020-11-04-13-28/OpenJDK8U-jdk_x64_windows_hotspot_2020-11-04-13-28.zip",
-            "hash": "c49243f3d7c8559e0baef825a3b61519b5bc905d93fb7accbc3950125a67071d"
+            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2021-10-19-05-03-beta/OpenJDK8U-jdk_x64_windows_hotspot_2021-10-19-05-03.zip",
+            "hash": "b35860870695b560caa9e5e75b5d8dbdb50ba0d2f210bf5c121f82bd94e7366e"
         }
     },
     "extract_to": "tmp",
@@ -22,8 +22,8 @@
     },
     "checkver": {
         "url": "https://api.adoptopenjdk.net/v3/assets/feature_releases/8/ea?jvm_impl=hotspot&heap_size=normal&os=windows&architecture=x64&image_type=jdk&project=jdk&vendor=adoptopenjdk&page_size=1&sort_order=DESC",
-        "jp": "$..binaries[0].package.link",
-        "re": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2})))",
+        "jsonpath": "$..binaries[0].package.link",
+        "regex": "https://github.com/(?<url>.*?jdk(?<major>[\\d]+)u-(?<date>(?<year>[\\d]{4})-(?<month>[\\d]{2})-(?<day>[\\d]{2})-(?<hour>[\\d]{2})-(?<minute>[\\d]{2}))-beta?)",
         "replace": "${year}${month}${day}${hour}${minute}"
     },
     "autoupdate": {
