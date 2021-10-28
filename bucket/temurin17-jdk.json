@@ -7,10 +7,6 @@
         "64bit": {
             "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x64_windows_hotspot_17_35.zip",
             "hash": "79e1c949f8301eb0a5979bc245829a4419507d7f6ac567c870e5986daf48c1db"
-        },
-        "32bit": {
-            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x86-32_windows_hotspot_17_35.zip",
-            "hash": "fa867167917a4696be611e63b77a334ad6aad38fc43d22285cbce1baaf77906e"
         }
     },
     "extract_dir": "jdk-17+35",
@@ -28,9 +24,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jdk_x64_windows_hotspot_$matchMajor_$matchBuild.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jdk_x86-32_windows_hotspot_$matchMajor_$matchBuild.zip"
             }
         },
         "hash": {
