@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "202112070441",
+    "version": "202112090607",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2021-12-07-04-41-beta/OpenJDK8U-jre_x64_windows_hotspot_2021-12-07-04-41.zip",
-            "hash": "319cf04bfb94767e6789de2c6bf268831e4a582073b8307852a076f3c8f4ff29"
+            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2021-12-09-06-07-beta/OpenJDK8U-jre_x64_windows_hotspot_2021-12-09-06-07.zip",
+            "hash": "2ca59627372de03b044d233abd498925e0f164c2953b35680a624ac484ea5847"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2021-12-07-04-41-beta/OpenJDK8U-jre_x86-32_windows_hotspot_2021-12-07-04-41.zip",
-            "hash": "802557efe865a37e492cd73aec1f19e3c42130c330540a1e975bc5ff1f8c3e5e"
+            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2021-12-09-06-07-beta/OpenJDK8U-jre_x86-32_windows_hotspot_2021-12-09-06-07.zip",
+            "hash": "0ea5ee3a02f26e6b1b439dff0513b202a6b7e4b805f4999f37f1308e323f13bd"
         }
     },
     "extract_to": "tmp",
