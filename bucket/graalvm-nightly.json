@@ -1,10 +1,10 @@
 {
     "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
-    "version": "22.1.0-dev-20211209_2306",
+    "version": "22.1.0-dev-20211215_1015",
     "homepage": "https://www.graalvm.org/",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/22.1.0-dev-20211209_2306/graalvm-ce-java17-windows-amd64-dev.zip",
-    "hash": "052a9316133d93c17118c2c4f922f748ecaefec94aa5dba04366c0a489b63001",
+    "url": "https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/22.1.0-dev-20211215_1015/graalvm-ce-java17-windows-amd64-dev.zip",
+    "hash": "043fe48cf86639cd72a8f8b94939a4ddc81d02194748379e64c588f293fdc0fb",
     "extract_dir": "graalvm-ce-java17-22.1.0-dev",
     "env_add_path": "bin",
     "env_set": {
