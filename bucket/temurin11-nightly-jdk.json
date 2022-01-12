@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "202201071437",
+    "version": "202201120845",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2022-01-07-14-37-beta/OpenJDK11U-jdk_x64_windows_hotspot_2022-01-07-14-37.zip",
-            "hash": "73c6509420a09cc99d238e08d59d72520537dfddcd9809ef1d82d3355fbec204"
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2022-01-12-08-45-beta/OpenJDK11U-jdk_x64_windows_hotspot_2022-01-12-08-45.zip",
+            "hash": "de249278fbbdb18319959a41891b43bf79f52624190883985a6b9e45ced9cc99"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2022-01-07-14-37-beta/OpenJDK11U-jdk_x86-32_windows_hotspot_2022-01-07-14-37.zip",
-            "hash": "eeafc34a2e7a6a445a4887c25e703a53fed09d7e62f10d8d792b8d235cb9d08e"
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk11u-2022-01-12-08-45-beta/OpenJDK11U-jdk_x86-32_windows_hotspot_2022-01-12-08-45.zip",
+            "hash": "7745c6d2eba6f9c83f29748351c60f614f0be221e806f39087a483f67702b0aa"
         }
     },
     "extract_to": "tmp",
