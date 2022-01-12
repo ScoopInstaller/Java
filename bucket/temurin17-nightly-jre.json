@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "202201071941",
+    "version": "202201121031",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-01-07-19-41-beta/OpenJDK17U-jre_x64_windows_hotspot_2022-01-07-19-41.zip",
-            "hash": "7eb35ae65c13d89680ab6cddda3ecefad8cc55f08e65e1878a6622b08977d79a"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-01-12-10-31-beta/OpenJDK17U-jre_x64_windows_hotspot_2022-01-12-10-31.zip",
+            "hash": "6b0704c88c912e5611e71fccf02a1befdcfe7f8f5effa8aa564551556830373a"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-01-07-19-41-beta/OpenJDK17U-jre_x86-32_windows_hotspot_2022-01-07-19-41.zip",
-            "hash": "387a990f213c5454f80f6ddbe32ff1faf0b0467b919a9942facbab3e1a19e348"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-01-12-10-31-beta/OpenJDK17U-jre_x86-32_windows_hotspot_2022-01-12-10-31.zip",
+            "hash": "04f7cb419a1549d75a6ba7290cb5be8b8d30ef3f3cd3c1c358fd0ebac51f9b4a"
         }
     },
     "extract_to": "tmp",
