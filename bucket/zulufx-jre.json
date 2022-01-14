@@ -1,21 +1,21 @@
 {
     "description": "Open Source Builds of Zulu With OpenJFX",
     "homepage": "https://www.azul.com/products/zulu-community/zulufx/",
-    "version": "17.30.15",
+    "version": "11.52.13",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.30.15-ca-fx-jre17.0.1-win_x64.zip",
-            "hash": "9da1efbc311302e0f62d6c70fa76e55e81b34391c3ad6c30e1763bf6a2965f5b",
-            "extract_dir": "zulu17.30.15-ca-fx-jre17.0.1-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.52.13-ca-fx-jre11.0.13-win_x64.zip",
+            "hash": "dac7c6f026afef5af13884f5b710bea1b30b1b4f4e369cc1ef7b30995e97d9d3",
+            "extract_dir": "zulu11.52.13-ca-fx-jre11.0.13-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.30.15-ca-fx-jre17.0.1-win_i686.zip",
-            "hash": "53337fe9a86b8db0a393874b282952e55e69a87bc2a17aa902f461d5f39b76e8",
-            "extract_dir": "zulu17.30.15-ca-fx-jre17.0.1-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.52.13-ca-fx-jre11.0.13-win_i686.zip",
+            "hash": "5699c994d0d9cd547995f76b4105cc9308fa00ade12a48c6a1c6f2418ad04147",
+            "extract_dir": "zulu11.52.13-ca-fx-jre11.0.13-win_i686"
         }
     },
     "env_add_path": "bin",
