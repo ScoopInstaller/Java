@@ -5,15 +5,15 @@
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_windows_hotspot_17.0.1_12.zip",
-            "hash": "e5419773052ac6479ff211d5945f8625e0cdb036e69c0f71affaf02d5dc9aa0b"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jre_x64_windows_hotspot_17.0.1_12.zip",
+            "hash": "14e36001bddb80379afb993e54366385e4d9a9daaee1117bf857f3840c53ddbc"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x86-32_windows_hotspot_17.0.1_12.zip",
-            "hash": "604919b02caa5506e8c68888d6410384234e9a9fb0dbc6a0d97eb7652da4cf66"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jre_x86-32_windows_hotspot_17.0.1_12.zip",
+            "hash": "f4bb1323cb34cdb42b92d825fe36fddd78b274f071b8971c5207a66a0e82748a"
         }
     },
-    "extract_dir": "jdk-17.0.1+12",
+    "extract_dir": "jdk-17.0.1+12-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -27,16 +27,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jdk_x64_windows_hotspot_$matchMajor_$matchBuild.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jre_x64_windows_hotspot_$matchMajor_$matchBuild.zip"
             },
             "32bit": {
-                "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jdk_x86-32_windows_hotspot_$matchMajor_$matchBuild.zip"
+                "url": "https://github.com/$matchUrl/OpenJDK$matchJdk$matchUpdate-jre_x86-32_windows_hotspot_$matchMajor_$matchBuild.zip"
             }
         },
         "hash": {
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild"
+        "extract_dir": "jdk-$matchMajor+$matchBuild-jre"
     }
 }
