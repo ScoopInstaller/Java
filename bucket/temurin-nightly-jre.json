@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "8.0.332-1.0.202202021811",
+    "version": "17.0.2-8.0.202202020005",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2022-02-03-05-07-beta/OpenJDK8U-jdk_x64_windows_hotspot_2022-02-03-05-07.zip",
-            "hash": "6906f7685faf56c0b4941cf1944d6a08160e8b20a2473c264d404046ad93db97"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-02-02-08-29-beta/OpenJDK17U-jre_x64_windows_hotspot_2022-02-02-08-29.zip",
+            "hash": "3073e55b7f9392f5df312294b0ee6acc5065d8526352c21e0dcef9725fb61153"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2022-02-03-05-07-beta/OpenJDK8U-jdk_x86-32_windows_hotspot_2022-02-03-05-07.zip",
-            "hash": "c88d3eb39ea2c8552cf2b087615f6a4fecb9163200d11b32a4bd11069a4a4199"
+            "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk17u-2022-02-02-08-29-beta/OpenJDK17U-jre_x86-32_windows_hotspot_2022-02-02-08-29.zip",
+            "hash": "2c8aeefc8924685f0578fa3299959f79fe2aef5bf999870320b8eec641a77329"
         }
     },
     "extract_to": "tmp",
@@ -25,7 +25,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.adoptium.net/v3/assets/feature_releases/8/ea?jvm_impl=hotspot&heap_size=normal&os=windows&architecture=x64&image_type=jdk&project=jdk&vendor=eclipse&page_size=1&sort_order=DESC",
+        "url": "https://api.adoptium.net/v3/assets/version/%5B8%2C%29?release_type=ea&jvm_impl=hotspot&heap_size=normal&os=windows&architecture=x64&image_type=jre&project=jdk&vendor=eclipse&page_size=1&sort_order=DESC",
         "script": [
             "$ver = (json_path $page $..version_data.semver).replace('+', '-').replace('-beta','')",
             "$link = (json_path $page $..release_link).replace('%2B', '+')",
