@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu11.54.25-ca-jdk11.0.14.1-win_x64.zip",
-            "hash": "727729a0a66d488664beabf28afecc122ea131a9ea2d3b628fc89a9878d7d32d",
+            "hash": "5ec3687f4e881d776376e9126e7484e9fed7a16865b40dfe9aa63d030219358f",
             "extract_dir": "zulu11.54.25-ca-jdk11.0.14.1-win_x64"
         },
         "32bit": {
