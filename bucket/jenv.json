@@ -1,0 +1,16 @@
+{
+    "version": "2.0.3",
+    "description": "Change your current Java version with one line",
+    "homepage": "https://github.com/FelixSelter/JEnv-for-Windows",
+    "license": "Apache-2.0",
+    "url": "https://github.com/FelixSelter/JEnv-for-Windows/releases/download/v2.0.3/JEnv.zip",
+    "hash": "35f76e5417341c37eb0103f6472347efa1303df632e6516b840d671e847bcb93",
+    "bin": [
+        "jenv.bat",
+        "java.bat"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/FelixSelter/JEnv-for-Windows/releases/download/v$version/JEnv.zip"
+    }
+}
