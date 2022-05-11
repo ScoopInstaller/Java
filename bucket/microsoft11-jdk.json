@@ -9,7 +9,7 @@
             "hash": "3a646a24977249272abccbea2e540495fd1f37b54940b0dc49c7734bf1e3b6b8"
         }
     },
-    "extract_dir": "jdk-11+0",
+    "extract_dir": "jdk-11.0.15+10",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
