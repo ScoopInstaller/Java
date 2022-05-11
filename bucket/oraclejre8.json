@@ -1,19 +1,19 @@
 {
     "description": "Oracle Java Platform, Standard Edition Runtime Environment (JRE)",
     "homepage": "https://www.java.com/",
-    "version": "8u321",
+    "version": "8u333",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
     "architecture": {
         "64bit": {
-            "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245808_df5ad55fdd604472a86a45a217032c7d#/dl.tar.gz",
-            "hash": "d8e3708ed097d395b5c8fe0aa84e5e80bbd1bcb040e5f147cb87454193e49203"
+            "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=246474_2dee051a5d0647d5be72a7c0abff270e#/dl.tar.gz",
+            "hash": "b0244a6dd643f7d2b6f891b7bc2baeca6142897cddee877a83f1e7f89efcb3fa"
         },
         "32bit": {
-            "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245806_df5ad55fdd604472a86a45a217032c7d#/dl.tar.gz",
-            "hash": "3946ce0cd2b595569c5effccad02c2c03d023a9ef227e1dcd2d7fd438c78b1bf"
+            "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=246472_2dee051a5d0647d5be72a7c0abff270e#/dl.tar.gz",
+            "hash": "4ceb40b04e3a564d4c8c9342174a5cbdba373b8a0c4be0d5e9756903ce551ce4"
         }
     },
-    "extract_dir": "jre1.8.0_321",
+    "extract_dir": "jre1.8.0_333",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -23,8 +23,8 @@
         "script": [
             "$ver = json_path $page $.fields.json.latest8Version",
             "$secid = json_path $page $.fields.json.secID",
-            "$win32 = [int](json_path $page $.fields.json.win_offline_bundle) + 1",
-            "$win64 = [int](json_path $page $.fields.json.win_x64_bundle) + 1",
+            "$win32 = [int](json_path $page $.fields.json.win_offline_bundle)",
+            "$win64 = [int](json_path $page $.fields.json.win_x64_bundle)",
             "Write-Output \"$ver $win32 $win64 $secid\""
         ],
         "regex": "(?<long>(?<ver>[\\d.]+)_(?<build>[\\d]+)) (?<win32b>[\\d]+) (?<win64b>[\\d]+) (?<secid>[\\da-f]{32})",
