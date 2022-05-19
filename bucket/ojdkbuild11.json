@@ -21,8 +21,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/$matchFolder/$matchUrl.x86_64.zip",
-                "extract_dir": "$matchUrl.x86_64"
+                "url": "https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-$version/java-11-openjdk-$version.windows.ojdkbuild.x86_64.zip",
+                "extract_dir": "java-11-openjdk-$version.windows.ojdkbuild.x86_64"
             }
         },
         "hash": {
