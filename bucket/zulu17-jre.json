@@ -1,21 +1,21 @@
 {
     "description": "Zulu is certified build of OpenJDK",
     "homepage": "https://www.azul.com/products/zulu-community/",
-    "version": "17.30.15",
+    "version": "17.34.19",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.30.15-ca-jre17.0.1-win_x64.zip",
-            "hash": "e35add53b3279b1954c17cfee2d45a50fbe6473ea0780d68a64e15df59881cd1",
-            "extract_dir": "zulu17.30.15-ca-jre17.0.1-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu17.34.19-ca-jre17.0.3-win_x64.zip",
+            "hash": "23d6e24d4de6cf31e5a6806d4d1aa2c46b349d0084d26080ccd613b8d9f7b7a6",
+            "extract_dir": "zulu17.34.19-ca-jre17.0.3-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.30.15-ca-jre17.0.1-win_i686.zip",
-            "hash": "858cbcdbf5a1f77c1947778562e60545d7645057a4fcde2a10d89fbf8a636d90",
-            "extract_dir": "zulu17.30.15-ca-jre17.0.1-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu17.34.19-ca-jre17.0.3-win_i686.zip",
+            "hash": "aee81fd606ca3ba38702392075831a7e632f4362a7f581eeb980ad540744319f",
+            "extract_dir": "zulu17.34.19-ca-jre17.0.3-win_i686"
         }
     },
     "env_add_path": "bin",
