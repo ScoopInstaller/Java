@@ -1,21 +1,21 @@
 {
     "description": "Zulu is certified build of OpenJDK",
     "homepage": "https://www.azul.com/products/zulu-community/",
-    "version": "13.44.13",
+    "version": "13.48.19",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu13.44.13-ca-jdk13.0.9-win_x64.zip",
-            "hash": "229df46615bc421d77bae07db453f615d9cd32f750d9dcc5fc3a4c9eae889e5e",
-            "extract_dir": "zulu13.44.13-ca-jdk13.0.9-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.48.19-ca-jdk13.0.11-win_x64.zip",
+            "hash": "e6e7d82bec451eae858a3ae6ee82eeb0e91e5abad33a5df49733163042d57beb",
+            "extract_dir": "zulu13.48.19-ca-jdk13.0.11-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu13.44.13-ca-jdk13.0.9-win_i686.zip",
-            "hash": "2213e0e226365164b8a511c18788c7e54e28ab6251ae047ff84b840db63ec84e",
-            "extract_dir": "zulu13.44.13-ca-jdk13.0.9-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.48.19-ca-jdk13.0.11-win_i686.zip",
+            "hash": "c69363f6306904e59ec0f9af2eccac4af973943a9f291fac48b735b639f4955c",
+            "extract_dir": "zulu13.48.19-ca-jdk13.0.11-win_i686"
         }
     },
     "env_add_path": "bin",
