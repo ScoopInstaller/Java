@@ -1,21 +1,21 @@
 {
     "description": "Zulu is certified build of OpenJDK",
     "homepage": "https://www.azul.com/products/zulu-community/",
-    "version": "15.36.13",
+    "version": "15.40.19",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu15.36.13-ca-jre15.0.5-win_x64.zip",
+            "url": "https://cdn.azul.com/zulu/bin/zulu15.40.19-ca-jre15.0.7-win_x64.zip",
             "hash": "003a2b0f375745092b170e9a3a08b2062284d5be9758fc9ca9fdf82a480c61b5",
-            "extract_dir": "zulu15.36.13-ca-jre15.0.5-win_x64"
+            "extract_dir": "zulu15.40.19-ca-jre15.0.7-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu15.36.13-ca-jre15.0.5-win_i686.zip",
+            "url": "https://cdn.azul.com/zulu/bin/zulu15.40.19-ca-jre15.0.7-win_i686.zip",
             "hash": "16833a9b205b349cb4d8ed19b7f085c2fede38d09e4d8f7c31d5be77a45c0fac",
-            "extract_dir": "zulu15.36.13-ca-jre15.0.5-win_i686"
+            "extract_dir": "zulu15.40.19-ca-jre15.0.7-win_i686"
         }
     },
     "env_add_path": "bin",
