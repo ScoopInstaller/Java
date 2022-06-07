@@ -1,21 +1,21 @@
 {
     "description": "Open Source Builds of Zulu With OpenJFX",
     "homepage": "https://www.azul.com/products/zulu-community/zulufx/",
-    "version": "13.48.19",
+    "version": "13.44.13",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu13.48.19-ca-fx-jdk13.0.11-win_x64.zip",
-            "hash": "6750251dae5da452eb385b7598f2ff3bd1655322d57828ff5679943213e19711",
-            "extract_dir": "zulu13.48.19-ca-fx-jdk13.0.11-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.44.13-ca-fx-jdk13.0.9-win_x64.zip",
+            "hash": "c20674983438072e32b81761b4c4c53c9b66a12e7983547ba1bc312d5448b1d5",
+            "extract_dir": "zulu13.44.13-ca-fx-jdk13.0.9-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu13.48.19-ca-fx-jdk13.0.11-win_i686.zip",
-            "hash": "44178f6f786e7f3030d041981cce5a22bb1d3519a26999ade7073bda227f9670",
-            "extract_dir": "zulu13.48.19-ca-fx-jdk13.0.11-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu13.44.13-ca-fx-jdk13.0.9-win_i686.zip",
+            "hash": "c5a83e6b2e55b794be18898ec5d4563c8f717b03e6ae6b7e8d74aab1e4f5826d",
+            "extract_dir": "zulu13.44.13-ca-fx-jdk13.0.9-win_i686"
         }
     },
     "env_add_path": "bin",
