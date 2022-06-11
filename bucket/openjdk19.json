@@ -1,12 +1,12 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 19",
     "homepage": "https://jdk.java.net/19",
-    "version": "19-25-ea",
+    "version": "19-26-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk19/25/GPL/openjdk-19-ea+25_windows-x64_bin.zip",
-            "hash": "84efde3405658f7cab9d691e4111664eba372cc692eb4b86676b3478c4492d35"
+            "url": "https://download.java.net/java/early_access/jdk19/26/GPL/openjdk-19-ea+26_windows-x64_bin.zip",
+            "hash": "3cf2f966ea53708ed1141e992d6878520fc981896396e1f625301a90741f0ce9"
         }
     },
     "extract_dir": "jdk-19",
