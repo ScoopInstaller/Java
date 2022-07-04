@@ -24,7 +24,7 @@
             "$ver = json_path $page $.fields.json.latest8Version",
             "$secid = json_path $page $.fields.json.secID",
             "$win32 = [int](json_path $page $.fields.json.win_offline_bundle) + 1",
-            "$win64 = [int](json_path $page $.fields.json.win_x64_bundle) + 1",
+            "$win64 = [int](json_path $page $.fields.json.win_x64_bundle) + 2",
             "Write-Output \"$ver $win32 $win64 $secid\""
         ],
         "regex": "(?<long>(?<ver>[\\d.]+)_(?<build>[\\d]+)) (?<win32b>[\\d]+) (?<win64b>[\\d]+) (?<secid>[\\da-f]{32})",
