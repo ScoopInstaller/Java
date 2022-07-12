@@ -1,5 +1,5 @@
 {
-    "description": "Official Early-Access Builds of OpenJDK 20",
+    "description": "Official production-ready open-source builds of OpenJDK 20",
     "homepage": "https://jdk.java.net/20",
     "version": "20-5-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
