@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "19.0.0-27.0.202206210351",
+    "version": "19.0.0-29.0.202207020350",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin19-binaries/releases/download/jdk19-2022-06-21-13-00-beta/OpenJDK19U-jre_x64_windows_hotspot_2022-06-21-13-00.zip",
-            "hash": "66a5c955e7d3eadab6d3cf3c3192668d2ebfc881b4f44e96cdfd93c28a4fa47b"
+            "url": "https://github.com/adoptium/temurin19-binaries/releases/download/jdk19-2022-07-02-15-36-beta/OpenJDK19U-jre_x64_windows_hotspot_2022-07-02-15-36.zip",
+            "hash": "c41b7f4c0c90d8ebbb13b7f6f016ec250c79452c648489fdf7f24fd6c4a4bd63"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin19-binaries/releases/download/jdk19-2022-06-21-13-00-beta/OpenJDK19U-jre_x86-32_windows_hotspot_2022-06-21-13-00.zip",
-            "hash": "34e27f1c8fd969c54bca18b3f223538cd944421841df803b49be9fa5331d11f6"
+            "url": "https://github.com/adoptium/temurin19-binaries/releases/download/jdk19-2022-07-02-15-36-beta/OpenJDK19U-jre_x86-32_windows_hotspot_2022-07-02-15-36.zip",
+            "hash": "1dc8203064739856e81e2e923af21d33518018b022095efa427c30aa5665edb4"
         }
     },
     "extract_to": "tmp",
