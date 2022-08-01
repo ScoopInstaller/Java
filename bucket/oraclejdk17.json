@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.oracle.com/java/17/archive/jdk-17.0.4_windows-x64_bin.zip",
-            "hash": "4f2872ccc7b0d71b4ce1ab1902ab25cbf2a2ba36dc483e033ed49301b093e0bd"           
+            "hash": "4f2872ccc7b0d71b4ce1ab1902ab25cbf2a2ba36dc483e033ed49301b093e0bd"
         }
     },
     "extract_dir": "jdk-17.0.4",
