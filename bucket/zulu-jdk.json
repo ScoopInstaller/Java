@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cdn.azul.com/zulu/bin/zulu18.32.13-ca-jdk18.0.2.1-win_x64.zip",
-            "hash": "384b0379ee0ca09da8e9d6728b2b8d6770c52da21da7106bf613f8f8bd80bf94",
+            "hash": "1eb72029b9a2b3d4372646ab395f991e8e04dd4e41ec22ffd42d09f4e4a9fd02",
             "extract_dir": "zulu18.32.13-ca-jdk18.0.2.1-win_x64"
         },
         "32bit": {
