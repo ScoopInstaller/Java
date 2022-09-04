@@ -1,15 +1,15 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "19.0.0-beta-36.0.202208190932",
+    "version": "18.0.2-101",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19+36-RC1-beta/OpenJDK19U-jre_x64_windows_hotspot_19_36-RC1.zip",
-            "hash": "ed3af85ce70c898b63376916c303eb603f0386d4c4424215952cef27651f895a"
+            "url": "https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.2.1+1/OpenJDK18U-jre_x64_windows_hotspot_18.0.2.1_1.zip",
+            "hash": "ba7976e86e9a7e27542c7cf9d5081235e603a9be368b6cbd49673b417da544b1"
         }
     },
-    "extract_dir": "jdk-19+36-RC1-beta-jre",
+    "extract_dir": "jdk-18.0.2.1+1-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
