@@ -9,7 +9,7 @@
             "hash": "md5:2d176e977c696778f7c06063e40d9858"
         }
     },
-    "extract_dir": "jdk16.0.2_7",
+    "extract_dir": "jdk15.0.2_7",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
