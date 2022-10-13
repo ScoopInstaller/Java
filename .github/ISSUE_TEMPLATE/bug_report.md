@@ -1,6 +1,6 @@
 ---
-name: "Bug report"
-about: "Create a report to help us improve"
+name: "Bug Report"
+about: "I am facing some problems."
 title: ""
 labels: "bug"
 ---
@@ -47,10 +47,3 @@ labels: "bug"
 ```json
 //# Your configuration here
 ```
-
-#### Troubleshooting before submitting
-
-- [ ] Ran `scoop checkup` with no found problems?
-- [ ] Read the [wiki](https://github.com/ScoopInstaller/Java/wiki) relevant for the manifest being installed?
-- [ ] Checked for [duplicate issues](https://github.com/ScoopInstaller/Java/issues?q=is%3Aissue), included closed ones?
-- [ ] Checked with [main scoop repo](https://github.com/ScoopInstaller/Scoop/issues) for related issues
