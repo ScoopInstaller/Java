@@ -1,0 +1,34 @@
+{
+    "version": "17.0.5-b469.67",
+    "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
+    "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
+    "license": "GPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-17.0.5-windows-x64-b469.67.tar.gz",
+            "hash": "4c0a278e607e79f52c75321b91b9a2b96fac5b467252da0352430243d1bd143f"
+        }
+    },
+    "extract_dir": "jbr-17.0.5-x64-b469",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://github.com/JetBrains/JetBrainsRuntime",
+        "regex": "jbr-(?<First>[\\d.]+)-windows-x64-(?<Second>[\\w]+)\\.(?<Third>[\\d]+)",
+        "replace": "${First}-${Second}.${Third}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-$matchFirst-windows-x64-$matchSecond.$matchThird.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha256\\s"
+                }
+            }
+        },
+        "extract_dir": "jbr-$matchFirst-x64-$matchSecond"
+    }
+}
