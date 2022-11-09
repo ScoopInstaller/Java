@@ -7,7 +7,12 @@
         "64bit": {
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_nomod-11_0_16-windows-x64-b2043.64.tar.gz",
             "hash": "88213eb14ba1c1f6dee1ebb7bb7221d8940d3168630345929c8a5b9b7a87e9e3",
-            "extract_dir": "jbr"
+            "extract_dir": "jbrsdk_nomod"
+        },
+        "32bit": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-11_0_16-windows-x86-b2043.64.tar.gz",
+            "hash": "297ae50f29ccfbcf1c5186eebd82b7a2185136b5492ac214a9000f08a67e4551",
+            "extract_dir": "jbrsdk"
         }
     },
     "env_set": {
@@ -22,12 +27,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_nomod-$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
-                "hash": {
-                    "url": "$url.checksum",
-                    "regex": "$sha256\\s"
-                }
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_nomod-$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz"
+            },
+            "32bit": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-$matchVersion-windows-x86-$matchBuild.$matchPatch.tar.gz"
             }
+        },
+        "hash": {
+            "url": "$url.checksum",
+            "regex": "$sha256\\s"
         }
     }
 }

@@ -6,10 +6,10 @@
     "architecture": {
         "64bit": {
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-11_0_16-windows-x64-b2043.64.tar.gz",
-            "hash": "4e23c52a5a23dba1cf9e2ea980d1ce31f2f34f39404eb4e5689359dfa9f28269",
-            "extract_dir": "jbr"
+            "hash": "4e23c52a5a23dba1cf9e2ea980d1ce31f2f34f39404eb4e5689359dfa9f28269"
         }
     },
+    "extract_dir": "jbr",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
