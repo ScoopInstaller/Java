@@ -11,7 +11,7 @@
         },
         "32bit": {
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-11_0_16-windows-x86-b2043.64.tar.gz",
-            "hash": "297ae50f29ccfbcf1c5186eebd82b7a2185136b5492ac214a9000f08a67e4551",
+            "hash": "03227f2e3e95e0709f9df630aaa3e6d38c21a2a356a4df298ffac5cfa2be40b8",
             "extract_dir": "jbrsdk"
         }
     },
