@@ -16,18 +16,18 @@
     "env_add_path": "bin",
     "checkver": {
         "url": "https://github.com/JetBrains/JetBrainsRuntime/releases",
-        "regex": "\\s(?<JBRVersion>[\\d.]+)-(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)</h2>",
-        "replace": "${JBRVersion}-${Build}.${Patch}"
+        "regex": "\\s(?<Version>[\\d.]+)-(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)</h2>",
+        "replace": "${Version}-${Build}.${Patch}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-$matchJBRVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
                     "url": "$url.checksum",
                     "regex": "$sha256\\s"
                 },
-                "extract_dir": "jbr-$matchJBRVersion-x64-$matchBuild.$matchPatch"
+                "extract_dir": "jbr-$matchVersion-x64-$matchBuild.$matchPatch"
             }
         }
     }
