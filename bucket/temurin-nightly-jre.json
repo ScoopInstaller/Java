@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "20.0.0-28.0.202212210343",
+    "version": "20.0.0-28.0.202212210356",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin20-binaries/releases/download/jdk20-2022-12-21-12-31-beta/OpenJDK20U-jre_x64_windows_hotspot_2022-12-21-12-31.zip",
-            "hash": "02ca4dc916e9be341c95b3fdc3bde9b3845f4a47fbffce0308a2c7c42099b0b4"
+            "url": "https://github.com/adoptium/temurin20-binaries/releases/download/jdk20-2022-12-21-17-54-beta/OpenJDK20U-jre_x64_windows_hotspot_2022-12-21-17-54.zip",
+            "hash": "f2095ef4d86f4c07ab5952fc7cdd9784b150a6b8315ed77c9a3674ad4f9c708f"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin20-binaries/releases/download/jdk20-2022-12-21-12-31-beta/OpenJDK20U-jre_x86-32_windows_hotspot_2022-12-21-12-31.zip",
-            "hash": "c978c682aecd3490feb31e2a1a07843ff4b78fe37b14eaa14785030d3f5b63c0"
+            "url": "https://github.com/adoptium/temurin20-binaries/releases/download/jdk20-2022-12-21-17-54-beta/OpenJDK20U-jre_x86-32_windows_hotspot_2022-12-21-17-54.zip",
+            "hash": "9f18a8c20086b0295ff7a7b0c4ea2473b7fbd329b2e2fb2122ca0dd067063f86"
         }
     },
     "extract_to": "tmp",
