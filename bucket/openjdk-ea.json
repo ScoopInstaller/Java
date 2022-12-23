@@ -1,5 +1,5 @@
 {
-    "description": "Official production-ready open-source builds of OpenJDK 21",
+    "description": "Official Early-Access Builds of OpenJDK",
     "homepage": "https://jdk.java.net/",
     "version": "21-2-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
