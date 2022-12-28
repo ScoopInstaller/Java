@@ -1,6 +1,6 @@
 {
-    "description": "Official Early-Access Builds of OpenJDK",
-    "homepage": "https://jdk.java.net/",
+    "description": "Official production-ready open-source builds of OpenJDK 21",
+    "homepage": "https://jdk.java.net/21",
     "version": "21-2-ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
