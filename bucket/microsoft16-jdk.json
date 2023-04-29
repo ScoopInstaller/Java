@@ -25,7 +25,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://docs.microsoft.com/java/openjdk/download",
+        "url": "https://learn.microsoft.com/java/openjdk/older-releases",
         "regex": "(?<ms>microsoft-jdk-((?<ver>16[\\d.]*?).(?<build>[\\d]+).[\\d]+)-windows-x64).zip"
     },
     "autoupdate": {
