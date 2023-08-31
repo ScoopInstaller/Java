@@ -21,7 +21,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/dragonwell-project/dragonwell17/releases/",
+        "github": "https://github.com/dragonwell-project/dragonwell17/releases/latest/",
         "regex": "(?<tag>dragonwell-standard-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))(?<filename>Alibaba_Dragonwell_Standard_(\\d+(?:\\.\\d+)+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}${b}"
     },
