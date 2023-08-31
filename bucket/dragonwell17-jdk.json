@@ -21,7 +21,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/alibaba/dragonwell17",
+        "github": "https://github.com/dragonwell-project/dragonwell17",
         "regex": "(?<tag>dragonwell-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))/(?<filename>Alibaba_Dragonwell_(?:[\\d.+]+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}${b}"
     },
