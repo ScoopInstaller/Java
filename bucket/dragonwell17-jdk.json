@@ -22,7 +22,7 @@
     },
     "checkver": {
         "github": "https://github.com/dragonwell-project/dragonwell17",
-        "regex": "(?<tag>dragonwell-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))/(?<filename>Alibaba_Dragonwell_(?:[\\d.+]+)_x64_windows)\\.zip",
+        "regex": "(?<tag>dragonwell-standard-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))(?<filename>Alibaba_Dragonwell_Standard_(\\d+(?:\\.\\d+)+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}${b}"
     },
     "autoupdate": {
