@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alibaba/dragonwell17/releases/download/$matchTag/$matchFilename.zip"
+                "url": "https://github.com/dragonwell-project/dragonwell17/releases/download/$matchTag/$matchFilename.zip"
             }
         },
         "hash": {
