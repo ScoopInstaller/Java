@@ -22,7 +22,7 @@
     },
     "checkver": {
         "url": "https://github.com/dragonwell-project/dragonwell11/releases/",
-        "regex": "(?<tag>dragonwell-extended-(?<dragon>[\\d.]+)?_jdk-(?<jdk>[\\d.]+)(?:-ga))/(?<filename>Alibaba_Dragonwell_Extended_(?:[\\d.+]+)_x64_windows)\\.zip",
+        "regex": "(?<tag>dragonwell-extended-(?<dragon>[\\d.]+)?_jdk-(?<jdk>[\\d.]+)-ga)/(?<filename>Alibaba_Dragonwell_Extended_(?:[\\d.+]+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}"
     },
     "autoupdate": {
