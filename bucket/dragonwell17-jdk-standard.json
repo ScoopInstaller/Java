@@ -1,5 +1,5 @@
 {
-    "description": "Alibaba Dragonwell, a downstream version of OpenJDK, is the in-house OpenJDK implementation at Alibaba",
+    "description": "Alibaba Dragonwell Standard Edition, a downstream version of OpenJDK, is the in-house OpenJDK implementation at Alibaba",
     "version": "17.0.8.0.8-17.0.8",
     "homepage": "https://dragonwell-jdk.io/",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
