@@ -21,7 +21,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/dragonwell-project/dragonwell8",
+        "url": "https://github.com/dragonwell-project/dragonwell8/releases/",
         "regex": "(?<tag>dragonwell-extended-(?<dragon>[\\d.]+)_jdk8u(?<jdk>[\\d]+)(?:(?<b>-[\\d+])|-ga))",
         "replace": "${dragon}-8.0.${jdk}${b}"
     },
