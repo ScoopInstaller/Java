@@ -1,0 +1,39 @@
+{
+    "description": "Alibaba Dragonwell Extended Edition, a downstream version of openjdk with a large number of customized features optimized for cloud computing environments (compared with Standard Edition), is the in-house OpenJDK implementation at Alibaba",
+    "version": "11.0.20.16-11.0.20",
+    "homepage": "https://dragonwell-jdk.io/",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dragonwell-project/dragonwell11/releases/download/dragonwell-extended-11.0.20.16_jdk-11.0.20-ga/Alibaba_Dragonwell_Extended_11.0.20.16.8_x64_windows.zip",
+            "hash": "33f7b5d83b417acf88c70125a3a12042521dae3e910a1b0f5773fa4c20b5df62"
+        }
+    },
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "(Get-ChildItem -Directory \"$dir\\tmp\").FullName | % { Move-Item \"$_\\*\" \"$dir\" }",
+            "Remove-Item -Recurse \"$dir\\tmp\""
+        ]
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/dragonwell-project/dragonwell11",
+        "regex": "(?<tag>dragonwell-extended-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))/(?<filename>Alibaba_Dragonwell_Extended_(?:[\\d.+]+)_x64_windows)\\.zip",
+        "replace": "${dragon}-${jdk}${b}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dragonwell-project/dragonwell11/releases/download/$matchTag/$matchFilename.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256.txt",
+            "regex": "$sha256"
+        }
+    }
+}
