@@ -22,13 +22,13 @@
     },
     "checkver": {
         "github": "https://github.com/dragonwell-project/dragonwell8",
-        "regex": "(?<tag>dragonwell-extended-(?<dragon>[\\d.]+)_jdk8u(?<jdk>[\\d]+)(?:(?<b>-[\\d+])|-ga))",
+        "regex": "(dragonwell-standard-(?<dragon>[\\d.]+)_jdk8u(?<jdk>[\\d]+)(?:(?<b>-[\\d+])|-ga))",
         "replace": "${dragon}-8.0.${jdk}${b}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/dragonwell-project/dragonwell8/releases/download/$matchTag/Alibaba_Dragonwell_Extended_$matchDragon_x64_windows.zip"
+                "url": "https://github.com/dragonwell-project/dragonwell8/releases/download/dragonwell-extended-$matchDragon_jdk8u$matchJdk-ga/Alibaba_Dragonwell_Extended_$matchDragon_x64_windows.zip"
             }
         },
         "hash": {
