@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "8.0.392-3.0.202309131856",
+    "version": "8.0.392-5.0.202309180616",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2023-09-14-02-34-beta/OpenJDK8U-jre_x64_windows_hotspot_2023-09-14-02-34.zip",
-            "hash": "f40908d03ca361c4ec697c9eb5d0cec16fcba93ebeb64167589d49856389ea10"
+            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2023-09-18-09-51-beta/OpenJDK8U-jre_x64_windows_hotspot_2023-09-18-09-51.zip",
+            "hash": "6102928d98473e93807a03f56fe4a8f36bff7cb2f5cb996178862aea63efc827"
         },
         "32bit": {
-            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2023-09-14-02-34-beta/OpenJDK8U-jre_x86-32_windows_hotspot_2023-09-14-02-34.zip",
-            "hash": "6e7c8da9df69f62cdf933621fb6cf65da83fd0cc8a0b23ede8527fcdede7ad36"
+            "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u-2023-09-18-09-51-beta/OpenJDK8U-jre_x86-32_windows_hotspot_2023-09-18-09-51.zip",
+            "hash": "72ef0b1d7b3a9e46d7654216511a047c36a526fb0883439d85012a0a7f5542af"
         }
     },
     "extract_to": "tmp",
