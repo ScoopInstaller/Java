@@ -1,6 +1,6 @@
 {
     "description": "Oracle Java Platform, Standard Edition Development Kit (JDK)",
-    "homepage": "https://www.oracle.com/java/technologies/downloads/#java17",
+    "homepage": "https://www.oracle.com/java/technologies/downloads/#java21",
     "version": "21",
     "license": "https://www.oracle.com/downloads/licenses/no-fee-license.html",
     "architecture": {
