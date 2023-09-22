@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.oracle.com/java/21/archive/jdk-21_windows-x64_bin.zip",
-            "hash": "cb2f25671cabbde70f8a46bdf67210313038efe275e26d00340d617ec62862a8"
+            "hash": "4fbf2c43b487c1c4dfc0a77496bf1bb1b3c5f2e947f57de01c1d346a440506a0"
         }
     },
     "extract_dir": "jdk-21",
