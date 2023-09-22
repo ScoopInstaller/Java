@@ -17,7 +17,7 @@
     "checkver": {
         "url": "https://www.oracle.com/java/technologies/downloads",
         "useragent": "curl/7",
-        "regex": "Java SE Development Kit ([\\d.]+) downloads"
+        "regex": "JDK Development Kit ([\\d.]+) downloads"
     },
     "autoupdate": {
         "architecture": {
