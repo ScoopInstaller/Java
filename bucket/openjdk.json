@@ -9,12 +9,7 @@
             "hash": "5434faaf029e66e7ce6e75770ca384de476750984a7d2881ef7686894c4b4944"
         }
     },
-    "installer": {
-        "script": [
-            "Move-Item \"$dir\\jdk-*\\*\" \"$dir\\\" -Force",
-            "Remove-Item \"$dir\\jdk-*\" -Force "
-        ]
-    },
+    "extract_dir": "jdk-21",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
