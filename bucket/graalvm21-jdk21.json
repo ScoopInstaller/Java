@@ -1,0 +1,26 @@
+{
+    "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
+    "version": "21.0.1",
+    "homepage": "https://www.graalvm.org/",
+    "license": "GPL-2.0",
+    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-21.0.1/graalvm-community-jdk-21.0.1_windows-x64_bin.zip",
+    "hash": "18034bcfdd54319292eece7a4a669075433b76adbd6d04d32dcf23f74f7b8f0e",
+    "extract_dir": "graalvm-community-openjdk-21.0.1+12.1",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir",
+        "GRAALVM_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://www.graalvm.org/downloads/",
+        "regex": "vm-(21[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-$version/graalvm-community-jdk-$version_windows-x64_bin.zip",
+        "extract_dir": "graalvm-ce-java21-$version",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
+
