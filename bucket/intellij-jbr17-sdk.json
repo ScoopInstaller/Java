@@ -1,13 +1,13 @@
 {
-    "version": "17.0.9-b1087.11",
+    "version": "17.0.10-b1171.14",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-17.0.9-windows-x64-b1087.11.tar.gz",
-            "hash": "sha512:1d0789163adab94d6e04ea5511831fbac4ad2dd603454fe7cf6cd5151921bf071eb16ad234c6ce9e9236fd8d2b12d0b171bda1be5f9853e3ac72519142bcbe8c",
-            "extract_dir": "jbrsdk-17.0.9-windows-x64-b1087.11"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-17.0.10-windows-x64-b1171.14.tar.gz",
+            "hash": "sha512:2e58fdba678b11add635beab02f62a16f922db7597ddef8137db33f06713e6270c9c8f9516dad4414326ca57a868cb53149fc6a6f74d4f600afc8dc7a31267d9",
+            "extract_dir": "jbrsdk-17.0.10-windows-x64-b1171.14"
         }
     },
     "env_set": {
@@ -15,19 +15,19 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://github.com/JetBrains/JetBrainsRuntime/raw/main/.github/README.md",
-        "regex": "\\[17\\.(?<Version>[\\d.]+)-(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)]",
-        "replace": "17.${Version}-${Build}.${Patch}"
+        "url": "https://github.com/JetBrains/JetBrainsRuntime/releases",
+        "regex": "jbr-release-17\\.(?<Version>[\\d.]+)b(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
+        "replace": "17.${Version}-b${Build}.${Patch}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-17.$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-17.$matchVersion-windows-x64-b$matchBuild.$matchPatch.tar.gz",
                 "hash": {
                     "url": "$url.checksum",
                     "regex": "$sha512\\s"
                 },
-                "extract_dir": "jbrsdk-17.$matchVersion-windows-x64-$matchBuild.$matchPatch"
+                "extract_dir": "jbrsdk-17.$matchVersion-windows-x64-b$matchBuild.$matchPatch"
             }
         }
     }
