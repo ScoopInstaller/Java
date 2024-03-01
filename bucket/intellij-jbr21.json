@@ -1,13 +1,13 @@
 {
-    "version": "21.0.2-b346.3",
+    "version": "21.0.2-b375.1",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.2-windows-x64-b346.3.tar.gz",
-            "hash": "sha512:e2ca4366d36cdd21a65b9ee49ee56f6bd8b9782c11d76fd935f5999fb8e166a52f146c786cb248d037f58221743c417223b79efad7a7a19336f9e17fdf3a91db",
-            "extract_dir": "jbr-21.0.2-windows-x64-b346.3"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.2-windows-x64-b375.1.tar.gz",
+            "hash": "sha512:c253ae12e6bdeabb77e6f7692db26cbd04eb22dff0be5e4104660498b5618616a01a1b455d0f56a97195d7f4835ae29a67e47c47e9c8c334865822f542fc0c99",
+            "extract_dir": "jbr-21.0.2-windows-x64-b375.1"
         }
     },
     "env_set": {
