@@ -43,3 +43,4 @@
         "extract_dir": "jdk-$matchVer+$matchBuild"
     }
 }
+
