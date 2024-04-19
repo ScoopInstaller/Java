@@ -11,11 +11,6 @@
             "url": "https://cdn.azul.com/zulu/bin/zulu17.48.15-ca-jdk17.0.10-win_x64.zip",
             "hash": "169bcb1c519a1cf18e3589bcbaea036eb8114311425660e6c919376227855be3",
             "extract_dir": "zulu17.48.15-ca-jdk17.0.10-win_x64"
-        },
-        "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.48.15-ca-jdk17.0.10-win_i686.zip",
-            "hash": "a4eabb972a97bb9bd4a066c8ade14eb67c61a085c53f70c44fce8967906a4828",
-            "extract_dir": "zulu17.48.15-ca-jdk17.0.10-win_i686"
         }
     },
     "env_add_path": "bin",
@@ -35,14 +30,6 @@
                 "extract_dir": "$matchName_x64",
                 "hash": {
                     "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=17&bundle_type=jdk&features=&javafx=false&ext=zip&os=windows&arch=x86&hw_bitness=64",
-                    "jp": "$.sha256_hash"
-                }
-            },
-            "32bit": {
-                "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
-                "extract_dir": "$matchName_i686",
-                "hash": {
-                    "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=17&bundle_type=jdk&features=&javafx=false&ext=zip&os=windows&arch=x86&hw_bitness=32",
                     "jp": "$.sha256_hash"
                 }
             }
