@@ -18,7 +18,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=6&bundle_type=jdk&features=&javafx=false&ext=zip&os=windows&arch=x86&hw_bitness=64",
+        "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=6&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=false&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
         "jsonpath": "$.name",
         "regex": "(?<name>zulu(?<version>[\\d.]+)(?:-ca)?-jdk(?<java>[\\d.]+)-win)_x64.zip",
         "replace": "${version}"
@@ -29,7 +29,7 @@
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
                 "extract_dir": "$matchName_x64",
                 "hash": {
-                    "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=6&bundle_type=jdk&features=&javafx=false&ext=zip&os=windows&arch=x86&hw_bitness=64",
+                    "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=6&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=false&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
                     "jp": "$.sha256_hash"
                 }
             },
@@ -37,7 +37,7 @@
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_i686.zip",
                 "extract_dir": "$matchName_i686",
                 "hash": {
-                    "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=6&bundle_type=jdk&features=&javafx=false&ext=zip&os=windows&arch=x86&hw_bitness=32",
+                    "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=6&os=windows&arch=xi686&archive_type=zip&java_package_type=jdk&javafx_bundled=false&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
                     "jp": "$.sha256_hash"
                 }
             }
