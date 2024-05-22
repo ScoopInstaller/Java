@@ -1,16 +1,16 @@
 {
     "description": "Open Source Builds of Zulu With OpenJFX",
     "homepage": "https://www.azul.com/products/zulu-community/zulufx/",
-    "version": "16.32.15",
+    "version": "22.30.13",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu16.32.15-ca-fx-jdk16.0.2-win_x64.zip",
-            "hash": "d3010ab2f114ffd0adceda9fd7cca1624fa551b549abbce33d536bc36a591c6c",
-            "extract_dir": "zulu16.32.15-ca-fx-jdk16.0.2-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu22.30.13-ca-fx-jdk22.0.1-win_x64.zip",
+            "hash": "d4e4a38ad899dcb034e3d9a7bcd5abf5494921edcdff68a1f6aba52c638639c1",
+            "extract_dir": "zulu22.30.13-ca-fx-jdk22.0.1-win_x64"
         }
     },
     "env_add_path": "bin",
@@ -18,7 +18,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=16&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=true&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
+        "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=22&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=true&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
         "jsonpath": "$..download_url",
         "regex": "(?<name>zulu(?<version>[\\d.]+)-ca-fx-jdk(?<java>[\\d.]+)-win)_x64.zip",
         "replace": "${version}"
@@ -29,7 +29,7 @@
                 "url": "https://cdn.azul.com/zulu/bin/$matchName_x64.zip",
                 "extract_dir": "$matchName_x64",
                 "hash": {
-                    "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=16&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=true&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
+                    "url": "https://api.azul.com/metadata/v1/zulu/packages/?java_version=22&os=windows&arch=x64&archive_type=zip&java_package_type=jdk&javafx_bundled=true&crac_supported=false&release_type=PSU&latest=true&include_fields=sha256_hash&page_size=1",
                     "jp": "$..sha256_hash"
                 }
             }
