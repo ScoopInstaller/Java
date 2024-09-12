@@ -15,14 +15,14 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/ibmruntimes/semeru20-binaries",
+        "github": "https://github.com/ibmruntimes/semeru21-binaries",
         "regex": "(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<patch>[\\d.]*)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+(?:-m[\\d]+)?))?)",
         "replace": "${major}-${build}${patch}${jvmver}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ibmruntimes/semeru20-binaries/releases/download/$matchTag/ibm-semeru-open-jre_x64_windows_$matchMajor_$matchBuild$matchPatch_openj9$matchJvmver.zip"
+                "url": "https://github.com/ibmruntimes/semeru21-binaries/releases/download/$matchTag/ibm-semeru-open-jre_x64_windows_$matchMajor_$matchBuild$matchPatch_openj9$matchJvmver.zip"
             }
         },
         "hash": {
