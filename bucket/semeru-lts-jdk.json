@@ -1,12 +1,12 @@
 {
     "description": "The IBM Semeru Runtimes are free production-ready binaries built with the OpenJDK class libraries and the Eclipse OpenJ9 JVM",
     "homepage": "https://developer.ibm.com/languages/java/semeru-runtimes/",
-    "version": "21.0.4-7-0.46.0",
+    "version": "21.0.4-7-0.46.1",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.4+7_openj9-0.46.0/ibm-semeru-open-jdk_x64_windows_21.0.4_7_openj9-0.46.0.zip",
-            "hash": "11d413da5552ad6debe7f9da76d721607629928fa05828afdb199b40dab79337"
+            "url": "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.4+7_openj9-0.46.1/ibm-semeru-open-jdk_x64_windows_21.0.4_7_openj9-0.46.1.zip",
+            "hash": "0c48d861ab025435a8e7d50d54bdddbc370a100394b731ececd0958d12077791"
         }
     },
     "extract_dir": "jdk-21.0.4+7",
