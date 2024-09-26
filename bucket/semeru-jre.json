@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/ibmruntimes/semeru23-binaries/releases/download/jdk-23+37_openj9-0.47.0/ibm-semeru-open-jre_x64_windows_23_37_openj9-0.47.0.zip",
-            "hash": "2196ccd0e4ea4b22b45c60c1982e994f9f723b7daf5c7de4bafad682750a8c86"
+            "hash": "9166816bb4c05513af6415ab4c0a54c3856298d62e1d368a37fc7bf2622b98de"
         }
     },
     "extract_dir": "jdk-23+37-jre",
