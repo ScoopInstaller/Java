@@ -1,0 +1,33 @@
+{
+  "description": "Official production-ready open-source builds of OpenJDK 23",
+  "homepage": "https://jdk.java.net/23",
+  "version": "23",
+  "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+  "architecture": {
+      "64bit": {
+          "url": "https://download.java.net/java/GA/jdk23/3c5b90190c68498b986a97f276efd28a/37/GPL/openjdk-23_windows-x64_bin.zip",
+          "hash": "cba5013874ba50cae543c86fe6423453816c77281e2751a8a9a633d966f1dc04"
+      }
+  },
+  "extract_dir": "jdk-23",
+  "env_add_path": "bin",
+  "env_set": {
+      "JAVA_HOME": "$dir"
+  },
+  "checkver": {
+      "url": "https://jdk.java.net/23",
+      "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+      "replace": "${version}-${build}${ea}"
+  },
+  "autoupdate": {
+      "architecture": {
+          "64bit": {
+              "url": "https://download.java.net/java/$matchType/$matchPath/$matchFile"
+          }
+      },
+      "hash": {
+          "url": "$url.sha256"
+      },
+      "extract_dir": "jdk-$matchVersion"
+  }
+}
