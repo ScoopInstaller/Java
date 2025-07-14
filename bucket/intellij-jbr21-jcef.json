@@ -8,6 +8,11 @@
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-21.0.7-windows-x64-b1038.58.tar.gz",
             "hash": "sha512:00b2aa07632939baa0b44347a57233b0ea4f8b6a1c078c54df2a1398a0ce8e9bef718de7402cd20a94a7e1e11952d9c617f0f85b92a9d89c43e1b1aef8773068",
             "extract_dir": "jbr_jcef-21.0.7-windows-x64-b1038.58"
+        },
+        "arm64": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-21.0.7-windows-aarch64-b1038.58.tar.gz",
+            "hash": "sha512:99440f2e86d697b8aea1d089f9fc81fd93d8913e994d19b4400c75e747b994c3153ff313f6809e2833ad908930fc97b1d38ecd5fe8684af379ce601c42f680a4",
+            "extract_dir": "jbr_jcef-21.0.7-windows-aarch64-b1038.58"
         }
     },
     "env_set": {
@@ -29,6 +34,14 @@
                     "regex": "$sha512\\s"
                 },
                 "extract_dir": "jbr_jcef-21.$matchVersion-windows-x64-$matchBuild.$matchPatch"
+            },
+            "arm64": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha512\\s"
+                },
+                "extract_dir": "jbr_jcef-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch"
             }
         }
     }

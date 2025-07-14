@@ -4,10 +4,20 @@
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
+        "32bit": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.7-windows-x86-b1038.58.tar.gz",
+            "hash": "sha512:ea16c73eb41f4ad14a02d00e9ed8c630297a34a337d7e0323fafe6d0e0c7722101c3d26c651203c6b8eb878ae790bdbc163eef424fcd93b29ee5975493796f6c",
+            "extract_dir": "jbr-21.0.7-windows-x86-b1038.58"
+        },
         "64bit": {
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.7-windows-x64-b1038.58.tar.gz",
             "hash": "sha512:29542674de0471f5886e2fbbc8ff479cee6fe12d89db65238e44488e07a8f6470a30bddd76551a857f5af3d127b8186eab89fd789c5df1dc3bd5e714c1302db5",
             "extract_dir": "jbr-21.0.7-windows-x64-b1038.58"
+        },
+        "arm64": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.7-windows-aarch64-b1038.58.tar.gz",
+            "hash": "sha512:c7d48b0638e9f668829e69c32a4c9e80a901e67a730edf6f2f625b01f0461d2e2dfd677fa6de237738f72e828e093bcc4c27a7bc9f4ac0d55e6c30fcc1622fad",
+            "extract_dir": "jbr-21.0.7-windows-aarch64-b1038.58"
         }
     },
     "env_set": {
@@ -22,6 +32,14 @@
     },
     "autoupdate": {
         "architecture": {
+            "32bit": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.$matchVersion-windows-x86-$matchBuild.$matchPatch.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha512\\s"
+                },
+                "extract_dir": "jbr-21.$matchVersion-windows-x86-$matchBuild.$matchPatch"
+            },
             "64bit": {
                 "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
@@ -29,6 +47,14 @@
                     "regex": "$sha512\\s"
                 },
                 "extract_dir": "jbr-21.$matchVersion-windows-x64-$matchBuild.$matchPatch"
+            },
+            "arm64": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha512\\s"
+                },
+                "extract_dir": "jbr-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch"
             }
         }
     }

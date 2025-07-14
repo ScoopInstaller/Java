@@ -4,10 +4,20 @@
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
+        "32bit": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.7-windows-x86-b1038.58.tar.gz",
+            "hash": "sha512:39f890e3de7fefeed63293ce9a8a8b4e1e4c81f549eb94ba33855a000926e3ea950b3d83b4723263c3557f767ae350e4d4ff88ebdaf104d735639d73f3fb8012",
+            "extract_dir": "jbrsdk-21.0.7-windows-x86-b1038.58"
+        },
         "64bit": {
             "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.7-windows-x64-b1038.58.tar.gz",
             "hash": "sha512:0dc935ebfd61682b5d641fe4794a9f87b858ae51475bdf8eb1980fadc5da2b3aac502cb9bd4de571ea22c71b62b5bf7028fadfd5594746f3f34c3e6aa30bd1de",
             "extract_dir": "jbrsdk-21.0.7-windows-x64-b1038.58"
+        },
+        "arm64": {
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.7-windows-aarch64-b1038.58.tar.gz",
+            "hash": "sha512:1ce926a18bfc88416fb66c7ed1edaea277766224a55f8de860ff00bae875e5a980466d71904d83d3589b49c0aefcb73c75a9e7ccc3a73a187268762597b358cf",
+            "extract_dir": "jbrsdk-21.0.7-windows-aarch64-b1038.58"
         }
     },
     "env_set": {
@@ -22,6 +32,14 @@
     },
     "autoupdate": {
         "architecture": {
+            "32bit": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-x86-$matchBuild.$matchPatch.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha512\\s"
+                },
+                "extract_dir": "jbrsdk-21.$matchVersion-windows-x86-$matchBuild.$matchPatch"
+            },
             "64bit": {
                 "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
@@ -29,6 +47,14 @@
                     "regex": "$sha512\\s"
                 },
                 "extract_dir": "jbrsdk-21.$matchVersion-windows-x64-$matchBuild.$matchPatch"
+            },
+            "arm64": {
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
+                "hash": {
+                    "url": "$url.checksum",
+                    "regex": "$sha512\\s"
+                },
+                "extract_dir": "jbrsdk-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch"
             }
         }
     }
