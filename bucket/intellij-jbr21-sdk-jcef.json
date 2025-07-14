@@ -1,13 +1,13 @@
 {
-    "version": "21.0.7-b1038.54",
+    "version": "21.0.7-b1038.58",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.7-windows-x64-b1038.54.tar.gz",
-            "hash": "sha512:8cadb9382073e13eeb46f86673d5bb62b5db7b3be10ecffc48addd771bc300393537da481eef94bc3078c72e6b9cae6c1c66b5615acf14c0d11d0b6cd68d59a4",
-            "extract_dir": "jbrsdk_jcef-21.0.7-windows-x64-b1038.54"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.7-windows-x64-b1038.58.tar.gz",
+            "hash": "sha512:60c3d40b9a7c22a5ded1fcd9d81b673dc515d73c8cd9dc8e9798f4d68f380f22b514c141b4beb087c4ebfa78e3a522c8a2e5ef816a943f96351d93830c1b6f64",
+            "extract_dir": "jbrsdk_jcef-21.0.7-windows-x64-b1038.58"
         }
     },
     "env_set": {
@@ -15,8 +15,9 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://github.com/JetBrains/JetBrainsRuntime/raw/main/.github/README.md",
-        "regex": "\\[21\\.(?<Version>[\\d.]+)-(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)]",
+        "url": "https://api.github.com/repos/JetBrains/JetBrainsRuntime/releases",
+        "jsonpath": "$[?(@.tag_name =~ /^jbr-release-21\\./)].tag_name",
+        "regex": "jbr-release-21\\.(?<Version>[\\d.]+)(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
         "replace": "21.${Version}-${Build}.${Patch}"
     },
     "autoupdate": {
