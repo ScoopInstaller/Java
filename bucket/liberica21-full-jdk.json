@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.8%2B12/bellsoft-jdk21.0.8%2B12-windows-i586-full.zip",
             "hash": "sha1:d2f0f9f0403147812828c3b42a383c004b8a37a7"
+        },
+        "arm64": {
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.8%2B12/bellsoft-jdk21.0.8%2B12-windows-aarch64-full.zip",
+            "hash": "sha1:117282a6344ac3ff239dff310d331405ea2576a7"
         }
     },
     "extract_dir": "jdk-21.0.8-full",
@@ -31,6 +35,9 @@
             },
             "32bit": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-i586-full.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
             }
         },
         "hash": {
