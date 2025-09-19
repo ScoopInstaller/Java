@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/25%2B37/bellsoft-jre25%2B37-windows-amd64-full.zip",
-            "hash": "9dbb418a1abc81edfa86398d87aa2d67e0ae33eaab99b87a0253bd689e295693"
+            "hash": "sha1:e7be82c6dcba6051b563150c107ef96b8fd5e0e4"
         },
         "arm64": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/25%2B37/bellsoft-jre25%2B37-windows-aarch64-full.zip",
-            "hash": "f3304baf8097fca64424dfa699fafd8c825870bc1d2bf0348d212de35b1050b4"
+            "hash": "sha1:69224a1176f0dd70924e8b4b1f5df5e1ec1dd5b7"
         }
     },
     "extract_dir": "jre-25-full",
@@ -33,6 +33,10 @@
             "arm64": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jre$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
             }
+        },
+        "hash": {
+            "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
+            "jsonpath": "$.sha1"
         },
         "extract_dir": "jre-$matchMajor-full"
     }

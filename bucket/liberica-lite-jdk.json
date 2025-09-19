@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/25%2B37/bellsoft-jdk25%2B37-windows-amd64-lite.zip",
-            "hash": "9eb32802a87abc162d22328b2056d13d31495e0a57cf63b9c3e5664f6cbca55b"
+            "hash": "sha1:e2fa9243793aa64acde285b6556a7d0f8b0559e0"
         },
         "arm64": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/25%2B37/bellsoft-jdk25%2B37-windows-aarch64-lite.zip",
-            "hash": "053c12132c5c87db6a523e5e581c9132709a9aa8a41c8c0ad5e50aabf0ad5d1b"
+            "hash": "sha1:69dccf53ac60783928c0e1293d639ea51f1a192d"
         }
     },
     "extract_dir": "jdk-25-lite",
@@ -33,6 +33,10 @@
             "arm64": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-aarch64-lite.zip"
             }
+        },
+        "hash": {
+            "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
+            "jsonpath": "$.sha1"
         },
         "extract_dir": "jdk-$matchMajor-lite"
     }

@@ -34,6 +34,10 @@
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jre$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
             }
         },
+        "hash": {
+            "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
+            "jsonpath": "$.sha1"
+        },
         "extract_dir": "jre-$matchMajor-full"
     }
 }
