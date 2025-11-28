@@ -18,7 +18,7 @@
         "GRAALVM_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/latest",
+        "github": "graalvm/graalvm-ce-builds",
         "regex": "jdk-(25[\\d.]*)"
     },
     "autoupdate": {
