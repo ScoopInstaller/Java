@@ -15,8 +15,7 @@
         "GRAALVM_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.graalvm.org/downloads/",
-        "regex": "jdk-(25[\\d.]+)"
+        "github": "graalvm/graalvm-ce-builds"
     },
     "autoupdate": {
         "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-$version/graalvm-community-jdk-$version_windows-x64_bin.zip",
