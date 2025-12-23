@@ -1,5 +1,5 @@
 {
-    "version": "25b176.4",
+    "version": "25-b176.4",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that supports enhanced class redefinition (DCEVM), features optional JCEF, a framework for embedding Chromium-based browsers, includes a number of improvements in font rendering, keyboards support, windowing/focus subsystems, HiDPI, accessibility, and performance, provides better desktop integration and bugfixes not yet present in OpenJDK.",
     "license": "GPL-2.0-only",
@@ -39,7 +39,7 @@
             "Write-Output $latest.Tag"
         ],
         "regex": "jbr-release-25(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
-        "replace": "25${Build}.${Patch}"
+        "replace": "25-${Build}.${Patch}"
     },
     "autoupdate": {
         "architecture": {
