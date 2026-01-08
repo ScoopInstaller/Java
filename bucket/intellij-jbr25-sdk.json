@@ -1,18 +1,18 @@
 {
-    "version": "25-b176.4",
+    "version": "25.0.1-b266.34",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that supports enhanced class redefinition (DCEVM), features optional JCEF, a framework for embedding Chromium-based browsers, includes a number of improvements in font rendering, keyboards support, windowing/focus subsystems, HiDPI, accessibility, and performance, provides better desktop integration and bugfixes not yet present in OpenJDK.",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25-windows-x64-b176.4.tar.gz",
-            "hash": "sha512:408ec774e0911b5a59096755709effa67e6438c0e2048bf3a63fa03fbd104e9331899211f55f2679c82abf836e5e380c256714769666ac8c9e4470fd3f1f54a1",
-            "extract_dir": "jbrsdk-25-windows-x64-b176.4"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25.0.1-windows-x64-b266.34.tar.gz",
+            "hash": "sha512:9cd81048244e3e696c6be131cc37868bcbb51db161fd327b26b79fddc280075d96f18487e2ad5f4b3164dabfaff3845c841a45f667584f0a87ccb9105317773b",
+            "extract_dir": "jbrsdk-25.0.1-windows-x64-b266.34"
         },
         "arm64": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25-windows-aarch64-b176.4.tar.gz",
-            "hash": "sha512:e9d535c97d12d951078f3508e5fd0d700cc081cf6823cef03e61a5c7fc5a49e8a4c6900a36ba0eb378a84c6ca5d1af53991fb0fe35f3e375bf034f1e53a4222e",
-            "extract_dir": "jbrsdk-25-windows-aarch64-b176.4"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25.0.1-windows-aarch64-b266.34.tar.gz",
+            "hash": "sha512:d3b9bd219ff25c874ceb9a10f286e9ee1ceb091442b2357f22bdc7479ac442e7df86b419e918936fb9aa446ede9d710c446baca634bd21a81abb968af903eb53",
+            "extract_dir": "jbrsdk-25.0.1-windows-aarch64-b266.34"
         }
     },
     "env_set": {
@@ -26,38 +26,41 @@
             "$tags = $releases | ForEach-Object { $_.tag_name }",
             "# `$Script:expected_ver` is current version for fallback",
             "$tags += 'jbr-release-' + ($Script:expected_ver -replace '-', '')",
-            "$pattern = 'jbr-release-25b(?<BuildNum>[\\d]+)\\.(?<Patch>\\d+)'",
+            "$pattern = 'jbr-release-25\\.(?<Version>[\\d.]+)b(?<BuildNum>[\\d]+)\\.(?<Patch>\\d+)'",
             "$matches = foreach ($t in $tags) { if ($t -match $pattern) {",
             "    [PSCustomObject]@{",
             "      Tag = $t",
+            "      VersionParts = ($Matches.Version -split '\\.') | ForEach-Object { [int]$_ }",
             "      BuildNum = [int]$Matches.BuildNum",
             "      Patch = [int]$Matches.Patch",
             "    }",
             "  } }",
-            "$latest = $matches | Sort-Object @{Expression={$_.BuildNum}},",
+            "$latest = $matches | Sort-Object @{Expression={$_.VersionParts[0]}},",
+            "                                 @{Expression={$_.VersionParts[1]}},",
+            "                                 @{Expression={$_.BuildNum}},",
             "                                 @{Expression={$_.Patch}} | Select-Object -Last 1",
             "Write-Output $latest.Tag"
         ],
-        "regex": "jbr-release-25(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
-        "replace": "25-${Build}.${Patch}"
+        "regex": "jbr-release-25\\.(?<Version>[\\d.]+)(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
+        "replace": "25.${Version}-${Build}.${Patch}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25-windows-x64-$matchBuild.$matchPatch.tar.gz",
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25.$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
                     "url": "$url.checksum",
                     "regex": "$sha512\\s"
                 },
-                "extract_dir": "jbrsdk-25-windows-x64-$matchBuild.$matchPatch"
+                "extract_dir": "jbrsdk-25.$matchVersion-windows-x64-$matchBuild.$matchPatch"
             },
             "arm64": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
+                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-25.$matchVersion-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
                     "url": "$url.checksum",
                     "regex": "$sha512\\s"
                 },
-                "extract_dir": "jbrsdk-25-windows-aarch64-$matchBuild.$matchPatch"
+                "extract_dir": "jbrsdk-25.$matchVersion-windows-aarch64-$matchBuild.$matchPatch"
             }
         }
     }
