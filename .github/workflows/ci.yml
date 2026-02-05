@@ -8,7 +8,7 @@ on:
 jobs:
   test_powershell:
     name: WindowsPowerShell
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@main
@@ -28,7 +28,7 @@ jobs:
           .\my_bucket\bin\test.ps1
   test_pwsh:
     name: PowerShell
-    runs-on: windows-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@main
