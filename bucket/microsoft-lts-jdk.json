@@ -5,8 +5,12 @@
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://aka.ms/download-jdk/microsoft-jdk-25.0.1-windows-x64.msi",
-            "hash": "5ce322c00d8d56b99eeaec7abad6328f2b95f4d22e23558fc23b87464ff27597"
+            "url": "https://aka.ms/download-jdk/microsoft-jdk-25.0.2-windows-x64.zip",
+            "hash": "38d1a42d189c50b24152014ef131931f25f4cc80400ce618f0477f5e4e5aa252"              
+        },
+        "arm64": {
+            "url": "https://aka.ms/download-jdk/microsoft-jdk-25.0.2-windows-aarch64.zip",
+            "hash": "e0d9380cf3d0b5efc675664fa0db22cc9eb5d77c4fd2a132f4b58df0608593cf"
         }
     },
     "extract_to": "tmp",
@@ -21,13 +25,16 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://docs.microsoft.com/java/openjdk/download",
-        "regex": "(?<ms>microsoft-jdk-((?<ver>25[\\d.]*?).(?<build>[\\d]+).[\\d]+)-windows-x64).msi"
+        "url": "https://learn.microsoft.com/en-us/java/openjdk/download",
+        "regex": "(?<ms>microsoft-jdk-((?<ver>25[\\d.]*?).(?<build>[\\d]+).[\\d]+)-windows-x64).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://aka.ms/download-jdk/microsoft-jdk-$version-windows-x64.msi"
+                "url": "https://aka.ms/download-jdk/microsoft-jdk-$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://aka.ms/download-jdk/microsoft-jdk-$version-windows-aarch64.zip"
             }
         },
         "hash": {
