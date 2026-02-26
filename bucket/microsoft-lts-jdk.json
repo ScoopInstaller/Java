@@ -1,5 +1,5 @@
 {
-    "description": "Microsoft Build of OpenJDK is a new no-cost long-term supported distribution",
+    "description": "The Microsoft Build of OpenJDK is a new no-cost long-term supported distribution and Microsoft's new way to collaborate and contribute to the Java ecosystem",
     "homepage": "https://www.microsoft.com/openjdk/",
     "version": "25.0.2",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",

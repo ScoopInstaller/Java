@@ -1,19 +1,19 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java 8 implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "8u472-9",
+    "version": "8u482-10",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/8u472%2B9/bellsoft-jre8u472%2B9-windows-amd64-full.zip",
-            "hash": "sha1:dfeec12aa7e46ccaf5668bcd5f9e69d75c95e627"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/8u482%2B10/bellsoft-jre8u482%2B10-windows-amd64-full.zip",
+            "hash": "bacd1923fa6f0d22963a42cc2f903f39572e15ddd10cbb18542b25c7cc20c22f"
         },
         "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/8u472%2B9/bellsoft-jre8u472%2B9-windows-i586-full.zip",
-            "hash": "sha1:3da50e3dc9809f77aeb411391eb177fba4addff2"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/8u482%2B10/bellsoft-jre8u482%2B10-windows-i586-full.zip",
+            "hash": "33797bb60a336a0692ef3b3c847d223e8c3352cbf3444651220ef068cc91a823"
         }
     },
-    "extract_dir": "jre8u472-full",
+    "extract_dir": "jre8u482-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"

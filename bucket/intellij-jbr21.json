@@ -1,23 +1,23 @@
 {
-    "version": "21.0.8-b1038.68",
+    "version": "21.0.9-b1038.76",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
         "32bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.8-windows-x86-b1038.68.tar.gz",
-            "hash": "sha512:e3c0b1d270171e9ad179b99f0a24c469977b7125623f5d136efd418d063f61fc96eb3f4a41489f3fe89d6f1c86bf95afbb000ab06912a17a88bbcf3520bfc90a",
-            "extract_dir": "jbr-21.0.8-windows-x86-b1038.68"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.9-windows-x86-b1038.76.tar.gz",
+            "hash": "sha512:c2f0666c5d949b32289d286abddc831ed5a8e5a083d6d3068105c88257729a86a7525538487bb259eb2314d49e544eb3d4109baaa5c8cc3e5bb83bbdb3b28fa8",
+            "extract_dir": "jbr-21.0.9-windows-x86-b1038.76"
         },
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.8-windows-x64-b1038.68.tar.gz",
-            "hash": "sha512:b59b6c9dd5194c93c3b8512e788fea08cef97e6c1b9108591f72ecdddc6fdbd95999db1e44b382cb5c74202b5ae016da5aa1c21883cefe50c23f8d2d0f3f7434",
-            "extract_dir": "jbr-21.0.8-windows-x64-b1038.68"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.9-windows-x64-b1038.76.tar.gz",
+            "hash": "sha512:5b6441bddc8d4089347cdc4f23c52c1122ec43b2d24ffa147055ab7eed4527f24225a4025e52e8591d56f7510cf4c61de2ba2195db0e9e99bc2627b0ded8989f",
+            "extract_dir": "jbr-21.0.9-windows-x64-b1038.76"
         },
         "arm64": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.8-windows-aarch64-b1038.68.tar.gz",
-            "hash": "sha512:fb784bf1c0842ff788479e05d65e7d6e7c92545d006a753a158e3f00d17a52fe0f8e4b0aa6081fabe0443219682ec03f726daacd7bf2ea28ddd31bd3ae7b7f22",
-            "extract_dir": "jbr-21.0.8-windows-aarch64-b1038.68"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbr-21.0.9-windows-aarch64-b1038.76.tar.gz",
+            "hash": "sha512:5b023637aa83cc77c696ae792b9ea61f10d0a4b53e40be4fc08f1ae514f152021644a76aab5821c749f37124414657b0f3a464271fad9c617d9127e1ade9e21d",
+            "extract_dir": "jbr-21.0.9-windows-aarch64-b1038.76"
         }
     },
     "env_set": {

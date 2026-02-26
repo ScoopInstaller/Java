@@ -1,18 +1,18 @@
 {
-    "version": "21.0.9-b1163.78",
+    "version": "21.0.10-b1163.108",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.9-windows-x64-b1163.78.tar.gz",
-            "hash": "sha512:cea67d65b6479ca423b187f0c00f4951ed2b61d63b05db16ea43f5daa1be42fe27b6e7a6ce9a883e891f9626959787123dbec791066370f029b207c527aaab10",
-            "extract_dir": "jbrsdk_jcef-21.0.9-windows-x64-b1163.78"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.10-windows-x64-b1163.108.tar.gz",
+            "hash": "sha512:4f72e1eb25093fb8fa6d23af0852c40adc0107c33960342ec2f81210c0de47860fecf239b25c223f28e5f47a34c3c7b5cb5d558de4f3fd1154698082d908140e",
+            "extract_dir": "jbrsdk_jcef-21.0.10-windows-x64-b1163.108"
         },
         "arm64": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.9-windows-aarch64-b1163.78.tar.gz",
-            "hash": "sha512:583aea8a2c3ef32c985b54d8b715d884429a2d658b7816fda06ad12e86d55c55f18748919aef60578bf561630c0305b7b9c46c79489b8e71399add09021ee4bc",
-            "extract_dir": "jbrsdk_jcef-21.0.9-windows-aarch64-b1163.78"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-21.0.10-windows-aarch64-b1163.108.tar.gz",
+            "hash": "sha512:ada78415f356c073a3e10d836889af8c6108023c1ba97b2ce518972f9c3f76c3e5356f208c5b4818810e41f9556acd2f0c1a45e3e3b11dab81167de8a4e32d8e",
+            "extract_dir": "jbrsdk_jcef-21.0.10-windows-aarch64-b1163.108"
         }
     },
     "env_set": {
