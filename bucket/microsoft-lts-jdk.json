@@ -1,7 +1,7 @@
 {
     "description": "Microsoft Build of OpenJDK is a new no-cost long-term supported distribution",
     "homepage": "https://www.microsoft.com/openjdk/",
-    "version": "25.0.1",
+    "version": "25.0.2",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
