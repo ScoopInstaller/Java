@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://aka.ms/download-jdk/microsoft-jdk-25.0.2-windows-x64.zip",
-            "hash": "38d1a42d189c50b24152014ef131931f25f4cc80400ce618f0477f5e4e5aa252"              
+            "hash": "38d1a42d189c50b24152014ef131931f25f4cc80400ce618f0477f5e4e5aa252"
         },
         "arm64": {
             "url": "https://aka.ms/download-jdk/microsoft-jdk-25.0.2-windows-aarch64.zip",
