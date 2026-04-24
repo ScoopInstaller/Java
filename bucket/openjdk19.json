@@ -18,16 +18,5 @@
         "url": "https://api.github.com/repos/openjdk/jdk19u/tags?per_page=100",
         "regex": "\"name\":\"jdk-(?<version>19\\.[\\d.]+)\\+(?<build>\\d+)\"",
         "replace": "${version}-${build}"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.java.net/java/$matchType/$matchPath/$matchFile"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        },
-        "extract_dir": "jdk-$matchVersion"
     }
 }
