@@ -1,18 +1,18 @@
 {
-    "version": "25.0.1-b266.34",
+    "version": "25.0.2-b329.117",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that supports enhanced class redefinition (DCEVM), features optional JCEF, a framework for embedding Chromium-based browsers, includes a number of improvements in font rendering, keyboards support, windowing/focus subsystems, HiDPI, accessibility, and performance, provides better desktop integration and bugfixes not yet present in OpenJDK.",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-25.0.1-windows-x64-b266.34.tar.gz",
-            "hash": "sha512:0f7ce9c070bd369217de9ab6a9dbaf3e1a3fd63f8c9df29f8f4d38b4de132f5fb436ecfeec096dbbe6478162971ee3627dadf0f07c70d62d259f0311a8d1c0bf",
-            "extract_dir": "jbrsdk_jcef-25.0.1-windows-x64-b266.34"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-25.0.2-windows-x64-b329.117.tar.gz",
+            "hash": "sha512:d22470303cfe489de10b7060ba241ef7245b646b0dc9b6fe57127dcb3a79a4cdbd753ce686f049416857e8cbeefac9fb7a5481b72b9f65d27d07de51837b5a70",
+            "extract_dir": "jbrsdk_jcef-25.0.2-windows-x64-b329.117"
         },
         "arm64": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-25.0.1-windows-aarch64-b266.34.tar.gz",
-            "hash": "sha512:2b44f60bf26a31599a9286fd2491a06f87e8cc2e4262daed71092816b34c0de51d5d08424858f81f00a0d61394b7ab8a0377a6dbc626748bedd69d13ec9569c8",
-            "extract_dir": "jbrsdk_jcef-25.0.1-windows-aarch64-b266.34"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk_jcef-25.0.2-windows-aarch64-b329.117.tar.gz",
+            "hash": "sha512:3c76e51c937088ad1eb729e272b495ca00c8f38efe8711e8ed46191d5d9c2d1c4d6b9fc26371391eee2376fce2fb0138b2709bb3c86c12c247385d89df400735",
+            "extract_dir": "jbrsdk_jcef-25.0.2-windows-aarch64-b329.117"
         }
     },
     "env_set": {
