@@ -19,7 +19,7 @@
     },
     "checkver": {
         "url": "https://github.com/graalvm/graalvm-ce-builds/releases/latest",
-        "regex": "jdk-(25[\\d.]*)"
+        "regex": "jdk-([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-$version/graalvm-community-jdk-$version_windows-x64_bin.zip",
@@ -28,4 +28,3 @@
         }
     }
 }
-
