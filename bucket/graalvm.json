@@ -8,8 +8,10 @@
     "extract_to": "tmp",
     "installer": {
         "script": [
-            "(Get-ChildItem -Directory \"$dir\\tmp\").FullName | % { Move-Item \"$_\\*\" \"$dir\" }",
-            "Remove-Item -Recurse \"$dir\\tmp\""
+            "$tmp = Join-Path $dir 'tmp'",
+            "$dirs = Get-ChildItem -Directory $tmp",
+            "if ($dirs) { $dirs | ForEach-Object { Move-Item (Join-Path $_.FullName '*') $dir -Force } } else { Move-Item (Join-Path $tmp '*') $dir -Force }",
+            "Remove-Item -Recurse -Force $tmp"
         ]
     },
     "env_add_path": "bin",
