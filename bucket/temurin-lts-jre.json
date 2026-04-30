@@ -9,7 +9,7 @@
             "hash": "1919e7e1603bc5937187139db2d65824f8d95ef42d0423ae9f9f1d9eb97842f6"
         }
     },
-    "extract_dir": "jdk-25.0.2+10-jre",
+    "extract_dir": "jdk-25.0.2+10",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -35,6 +35,6 @@
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "$matchTag-jre"
+        "extract_dir": "$matchTag"
     }
 }
