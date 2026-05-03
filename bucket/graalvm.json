@@ -1,23 +1,30 @@
 {
     "description": "High-performance, embeddable, polyglot Virtual Machine for JVM-langs (Java, Scala, Kotlin), JavaScript/NodeJS, Python, Ruby, R, and LLVM-langs (C, C++, Rust)",
-    "version": "22.3.1",
+    "version": "25.0.2",
     "homepage": "https://www.graalvm.org/",
     "license": "GPL-2.0",
-    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.1/graalvm-ce-java19-windows-amd64-22.3.1.zip",
-    "hash": "f7250a997f0c251a78a447d38e9bd791ba2e35240d70338694cc6b9003a1ff4b",
-    "extract_dir": "graalvm-ce-java19-22.3.1",
+    "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_windows-x64_bin.zip",
+    "hash": "72edc27ce2dd3c156332144a339c97995745cae291205ed2f9b5cc26aa9cb422",
+    "extract_to": "tmp",
+    "installer": {
+        "script": [
+            "$tmp = Join-Path $dir 'tmp'",
+            "$dirs = Get-ChildItem -Directory $tmp",
+            "if ($dirs) { $dirs | ForEach-Object { Move-Item (Join-Path $_.FullName '*') $dir -Force } } else { Move-Item (Join-Path $tmp '*') $dir -Force }",
+            "Remove-Item -Recurse -Force $tmp"
+        ]
+    },
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir",
         "GRAALVM_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.graalvm.org/downloads/",
-        "regex": "vm-([\\d.]+)"
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/latest",
+        "regex": "jdk-([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$version/graalvm-ce-java19-windows-amd64-$version.zip",
-        "extract_dir": "graalvm-ce-java19-$version",
+        "url": "https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-$version/graalvm-community-jdk-$version_windows-x64_bin.zip",
         "hash": {
             "url": "$url.sha256"
         }
