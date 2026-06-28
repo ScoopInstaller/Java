@@ -1,5 +1,5 @@
 {
-    "description": "SapMachine LTS: An OpenJDK release maintained and supported by SAP",
+    "description": "SapMachine 21: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
     "version": "21.0.11",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",

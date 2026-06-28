@@ -1,22 +1,22 @@
 {
     "description": "SapMachine LTS: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
-    "version": "17.0.19",
+    "version": "21.0.11",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-17.0.19/sapmachine-jre-17.0.19_windows-x64_bin.zip",
-            "hash": "50fbc1804ce3370770798edbf9b953782b0cf21b808c07e1edef7c1181ad4a1c"
+            "url": "https://github.com/SAP/SapMachine/releases/download/sapmachine-21.0.11/sapmachine-jre-21.0.11_windows-x64_bin.zip",
+            "hash": "b7bf063bd473c4656ce5ab2ae1e65bfaa88ae611cfc5f6e20a779e5395abe3a8"
         }
     },
-    "extract_dir": "sapmachine-jre-17.0.19",
+    "extract_dir": "sapmachine-jre-21.0.11",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
         "url": "https://sap.github.io/SapMachine/assets/data/sapmachine_releases.json",
-        "jsonpath": "$.assets.17.releases[0].jre.windows-x64",
+        "jsonpath": "$.assets.21.releases[0].jre.windows-x64",
         "re": "(?<sap>/sapmachine-(?:[\\d.]+)(?:\\%2B|\\+)?(?:[\\d]*)/sapmachine-jre-(?<version>[\\d.]+)(?:(?<dash>-)(?<ea>ea)\\.(?<build>[\\d]+))?_windows-x64_bin).zip",
         "replace": "${version}${dash}${build}${dash}${ea}"
     },
