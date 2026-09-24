@@ -1,6 +1,6 @@
 {
-    "description": "Official General-Availability Release of OpenJDK",
-    "homepage": "https://jdk.java.net/",
+    "description": "Official production-ready open-source builds of OpenJDK 27",
+    "homepage": "https://jdk.java.net/27",
     "version": "27-35",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
@@ -16,7 +16,7 @@
     },
     "checkver": {
         "url": "https://jdk.java.net/27/",
-        "re": "https://download\\.java\\.net/java/(?<type>GA)/(?<path>jdk(?<major>[\\d.]+)/[^/]+/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin\\.(zip|tar.gz))",
+        "re": "https://download\\.java\\.net/java/(?<type>GA)/(?<path>jdk(?<major>27(?:\\.[\\d]+)*)/[^/]+/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>27(?:\\.[\\d]+)*)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin\\.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
     "autoupdate": {
