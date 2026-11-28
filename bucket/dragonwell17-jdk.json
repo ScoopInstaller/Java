@@ -1,12 +1,12 @@
 {
     "description": "Alibaba Dragonwell, a downstream version of OpenJDK, is the in-house OpenJDK implementation at Alibaba",
-    "version": "17.0.18.0.19-17.0.18",
+    "version": "17.0.21.1.22-17.0.21.1",
     "homepage": "https://dragonwell-jdk.io/",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dragonwell-project/dragonwell17/releases/download/dragonwell-standard-17.0.18.0.19%2B8_jdk-17.0.18-ga/Alibaba_Dragonwell_Standard_17.0.18.0.19.8_x64_windows.zip",
-            "hash": "1bad5423432fda924e12d2157707dd6355889182d54c6e465fdb5907dd5cb125"
+            "url": "https://github.com/dragonwell-project/dragonwell17/releases/download/dragonwell-standard-17.0.21.1.22%2B2_jdk-17.0.21.1-ga/Alibaba_Dragonwell_Standard_17.0.21.1.22.2_x64_windows.zip",
+            "hash": "052cb1a0d9293b4cbb564b0e2987b565176bf6cc05b4ed7fcb7b2147f840bfa4"
         }
     },
     "extract_to": "tmp",
@@ -21,7 +21,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/dragonwell-project/dragonwell17",
+        "github": "https://api.github.com/repos/dragonwell-project/dragonwell17/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
         "regex": "(?<tag>dragonwell-standard-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))/(?<filename>Alibaba_Dragonwell_Standard_(?:[\\d.+]+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}${b}"
     },

@@ -1,12 +1,12 @@
 {
     "description": "Alibaba Dragonwell, a downstream version of OpenJDK, is the in-house OpenJDK implementation at Alibaba (with extensive custom features optimized for cloud computing environments)",
-    "version": "21.0.10.0.10-21.0.10",
+    "version": "21.0.13.1.14-21.0.13.1",
     "homepage": "https://dragonwell-jdk.io/",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dragonwell-project/dragonwell21/releases/download/dragonwell-standard-21.0.10.0.10%2B7_jdk-21.0.10-ga/Alibaba_Dragonwell_Standard_21.0.10.0.10.7_x64_windows.zip",
-            "hash": "a62dbe536b5ba9d873915f39cae71e89fdd11f09f35ad5f9277bd6b4b0e4c45b"
+            "url": "https://github.com/dragonwell-project/dragonwell21/releases/download/dragonwell-standard-21.0.13.1.14%2B2_jdk-21.0.13.1-ga/Alibaba_Dragonwell_Standard_21.0.13.1.14.2_x64_windows.zip",
+            "hash": "b84b4dbc39ae2ca2390cf4a47c0d0a3bbe1fff9746aab78344ba6f2ccb6fdbf6"
         }
     },
     "extract_to": "tmp",
@@ -21,7 +21,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/dragonwell-project/dragonwell21/",
+        "github": "https://api.github.com/repos/dragonwell-project/dragonwell21/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
         "regex": "(?<tag>dragonwell-standard-(?<dragon>[\\d.]+)(?<build>(?:\\%2B|\\+)?[\\d]*)?_jdk-(?<jdk>[\\d.]+)(?:(?<b>-[\\d+])|-ga))/(?<filename>Alibaba_Dragonwell_Standard_(?:[\\d.+]+)_x64_windows)\\.zip",
         "replace": "${dragon}-${jdk}${b}"
     },
