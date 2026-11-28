@@ -1,34 +1,34 @@
 {
     "description": "The IBM Semeru Runtimes are free production-ready binaries built with the OpenJDK class libraries and the Eclipse OpenJ9 JVM",
     "homepage": "https://developer.ibm.com/languages/java/semeru-runtimes/",
-    "version": "17.0.18-8-0.57.0",
+    "version": "17.0.21.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.18%2B8_openj9-0.57.0/ibm-semeru-open-jdk_x64_windows_17.0.18_8_openj9-0.57.0.zip",
-            "hash": "c7cc82d95b47b88b5fd183d414e11ca03daaec48e80c137ef528f4b54ebabf6c"
+            "url": "https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.21.0/ibm-semeru-open-jdk_x64_windows_17.0.21.0.zip",
+            "hash": "88802c7c785d63d03a762c5ad34457a00e72729f48a36f2002ae2dd7db26a1a5"
         }
     },
-    "extract_dir": "jdk-17.0.18+8",
+    "extract_dir": "jdk-17.0.21.0",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/ibmruntimes/semeru17-binaries",
-        "regex": "(?<tag>jdk-(?<major>(?<jdk>[\\d]+)[\\d.]+)(?:\\%2B|\\+)(?<build>[\\d]+)(?<patch>[\\d.]*)(?:(?<oj>_openj9?)(?<jvmver>-[\\d.]+(?:-m[\\d]+)?))?)",
-        "replace": "${major}-${build}${patch}${jvmver}"
+        "github": "https://api.github.com/repos/ibmruntimes/semeru17-binaries/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^jdk-([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ibmruntimes/semeru17-binaries/releases/download/$matchTag/ibm-semeru-open-jdk_x64_windows_$matchMajor_$matchBuild$matchPatch_openj9$matchJvmver.zip"
+                "url": "https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-$version/ibm-semeru-open-jdk_x64_windows_$version.zip"
             }
         },
         "hash": {
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk-$matchMajor+$matchBuild"
+        "extract_dir": "jdk-$version"
     }
 }

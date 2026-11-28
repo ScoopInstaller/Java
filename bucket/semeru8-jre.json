@@ -1,41 +1,41 @@
 {
     "description": "The IBM Semeru Runtimes are free production-ready binaries built with the OpenJDK class libraries and the Eclipse OpenJ9 JVM",
     "homepage": "https://developer.ibm.com/languages/java/semeru-runtimes/",
-    "version": "8u482-b08-0.57.0",
+    "version": "8.0.512.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u482-b08_openj9-0.57.0/ibm-semeru-open-jre_x64_windows_8u482b08_openj9-0.57.0.zip",
-            "hash": "343888485c7683312b0aa34ddb2ef288a5bdf29846d0c73aa6b863c05e24e01a"
+            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk-8.0.512.0/ibm-semeru-open-jre_x64_windows_8.0.512.0.zip",
+            "hash": "8f01116146bca88ba9cac148aae9ad942ce8af2e4ac7451a44dbf66b9a958663"
         },
         "32bit": {
-            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u482-b08_openj9-0.57.0/ibm-semeru-open-jre_x86-32_windows_8u482b08_openj9-0.57.0.zip",
-            "hash": "5172d0a55872165760c5da175b8b6ef4f0f0d7462ed04dd78383a27a456b70e1"
+            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk-8.0.512.0/ibm-semeru-open-jre_x86-32_windows_8.0.512.0.zip",
+            "hash": "9cf899aec3e10b66b9896352d16db4b0527e136260582f57624c179ad789bcb3"
         }
     },
-    "extract_dir": "jdk8u482-b08-jre",
+    "extract_dir": "jdk-8.0.512.0-jre",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/ibmruntimes/semeru8-binaries",
-        "regex": "(?<tag>jdk(?<major>[\\d]+)(?<update>u[\\d]+)-(?<build>b[\\d]+)(?<patch>[\\d.]*)(?:(?:_openj9?)(?<jvmver>-[\\d.]+))?)",
-        "replace": "${major}${update}-${build}${patch}${jvmver}"
+        "github": "https://api.github.com/repos/ibmruntimes/semeru8-binaries/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^jdk-([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/$matchTag/ibm-semeru-open-jre_x64_windows_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+                "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk-$version/ibm-semeru-open-jre_x64_windows_$version.zip"
             },
             "32bit": {
-                "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/$matchTag/ibm-semeru-open-jre_x86-32_windows_$matchMajor$matchUpdate$matchBuild_openj9$matchJvmver.zip"
+                "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk-$version/ibm-semeru-open-jre_x86-32_windows_$version.zip"
             }
         },
         "hash": {
             "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
-        "extract_dir": "jdk$matchMajor$matchUpdate-$matchBuild-jre"
+        "extract_dir": "jdk-$version-jre"
     }
 }
